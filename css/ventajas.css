@@ -1,0 +1,174 @@
+.siguenos
+{
+	background:#42424D;
+	width: 1349px;
+	height:140px;
+	margin-top: 150px;
+}
+.sig
+{
+	font-family: "Open Sans"; 
+	font-style: normal; 
+	color:#72727D;
+	font-size: 20px;
+	margin-left: 100px;
+	margin-top: 60px;
+	float: left;
+}
+#btnn1
+{
+	border:none;
+	background:#42424D;
+	width: 100px;
+	height: 46px;
+	cursor: pointer;
+}
+
+#btnn2
+{
+	border:none;
+	background:#42424D;
+	width:100px;
+	height:46px;
+	cursor: pointer;
+}
+
+#btnn3
+{
+	border:none;
+	cursor: pointer;
+	background:#42424D;
+	width: 100px;
+	height: 46px;
+}
+
+#btnn4
+{
+	border:none;
+	background:#42424D;
+	width: 100px;
+	height: 46px;
+	cursor: pointer;
+}
+
+#btnn5
+{
+	border:none;
+	cursor: pointer;
+	background:#42424D;
+	width: 100px;
+	height: 46px;
+}
+
+#btnn6
+{
+	border:none;
+	cursor: pointer;
+	background:#42424D;
+	width: 90px;
+	height: 46px;
+}
+
+#btnn7
+{
+	border:none;
+	cursor: pointer;
+	background:#42424D;
+	width: 100px;
+	height: 46px;
+}
+.der
+{
+	font-family: "Open Sans"; 
+	font-style: normal; 
+	color:#72727D;
+}
+
+.pa
+{
+	margin-top: 5px;
+	margin-bottom:40px; 
+}
+
+.dezer
+{
+	float: left;
+    margin-top: 55px;
+    margin-left: 120px;
+}
+
+.extras
+{
+	float: left;
+    margin-top: 55px;
+    margin-left: 120px;
+}
+
+.dispositivo
+{
+	float: left;
+    margin-top: 55px;
+    margin-left: 120px;
+}
+
+.legal
+{
+	float: left;
+    margin-top: 55px;
+    margin-left: 120px;
+}
+
+.info
+{
+	float: left;
+	margin-top: 60px;
+}
+
+.per
+{
+	color: #656555;
+	font-family: "Open Sans"; 
+	font-style: normal; 
+	font-size: 12px;
+	margin-left:650px;
+	margin-top: 15px;
+}
+
+.lenguajes
+{
+
+    background-color: #42424d;
+    color: #c2c2ca;
+    cursor: pointer;
+    font-size: 14px;
+    left: 0;
+	float: left;
+	margin-top: -20px;
+	margin-left: 159px;
+    height: 30px;
+    padding: 5px;
+    width: 7%;
+    border: 0px none;
+    border-radius: 3px;
+    display: block;
+}
+
+hr
+{
+	color:solid gray;
+	background:gray;
+	margin-left: 150px;
+	border: 1px;
+}
+
+.azul1
+{
+	color:#1E5CE0;
+}
+
+#btngroup2
+{
+	position: absolute;
+	margin-top: 40px;
+	margin-left: 100px;
+}
