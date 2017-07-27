@@ -412,7 +412,7 @@
 										title:"voikdsssssssssksddddddddddlsdddddddddddddddddces",
 										artist:"rev theory",
 										mp3:"http://localhost/IS501-Deezer/musica/randi.mp3",
-										poster: "http://localhost/IS501-Deezer/musica/covers/orton.jpg"
+										poster: "http://localhost/IS501-DEEZER-V1.1/musica/covers/orton.jpg"
 									},
 
 									{
@@ -420,7 +420,7 @@
 										artist:"The Stark Palace",
 										mp3:"http://www.jplayer.org/audio/mp3/TSP-07-Cybersonnet.mp3",
 										oga:"http://www.jplayer.org/audio/ogg/TSP-07-Cybersonnet.ogg",
-										poster: "http://localhost/IS501-Deezer/img/goku.jpg"
+										poster: "http://localhost/IS501-DEEZER-V1.1/img/goku.jpg"
 									},
 									{
 										title:"Incredibles Teaser",
@@ -428,7 +428,7 @@
 										m4v: "http://www.jplayer.org/video/m4v/Incredibles_Teaser.m4v",
 										ogv: "http://www.jplayer.org/video/ogv/Incredibles_Teaser.ogv",
 										webmv: "http://www.jplayer.org/video/webm/Incredibles_Teaser.webm",
-										poster: "http://localhost/IS501-Deezer/img/goku.jpg"
+										poster: "http://localhost/IS501-DEEZER-V1.1/img/goku.jpg"
 									},
 									{
 										title:"Tempered Song",
