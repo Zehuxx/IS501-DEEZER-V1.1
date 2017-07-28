@@ -52,7 +52,7 @@
 		 <a href="#"  style="text-decoration:none"><p class="mac"><span class="azul">Ver el vídeo ></span></p></a>
 		 <a href="https://www.microsoft.com/en-us/store/p/deezer/9wzdncrfj26h?rtc=1"><img id="wins" src="img/winstore.png"></a>
 	</div>
-	</div>
+</div>
 	<div class="siguenos">
 		<h2 class="sig">Síguenos</h2>
 		<div class="perr">
@@ -177,6 +177,5 @@
 				</select>
 	     </div>
 	</div>
-</div>
 </body>
 </html>
