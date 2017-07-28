@@ -1,3 +1,27 @@
+<?php
+   function cortar($text){
+   	
+     if ((strlen($text)>25)) {
+     	echo substr($text, 0, 25)."..."; 
+     }else{
+     	echo $text;
+     }
+
+   }
+
+   function cortar2($text){
+    
+     if ((strlen($text)>28)) {
+      echo substr($text, 0, 28)."..."; 
+     }else{
+      echo $text;
+     }
+
+   }
+ 
+
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,22 +32,7 @@
 	<link href="css/jplayer.blue.monday.css" rel="stylesheet" type="text/css" />
 	<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
 	<style type="text/css">
-		body{
-			height: 100%;
-			margin: 0;
-			padding: 0;
-			overflow: hidden;
-		}
-		ul{ 
-			list-style:none;
-		}
-		a:link{
-			text-decoration:none;
-
-		}
-		li{ 
-			color: red;
-		}
+		
 		
 	</style>
 
@@ -117,7 +126,7 @@
 						</li>
 						<div class="hijo2" id="hijo2">
 							<div class="margen2">
-								<span onclick="" class="link">
+								<span onclick="playlists()" class="link">
 									<span class="color-primary">13</span>
 									<span class="azz"> 
 										<span> Playlists</span>
@@ -144,7 +153,7 @@
 							<div class="lineahr"></div>
 							<div class="plista">
 								<table class="playl">
-								    <tr>
+								    <tr id="modal-on">
 								    	<td><div class="addplay"><span class="glyphicon glyphicon-plus add"></div></td>
 								    	<td class="espacio"><span class="principal">Crear una playlist</span></td>
 								    </tr>
@@ -155,7 +164,11 @@
                                      	'<tr class="separacion"></tr>
                                      	<tr>
 										  <td><img src="img/goku.jpg" width="56" height="56"></td>
-										  <td class="espacio"><span class="principal"></span></td>
+										  <td class="espacio">
+                                            <span class="col-xs-12 principal2 playname">';echo cortar('1234567890'); echo '</span>
+                                            <span class="col-xs-12 playuser">de <span class="playuser2">';echo cortar2('1234567890'); echo '</span></span>
+                                            <span class="glyphicon glyphicon-option-horizontal xxx"></span>
+										  </td>
 									    </tr>';
                                      }
 								    ?>

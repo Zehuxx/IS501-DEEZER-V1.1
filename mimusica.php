@@ -1,6 +1,6 @@
 <?php
    function cortar($text){
-   	;
+   	
      if ((strlen($text)>30)) {
      	echo substr($text, 0, 30)."..."; 
      }else{
@@ -10,7 +10,7 @@
    }
 
    function cortar2($text){
-    ;
+    
      if ((strlen($text)>25)) {
       echo substr($text, 0, 25)."..."; 
      }else{

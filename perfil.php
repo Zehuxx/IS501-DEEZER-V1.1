@@ -121,15 +121,31 @@
 $(document).ready(function(){
   function cargar(){
   if($("#help").val()==1){
+  	borde2(1);
   	 $("#fav").addClass("borde-a");
     $("#ifra4").html('<iframe class="contenido4" onload="redimensionariframe(this)" src="favoritas.php" frameborder="0"  ></iframe>');
   }
   if($("#help").val()==2){
+  	borde2(2);
   	$("#mu").addClass("borde-a");
     $("#ifra4").html('<iframe class="contenido4" onload="redimensionariframe(this)" src="mimusica.php" frameborder="0"  ></iframe>');
   }
+  if($("#help").val()==3){
+  	borde2(2);
+  	$("#pla").addClass("borde-a");
+    $("#ifra4").html('<iframe class="contenido4" onload="redimensionariframe(this)" src="playlists.php" frameborder="0"  ></iframe>');
+  }
+  if($("#help").val()==4){
+  	borde2(2);
+  	$("#alb").addClass("borde-a");
+    $("#ifra4").html('<iframe class="contenido4" onload="redimensionariframe(this)" src="albumes.php" frameborder="0"  ></iframe>');
+  }
 }
 cargar();
+
+
+
+
 });
    
 	</script>

@@ -356,3 +356,14 @@ $("#ifra").html('<iframe class="contenido" src="perfil.php?accion=2" frameborder
 
 });
 
+function playlists(){
+  $("#li6 .si").css("color","#C2C2CA");
+  $("#li6").css("background-color","#23232c");
+  $("#hijo2").css({"visibility":"hidden","opacity":"0"});
+  $("#drop").css({"visibility":"hidden","opacity":"0"});
+  $("#ifra").html('<iframe class="contenido" src="perfil.php?accion=3" frameborder="0" id="pru" ></iframe>');
+}
+
+$("#modal-on").click(function(){
+  $("#newplaylist").modal("show");
+});
