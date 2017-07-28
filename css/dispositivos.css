@@ -140,76 +140,6 @@ body
 	float: left;
 }
 
-#btnn1
-{
-	border:none;
-	background:#42424D;
-	width: 90px;
-	height: 46px;
-	cursor: pointer;
-}
-
-#btnn2
-{
-	border:none;
-	background:#42424D;
-	width:90px;
-	height:46px;
-	cursor: pointer;
-}
-
-#btnn3
-{
-	border:none;
-	cursor: pointer;
-	background:#42424D;
-	width: 90px;
-	height: 46px;
-}
-
-#btnn4
-{
-	border:none;
-	background:#42424D;
-	width: 90px;
-	height: 46px;
-	cursor: pointer;
-}
-
-#btnn5
-{
-	border:none;
-	cursor: pointer;
-	background:#42424D;
-	width: 90px;
-	height: 46px;
-}
-
-#btnn6
-{
-	border:none;
-	cursor: pointer;
-	background:#42424D;
-	width: 90px;
-	height: 46px;
-}
-
-#btnn7
-{
-	border:none;
-	cursor: pointer;
-	background:#42424D;
-	width: 90px;
-	height: 46px;
-}
-
-#btngroup2
-{
-	position: absolute;
-	margin-top: 40px;
-	margin-left: 250px;
-}
-
 .der
 {
 	font-family: "Open Sans"; 
@@ -293,15 +223,6 @@ body
     appearance: none;
     
 }
-
-nav {
-    float: left;
-    margin-left: 100px;
-    width : 1150.002px;
-    height: 152px;
-    background :#F8F8F9;
-    top: 40px;
-    }
 
     .menu
     {
@@ -421,6 +342,11 @@ nav {
     .perr .par .fa-linkedin:hover
     {
     	color: #fff;
+    }
+
+    .perr .par .fa-bolt:hover
+    {
+        color: #fff;
     }
 
     .perr

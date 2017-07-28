@@ -63,7 +63,7 @@
            <a class="par" href="http://instagram.com/"><i class="fa fa-instagram fa-3x"></i></a>
            <a class="par" href="http://www.deezer-blog.com/"><img class="parf" src="img/blogger1.png" onmouseover="this.src='img/blogger.png' ;" onmouseout="this.src='img/blogger1.png';"></a>
            <a class="par" href="http://linkedin.com/"><i class="fa fa-linkedin fa-3x"></i></a>
-           <a class="par" href="http://jobteaser.com/"><img class="parf1" src="img/jobteaser1.png" onmouseover="this.src='img/jobteaser.png' ;" onmouseout="this.src='img/jobteaser1.png';"></a>
+           <a class="par" href="http://jobteaser.com/"><i class="fa fa-bolt fa-3x"></i></a>
         </div>
 	</div>
 	<div class="otrasopciones">
