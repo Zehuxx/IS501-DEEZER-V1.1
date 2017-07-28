@@ -367,3 +367,4 @@ function playlists(){
 $("#modal-on").click(function(){
   $("#newplaylist").modal("show");
 });
+
