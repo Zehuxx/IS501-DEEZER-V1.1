@@ -362,22 +362,9 @@ html{
     color: #72727d;
 }
 
-body{
-      height: 100%;
-      margin: 0;
-      padding: 0;
-      overflow: hidden; 
-    }
-    ul{ 
-      list-style:none;
-    }
-    a:link{
-      text-decoration:none;
-
-    }
-    li{ 
-      color: red;
-    }
+.popover{
+  position: fixed;
+}
 
 
 .xxx{
@@ -395,7 +382,7 @@ body{
 }
 
 
-.playname:hover{
+.userr:hover{
   text-decoration: underline;
   cursor: pointer;
 }
@@ -688,6 +675,10 @@ position: absolute;
 .playl tr:hover > td span.xxx{
   opacity: 1;
   visibility: visible;
+}
+
+.playl tr:hover > td.espacio{
+  background-color: #d1d1d7;
 }
 
 .listad tr td{

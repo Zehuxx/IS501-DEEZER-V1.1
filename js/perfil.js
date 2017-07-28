@@ -106,16 +106,31 @@ function unsobre(id){
 
 
 function ifra4(link){
-    if (link==1)
+    if (link==1){
+      borde22(1);
     	$("#ifra4").html('<iframe class="contenido4" onload="redimensionariframe(this)" src="favoritas.php" frameborder="0"  ></iframe>');
-    if(link==2)
+    }
+
+    if(link==2){
+      borde22(2);
     	$("#ifra4").html("<iframe class='contenido4' onload='redimensionariframe(this)' src='playlists.php' frameborder='0' ></iframe>");
-     if(link==3)
+    }
+
+     if(link==3){
+      borde22(2);
     	$("#ifra4").html("<iframe class='contenido4' onload='redimensionariframe(this)' src='albumes.php' frameborder='0' ></iframe>");
-    if(link==4)
+    }
+
+    if(link==4){
+      borde22(2);
       $("#ifra4").html("<iframe class='contenido4' onload='redimensionariframe(this)' src='artistas.php' frameborder='0' ></iframe>");
-    if(link==5)
+    }
+
+    if(link==5){
+      borde22(2);
       $("#ifra4").html("<iframe class='contenido4' onload='redimensionariframe(this)' src='mimusica.php' frameborder='0' ></iframe>");
+    }
+
 }
 
 
@@ -228,6 +243,94 @@ function borde2(id){
 }
 
 
+function borde22(id){
+  var a1=window.parent.parent.document.getElementById("start");
+  var b1=window.parent.parent.document.getElementById("start2");
+  var c1=window.parent.parent.document.getElementById("mod");
+  var d1=window.parent.parent.document.getElementById("start4");
+  var aa=window.parent.parent.document.getElementById("first");
+  var aaa=window.parent.parent.document.getElementById("first");
+  aaa=$(aaa);
+  var bb=window.parent.parent.document.getElementById("first2");
+  var bbb=window.parent.parent.document.getElementById("first2");
+  bbb=$(bbb);
+  var cc=window.parent.parent.document.getElementById("first3");
+  var ccc=window.parent.parent.document.getElementById("first3");
+  ccc=$(ccc);
+  var dd=window.parent.parent.document.getElementById("first4");
+  var ddd=window.parent.parent.document.getElementById("first4");
+  ddd=$(ddd);
+  d1.classList.contains("bordee"); 
+  a1.classList.contains("bordee");
+  b1.classList.contains("bordee");
+  c1.classList.contains("bordee");
+  if (id==1) {  
+       if (a1) {
+        a1.classList.remove("bordee");
+        d1.classList.add("bordee");
+        aa.classList.remove("margen");
+        dd.classList.add("margen");
+          $(aaa).css("color","#C2C2CA");
+          $(ddd).css("color","white");
+       }
+       if (b1) {
+        b1.classList.remove("bordee");
+        d1.classList.add("bordee");
+        bb.classList.remove("margen");
+        dd.classList.add("margen");
+        $(bbb).css("color","#C2C2CA");
+        $(ddd).css("color","white");
+       }
+       if (c1) {
+        c1.classList.remove("bordee");
+        d1.classList.add("bordee");
+        cc.classList.remove("margen");
+        dd.classList.add("margen");
+        $(ccc).css("color","#C2C2CA");
+        $(ddd).css("color","white");
+       }
+       if (d1) {
+        d1.classList.add("bordee");
+        dd.classList.add("margen");
+        $(ddd).css("color","white");
+       }
+  }
+
+  if (id==2) {
+       if (a1) {
+        a1.classList.remove("bordee");
+        c1.classList.add("bordee");
+        aa.classList.remove("margen");
+        cc.classList.add("margen");
+        $(aaa).css("color","#C2C2CA");
+        $(ccc).css("color","white");
+       }
+       if (b1) {
+        b1.classList.remove("bordee");
+        c1.classList.add("bordee");
+        bb.classList.remove("margen");
+        cc.classList.add("margen");
+        $(bbb).css("color","#C2C2CA");
+        $(ccc).css("color","white");
+       }
+       if (c1) {
+        c1.classList.add("bordee");
+        cc.classList.add("margen");
+        $(ccc).css("color","white");
+       }
+       if (d1) {
+        d1.classList.remove("bordee");
+        c1.classList.add("bordee");
+        dd.classList.remove("margen");
+        cc.classList.add("margen");
+        $(ddd).css("color","#C2C2CA");
+        $(ccc).css("color","white");
+       }
+  }
+
+}
+
+
 function info(){
  $('#ifra', window.parent.document).html('<iframe class="contenido" src="configuraciones.php" frameborder="0"  ></iframe>');
 }
@@ -255,14 +358,17 @@ function comprobar(){
 function subventana(id){
   comprobar();
   if (id==1) {
+    borde22(2);
     window.parent.document.getElementById("pla").classList.add("borde-a");
     $('#ifra4', window.parent.document).html('<iframe class="contenido4" onload="redimensionariframe(this)" src="playlists.php" frameborder="0"  ></iframe>');
   }
   if (id==2) {
+    borde22(2);
     window.parent.document.getElementById("alb").classList.add("borde-a");
     $('#ifra4', window.parent.document).html('<iframe class="contenido4" onload="redimensionariframe(this)" src="albumes.php" frameborder="0"  ></iframe>');
   }
   if (id==3) {
+    borde22(2);
     window.parent.document.getElementById("art").classList.add("borde-a");
     $('#ifra4', window.parent.document).html('<iframe class="contenido4" onload="redimensionariframe(this)" src="artistas.php" frameborder="0"  ></iframe>');
   }

@@ -1,24 +1,24 @@
 <?php
-   function cortar($text){
-   	
-     if ((strlen($text)>25)) {
-     	echo substr($text, 0, 25)."..."; 
-     }else{
-     	echo $text;
-     }
+function cortar($text){
 
-   }
+	if ((strlen($text)>25)) {
+		echo substr($text, 0, 25)."..."; 
+	}else{
+		echo $text;
+	}
 
-   function cortar2($text){
-    
-     if ((strlen($text)>28)) {
-      echo substr($text, 0, 28)."..."; 
-     }else{
-      echo $text;
-     }
+}
 
-   }
- 
+function cortar2($text){
+
+	if ((strlen($text)>28)) {
+		echo substr($text, 0, 28)."..."; 
+	}else{
+		echo $text;
+	}
+
+}
+
 
 ?>
 
@@ -32,7 +32,22 @@
 	<link href="css/jplayer.blue.monday.css" rel="stylesheet" type="text/css" />
 	<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
 	<style type="text/css">
-		
+		body{
+			height: 100%;
+			margin: 0;
+			padding: 0;
+			overflow: hidden; 
+		}
+		ul{ 
+			list-style:none;
+		}
+		a:link{
+			text-decoration:none;
+
+		}
+		li{ 
+			color: red;
+		}
 		
 	</style>
 
@@ -153,26 +168,32 @@
 							<div class="lineahr"></div>
 							<div class="plista">
 								<table class="playl">
-								    <tr id="modal-on">
-								    	<td><div class="addplay"><span class="glyphicon glyphicon-plus add"></div></td>
-								    	<td class="espacio"><span class="principal">Crear una playlist</span></td>
-								    </tr>
+									<tr id="modal-on">
+										<td><div class="addplay"><span class="glyphicon glyphicon-plus add"></div></td>
+										<td class="espacio"><span class="principal">Crear una playlist</span></td>
+									</tr>
 
-								    <?php
-                                     for ($i=0; $i <9 ; $i++) { 
-                                     	echo 
-                                     	'<tr class="separacion"></tr>
-                                     	<tr>
-										  <td><img src="img/goku.jpg" width="56" height="56"></td>
-										  <td class="espacio">
-                                            <span class="col-xs-12 principal2 playname">';echo cortar('1234567890'); echo '</span>
-                                            <span class="col-xs-12 playuser">de <span class="playuser2">';echo cortar2('1234567890'); echo '</span></span>
-                                            <span class="glyphicon glyphicon-option-horizontal xxx"></span>
-										  </td>
-									    </tr>';
-                                     }
-								    ?>
-									
+									<?php
+									for ($i=0; $i <9 ; $i++) { 
+										echo 
+										'<tr class="separacion"></tr>
+										<tr>
+											<td><img src="img/goku.jpg" width="56" height="56"></td>
+											<td class="espacio">
+												<span class="col-xs-12 principal2 playname"><span class="userr">';echo cortar('1234567890'); echo '</span></span>
+												<span class="col-xs-12 playuser">de <span class="playuser2">';echo cortar2('1234567890'); echo '</span></span>
+												<span class="glyphicon glyphicon-option-horizontal xxx" data-trigger="manual"  data-placement="auto right"  data-toggle="popover"   data-html="true" data-content="
+												<table>
+													<tr>
+														<td><img src=\'img/goku.jpg\' width=\'56\' height=\'56\'></td>
+														<td><span></span></td>
+													</tr>
+												</table> "></span>
+											</td>
+										</tr>';
+									}
+									?>
+
 									
 								</table>
 							</div>
@@ -412,8 +433,21 @@
 							<script type="text/javascript" src="js/jplayer.playlist.js"></script>
 							<script type="text/javascript">
 
+								
 								$(document).ready(function(){
 
+									$(".xxx").click(function(event){
+
+										event.stopPropagation();
+										$(".xxx").popover("hide");
+										$(this).popover("toggle");
+									});
+
+									$("body").click(function(){
+										if ($(".xxx").popover("show")) {
+											$(".xxx").popover("hide");
+										}
+									});
 
 
 									var py = new jPlayerPlaylist({
@@ -424,7 +458,7 @@
 									{
 										title:"voikdsssssssssksddddddddddlsdddddddddddddddddces",
 										artist:"rev theory",
-										mp3:"http://localhost/IS501-Deezer/musica/randi.mp3",
+										mp3:"http://localhost/IS501-DEEZER-V1.1/musica/randi.mp3",
 										poster: "http://localhost/IS501-DEEZER-V1.1/musica/covers/orton.jpg"
 									},
 
