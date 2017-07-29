@@ -6,6 +6,7 @@
 	<link rel="stylesheet" type="text/css" href="css/dispositivos.css"> 
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="fantastic/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="blogger/style.css">
 </head>
 <body>
 <div class="Principal">
@@ -61,7 +62,7 @@
            <a class="par" href="http://twitter.com/"><i class="fa fa-twitter fa-3x"></i></a>
            <a class="par" href="http://youtube.com/"><i class="fa fa-youtube fa-3x"></i> </a>
            <a class="par" href="http://instagram.com/"><i class="fa fa-instagram fa-3x"></i></a>
-           <a class="par" href="http://www.deezer-blog.com/"><img class="parf" src="img/blogger1.png" onmouseover="this.src='img/blogger.png' ;" onmouseout="this.src='img/blogger1.png';"></a>
+           <a class="par" href="http://www.deezer-blog.com/"><span id="parf" class="icon-blogger"></span></a>
            <a class="par" href="http://linkedin.com/"><i class="fa fa-linkedin fa-3x"></i></a>
            <a class="par" href="http://jobteaser.com/"><i class="fa fa-bolt fa-3x"></i></a>
         </div>

@@ -12,6 +12,7 @@
 	   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
      <link rel="stylesheet" type="text/css" href="css/ventajas.css">
+     <link rel="stylesheet" type="text/css" href="blogger/style.css">
      <link rel="stylesheet" type="text/css" href="fantastic/css/font-awesome.min.css">
      <style type="text/css">
        
@@ -125,14 +126,14 @@
 <div class="siguenos">
     <h1 class="sig">Síguenos</h1>
     <div class="social">
-      <a class="soc" href=""><i class="fa fa-facebook fa-3x"></i></a>
-      <a class="soc" href=""><i class="fa fa-google-plus fa-3x"></i></a>
-      <a class="soc" href=""><i class="fa fa-twitter fa-3x"></i></a>
-      <a class="soc" href=""><i class="fa fa-youtube fa-3x"></i></a>
-      <a class="soc" href=""><i class="fa fa-instagram fa-3x"></i></a>
-      <a class="soc" href=""><img class="parf1" src="img/blogger1.png" onmouseover="this.src='img/blogger.png' ;" onmouseout="this.src='img/blogger1.png';"></a></a>
-      <a class="soc" href=""><i class="fa fa-linkedin fa-3x"></i></a>
-      <a class="soc" href=""><i class="fa fa-bolt fa-3x"></i></a>
+      <a class="soc" href="http://facebook.com/"><i class="fa fa-facebook fa-3x"></i></a>
+      <a class="soc" href="http://plus.google.com/"><i class="fa fa-google-plus fa-3x"></i></a>
+      <a class="soc" href="http://twitter.com/"><i class="fa fa-twitter fa-3x"></i></a>
+      <a class="soc" href="http://youtube.com/"><i class="fa fa-youtube fa-3x"></i></a>
+      <a class="soc" href="http://instagram.com/"><i class="fa fa-instagram fa-3x"></i></a>
+      <a class="soc" href="http://www.deezer-blog.com/" style="text-decoration: none;"><span id="parf" class="icon-blogger"></span></a>
+      <a class="soc" href="http://linkedin.com/"><i class="fa fa-linkedin fa-3x"></i></a>
+      <a class="soc" href="http://jobteaser.com/"><i class="fa fa-bolt fa-3x"></i></a>
     </div>
   </div>
     

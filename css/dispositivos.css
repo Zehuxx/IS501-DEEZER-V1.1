@@ -298,9 +298,15 @@ body
       margin-left: 118px;
     }
 
-    .parf
+    #parf
     {
-    	margin-top: -2px;
+        font-size: 39px;
+        color: #888891;
+    }
+
+    .perr .par #parf:hover
+    {
+        color: #fff;
     }
 
     .parf1

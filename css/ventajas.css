@@ -47,9 +47,15 @@
     	color: #fff;
     }
 
-     .parf
+    #parf
     {
-    	margin-top: -8px;
+        font-size: 39px;
+        color: #888891;
+    }
+
+    .social .soc #parf:hover
+    {
+        color: #fff;
     }
 
     .social .soc .fa-bolt:hover
@@ -187,7 +193,13 @@ dl dd a:hover
     color: #fff;
 }
 
- .parf1
+ #parf1
     {
-        margin-top: -2px;
+        font-size: 39px;
+        color: #888891;
+    }
+
+    .social .soc #parf1:hover
+    {
+        color: #fff;
     }
