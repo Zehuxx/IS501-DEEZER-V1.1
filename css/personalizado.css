@@ -362,6 +362,19 @@ html{
     color: #72727d;
 }
 
+.playuser3{
+    font-family: "Open Sans",Arial,sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    top: -2px;
+    left: -2px;
+    color: #72727d;
+}
+
+.help tr td:hover{
+  cursor: default;
+}
+
 .popover{
   position: fixed;
 }
@@ -395,6 +408,13 @@ html{
 }
 
 .playname{
+  position: relative;
+  margin-bottom: 7px;
+  margin-left: 20px;
+  margin-top: -5px;
+}
+
+.playname2{
   position: relative;
   margin-bottom: 7px;
   margin-left: 20px;
@@ -610,10 +630,40 @@ position: absolute;
   color: white;
 }
 
+#otros tr td:hover{
+    background-color: #d1d1d7;
+    color: #23232d;
+}
+
+
+
+
+
+#otros tr td{
+  width: 245px;
+  height: 40px;
+}
+
+.gly{
+  padding-right: 10px;
+  color: #92929d;
+}
+
+
+
+
 .lineahr{
   background-color: #e8e8ec;
   height: 2px;
   margin-top: 15px;
+  margin-bottom: 15px;
+  width: 100%
+}
+
+.lineahr2{
+  background-color: #e8e8ec;
+  height: 1px;
+  margin-top: 10px;
   margin-bottom: 15px;
   width: 100%
 }
@@ -654,6 +704,15 @@ position: absolute;
     font-size: 14px;
     top: 15px;
     left: -35px;
+}
+
+.principal3{
+    color: #32323d;
+    font-family: "Open Sans",Arial,sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    top: 3px;
+    left: -25px;
 }
 
 .playl tr td:first-child{
@@ -1088,6 +1147,20 @@ color: #72727d;
     font-family: "Lucida Grande",Arial,sans-serif;
 }
 
+.inform{
+    color: #52525d;
+    font-family: "Open Sans",Arial,sans-serif;
+}
+
+.inform2{
+  padding-left: 10px;
+    color: #52525d;
+    font-family: "Open Sans",Arial,sans-serif;
+}
+
+.derecha{
+  padding-left: 100px;
+}
 
 .alinear{
       display: block;

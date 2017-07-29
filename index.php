@@ -18,6 +18,16 @@ function cortar2($text){
 	}
 
 }
+function cortar3($text){
+
+	if ((strlen($text)>20)) {
+		echo substr($text, 0, 20)."..."; 
+	}else{
+		echo $text;
+	}
+
+}
+
 
 
 ?>
@@ -183,174 +193,195 @@ function cortar2($text){
 												<span class="col-xs-12 principal2 playname"><span class="userr">';echo cortar('1234567890'); echo '</span></span>
 												<span class="col-xs-12 playuser">de <span class="playuser2">';echo cortar2('1234567890'); echo '</span></span>
 												<span class="glyphicon glyphicon-option-horizontal xxx" data-trigger="manual"  data-placement="auto right"  data-toggle="popover"   data-html="true" data-content="
-												<table>
+												<table class=\'help\'>
 													<tr>
 														<td><img src=\'img/goku.jpg\' width=\'56\' height=\'56\'></td>
-														<td><span></span></td>
-													</tr>
-												</table> "></span>
-											</td>
-										</tr>';
-									}
-									?>
-
-									
-								</table>
-							</div>
-						</div>
-
-
-						<li id="li7" onclick="li('li7');ver('hijo3','hijo2','hijo','hijo4','hijo5','hijo6');">
-							<a href="#" class="si">
-								<span>
-									<svg class="svg-icon icon3 svg-icon-album" viewBox="0 0 12 12" aria-hidden="true" height="16" width="16"><g><path d="M6,12 C2.68630007,12 0,9.31370447 0,6.00000293 C0,2.68627795 2.68630007,0 6,0 C9.31369993,0 12,2.68627795 12,6.00000293 C11.9999941,9.31370447 9.31369993,12 6,12 L6,12 L6,12 Z M6,2.99999854 C4.34315297,2.99999854 3.00000293,4.34313751 3.00000293,5.99999707 C3.00000293,7.65684491 4.34315297,8.99999561 6,8.99999561 C7.65684703,8.99999561 8.99999707,7.65684491 8.99999707,5.99999707 C8.99999707,4.34314337 7.65684703,2.99999854 6,2.99999854 L6,2.99999854 L6,2.99999854 Z M4,6 C4,4.89544508 4.89545094,4 6,4 C7.10454906,4 8,4.89544508 8,6 C8,7.10454906 7.10454906,8 6,8 C4.89545094,8 4,7.10454906 4,6 L4,6 Z M5,6 C5,6.55229635 5.44770365,7 6,7 C6.55229635,7 7,6.55229635 7,6 C6.99998828,5.44769193 6.55229635,5 6,5 C5.44770365,5 5,5.44769193 5,6 L5,6 Z"></path></g></svg></span>Albumes
-								</a>
-
-							</li>
-							<div class="hijo3" id="hijo3">
-								<p>3</p>
-							</div>
-
-
-							<li  id="li8" onclick="li('li8');ver('hijo4','hijo2','hijo3','hijo','hijo5','hijo6');">
-								<a href="#"  class="si">
-									<span>
-										<svg class="svg-icon icon3 svg-icon-time" viewBox="0 0 12 12" aria-hidden="true" height="16" width="16"><g><path d="M11,6 C11,3.23857625 8.76142375,1 6,1 C3.23857625,1 1,3.23857625 1,6 C1,8.76142375 3.23857625,11 6,11 C8.76142375,11 11,8.76142375 11,6 Z M7,6.50952148 L7,3.49047852 C7,3.21505737 6.77614237,3 6.5,3 C6.23193359,3 6,3.21959471 6,3.49047852 L6,6 L4.49538898,6 C4.2157526,6 4,6.22385763 4,6.5 C4,6.76806641 4.2217932,7 4.49538898,7 L6.50461102,7 C6.64282453,7 6.76543159,6.94531282 6.85409473,6.85665508 C6.94267961,6.76617647 7,6.64418681 7,6.50952148 Z" fill-rule="evenodd"></path></g></svg></span>Actividad
-									</a>
-
-								</li>
-								<div class="hijo4" id="hijo4">
-									<p>4</p>
-								</div>
-
-
-								<li  id="li9" onclick="li('li9');ver('hijo5','hijo2','hijo3','hijo4','hijo','hijo6')">
-									<a href="#" class="si">
-										<span>
-											<svg class="svg-icon icon3 svg-icon-app" viewBox="0 0 12 12" aria-hidden="true" height="16" width="16"><g><path d="M0.375518305,6.90836424 C-0.126157409,6.40668852 -0.124187159,5.59134123 0.375518305,5.09163576 L5.09163576,0.375518305 C5.59331148,-0.126157409 6.40865877,-0.124187159 6.90836424,0.375518305 L11.6244817,5.09163576 C12.1261574,5.59331148 12.1241872,6.40865877 11.6244817,6.90836424 L6.90836424,11.6244817 C6.40668852,12.1261574 5.59134123,12.1241872 5.09163576,11.6244817 L0.375518305,6.90836424 L0.375518305,6.90836424 Z M8.56634425,6.00000601 L4.9734623,3.9469246 L4.9734623,8.0530754 L8.56634425,6.00000601 L8.56634425,6.00000601 Z"></path></g></svg></span>Aplicaciones
-										</a> 
-
-									</li>
-									<div class="hijo5" id="hijo5">
-										<span class="azul">0 <span class="apps">Aplicaciones</span></span>
-										<div class="alrededor">
-											<div class="paddd">
-												<span class="reco">Deezer recomienda:</span>
-												<div>
-													<img src="img/disney.jpg" class="disney" width="320" height="120">
-												</div>
-												<div class="content">
-													<table class="dis" >
-														<tr>
-															<td >
-																<div style="padding-top:6px; "><span class="fath">Disney</span></div>
-																<div style="padding-bottom:8px; "> <span class="son">Disney Magic !</span></div>
-															</td>
-															<td>
-																<span class="glyphicon glyphicon-heart cor"></span>
-															</td>
+														<td><span class=\'col-xs-12 principal3 playname2\'><span class=\'userr\'>';echo cortar3('1234567890123456789012345'); echo '</span></span>
+															<span class=\'col-xs-12 playuser3\'>de <span class=\'playuser2\'>';echo cortar3('1234567890123456789012345'); echo '</span></span></td>
 														</tr>
 													</table>
+													<div class=\'lineahr2\'></div>
+													<table id=\'otros\'>
+														<tr>
+															<a href=\'javascript:;\'><td><span class=\'glyphicon glyphicon-option-horizontal\'  aria-hidden=\'true\'><span class=\'inform2\'>Escuchar justo despues</span></td><a/>
+															</tr> 
+															<tr>
+																<a href=\'javascript:;\'><td><span class=\'glyphicon glyphicon-list-alt\'  aria-hidden=\'true\'><span class=\'inform2\'>Aadir a la lista de espera</span></td><a/>
+																</tr>  
+																<tr>
+																<a href=\'javascript:;\'><td><span class=\'glyphicon glyphicon-share gly\'  aria-hidden=\'true\'></span><span class=\'inform\'>Compartir</span></td><a/>
+																	</tr> 
+																	<tr>
+																	<a href=\'javascript:;\'><td><span class=\'glyphicon glyphicon-remove gly\'  aria-hidden=\'true\'></span><span class=\'inform\'>Eliminar de Mi Musica</span></td><a/>
+																		</tr> 	
+																		<tr>
+																			<a href=\'javascript:;\'><td><span class=\'inform\'>Perfil de usuario</span><span class=\' glyphicon glyphicon-chevron-right derecha\'></span></td><a/>
+																			</tr> 
+																		</table>
 
-												</div>
+																		"></span>
+																	</td>
+																</tr>';
+															}
+															?>
 
-											</div>	
-										</div>
-										<div class="mar">
-											<table >
-												<tr>
-													<td>
-														<button class="plus"><span class="glyphicon glyphicon-plus"></button>
-													</td>
-													<td id="can">
-														<span class="col-xs-12 fath2">Descubre nuestras apps</span>
-														<span class="col-xs-12 son2">¡Juegos y musica!</span>
-													</td>
-												</tr>
-											</table>
-										</div>
-									</div>
-								</ul>
-								<div id="jp_container_1"  class="jp-video jp-video-270p" role="application" aria-label="media player">
-									<div class="jp-type-playlist" >
-										<span style="position: absolute;" id="detalles">
-											<p class="nombresong"><a href="#" id="nombresong"></a></p>
-											<p class="nombreartista" style="margin-top: -5px">de<a href="#" id="nombreartista"></a></p>
-										</span>	
-										<div id="jquery_jplayer_1" class="jp-jplayer">
 
-										</div>
-										<div class="jp-gui">
-
-											<div class="jp-interface">
-												<div class="jp-progress">
-													<div class="jp-seek-bar">
-														<div class="jp-play-bar"></div>
+														</table>
 													</div>
 												</div>
-												<div class="jp-current-time" role="timer" aria-label="time">&nbsp;</div>
-												<div class="jp-duration" role="timer" aria-label="duration">&nbsp;</div>
-												<div class="jp-controls-holder">
-													<div class="jp-controls">
 
-														<a href="#" title="Anterior"><span class="jp-previous glyphicon glyphicon-step-backward" aria-hidden="true"></span></a>
-														<a href="" title="Pausa" id="pausee"><span class="jp-pause glyphicon glyphicon-pause"></span></a>
-														<a href="" id="playy"  title="Reproducir"><span class="jp-play glyphicon glyphicon-play"></span></a>
-														<a href="#" title="Siguiente"><span class="jp-next glyphicon glyphicon-step-forward" aria-hidden="true"></span></a>
 
+												<li id="li7" onclick="li('li7');ver('hijo3','hijo2','hijo','hijo4','hijo5','hijo6');">
+													<a href="#" class="si">
+														<span>
+															<svg class="svg-icon icon3 svg-icon-album" viewBox="0 0 12 12" aria-hidden="true" height="16" width="16"><g><path d="M6,12 C2.68630007,12 0,9.31370447 0,6.00000293 C0,2.68627795 2.68630007,0 6,0 C9.31369993,0 12,2.68627795 12,6.00000293 C11.9999941,9.31370447 9.31369993,12 6,12 L6,12 L6,12 Z M6,2.99999854 C4.34315297,2.99999854 3.00000293,4.34313751 3.00000293,5.99999707 C3.00000293,7.65684491 4.34315297,8.99999561 6,8.99999561 C7.65684703,8.99999561 8.99999707,7.65684491 8.99999707,5.99999707 C8.99999707,4.34314337 7.65684703,2.99999854 6,2.99999854 L6,2.99999854 L6,2.99999854 Z M4,6 C4,4.89544508 4.89545094,4 6,4 C7.10454906,4 8,4.89544508 8,6 C8,7.10454906 7.10454906,8 6,8 C4.89545094,8 4,7.10454906 4,6 L4,6 Z M5,6 C5,6.55229635 5.44770365,7 6,7 C6.55229635,7 7,6.55229635 7,6 C6.99998828,5.44769193 6.55229635,5 6,5 C5.44770365,5 5,5.44769193 5,6 L5,6 Z"></path></g></svg></span>Albumes
+														</a>
+
+													</li>
+													<div class="hijo3" id="hijo3">
+														<p>3</p>
 													</div>
-													<div class="jp-volume-controls">			
-														<a href="#" title="Silencio"><span class="jp-mute glyphicon glyphicon-volume-off" id="iconos" aria-hidden="true"></span></a>
-														<div class="ocultoo" id="barravol">
-															<div class="jp-volume-bar ">
-																<div class="jp-volume-bar-value"></div>
-															</div></div>
 
-															<a href="#" class="ocultoo" id="volplus"><span class="jp-volume-max glyphicon glyphicon-volume-up " id="iconos" aria-hidden="true"></span></a>
 
+													<li  id="li8" onclick="li('li8');ver('hijo4','hijo2','hijo3','hijo','hijo5','hijo6');">
+														<a href="#"  class="si">
+															<span>
+																<svg class="svg-icon icon3 svg-icon-time" viewBox="0 0 12 12" aria-hidden="true" height="16" width="16"><g><path d="M11,6 C11,3.23857625 8.76142375,1 6,1 C3.23857625,1 1,3.23857625 1,6 C1,8.76142375 3.23857625,11 6,11 C8.76142375,11 11,8.76142375 11,6 Z M7,6.50952148 L7,3.49047852 C7,3.21505737 6.77614237,3 6.5,3 C6.23193359,3 6,3.21959471 6,3.49047852 L6,6 L4.49538898,6 C4.2157526,6 4,6.22385763 4,6.5 C4,6.76806641 4.2217932,7 4.49538898,7 L6.50461102,7 C6.64282453,7 6.76543159,6.94531282 6.85409473,6.85665508 C6.94267961,6.76617647 7,6.64418681 7,6.50952148 Z" fill-rule="evenodd"></path></g></svg></span>Actividad
+															</a>
+
+														</li>
+														<div class="hijo4" id="hijo4">
+															<p>4</p>
 														</div>
-														<div class="jp-toggles">
-															<a href="#" id="repetir" title="Repetir todas las canciones de la lista"><span class=" jp-repeat glyphicon glyphicon-refresh"  aria-hidden="true"></span></a>
-															<a href="#" id="ran" title="Activar modo aleatorio"><span class=" jp-shuffle glyphicon glyphicon-random" aria-hidden="true"></span></a>
-															<a href="#" id="cola" title="Lista de espera"><span class="glyphicon glyphicon-list-alt" id="iconos" >
-															</span></a>
-															<div class="hijo6 " id="hijo6" >
 
-																<div class="jp-playlist" >
-																	<div id="listaa">
-																		<div id="sublistaa">
-																			<div>
-																				<h2 class="espera elip estilo">Lista de espera</h2>
-																				<h3 class="total elip estilo">15 canciones 4:34:43</h3>
-																				<div id="chek">
-																					<input type="checkbox" name="chk3" id="chk3"><label for="chk3"><p >Recomendaciones automaticas</p> </label>
-																				</div>
-																			</div>
+
+														<li  id="li9" onclick="li('li9');ver('hijo5','hijo2','hijo3','hijo4','hijo','hijo6')">
+															<a href="#" class="si">
+																<span>
+																	<svg class="svg-icon icon3 svg-icon-app" viewBox="0 0 12 12" aria-hidden="true" height="16" width="16"><g><path d="M0.375518305,6.90836424 C-0.126157409,6.40668852 -0.124187159,5.59134123 0.375518305,5.09163576 L5.09163576,0.375518305 C5.59331148,-0.126157409 6.40865877,-0.124187159 6.90836424,0.375518305 L11.6244817,5.09163576 C12.1261574,5.59331148 12.1241872,6.40865877 11.6244817,6.90836424 L6.90836424,11.6244817 C6.40668852,12.1261574 5.59134123,12.1241872 5.09163576,11.6244817 L0.375518305,6.90836424 L0.375518305,6.90836424 Z M8.56634425,6.00000601 L4.9734623,3.9469246 L4.9734623,8.0530754 L8.56634425,6.00000601 L8.56634425,6.00000601 Z"></path></g></svg></span>Aplicaciones
+																</a> 
+
+															</li>
+															<div class="hijo5" id="hijo5">
+																<span class="azul">0 <span class="apps">Aplicaciones</span></span>
+																<div class="alrededor">
+																	<div class="paddd">
+																		<span class="reco">Deezer recomienda:</span>
+																		<div>
+																			<img src="img/disney.jpg" class="disney" width="320" height="120">
+																		</div>
+																		<div class="content">
+																			<table class="dis" >
+																				<tr>
+																					<td >
+																						<div style="padding-top:6px; "><span class="fath">Disney</span></div>
+																						<div style="padding-bottom:8px; "> <span class="son">Disney Magic !</span></div>
+																					</td>
+																					<td>
+																						<span class="glyphicon glyphicon-heart cor"></span>
+																					</td>
+																				</tr>
+																			</table>
 
 																		</div>
+
+																	</div>	
+																</div>
+																<div class="mar">
+																	<table >
+																		<tr>
+																			<td>
+																				<button class="plus"><span class="glyphicon glyphicon-plus"></button>
+																			</td>
+																			<td id="can">
+																				<span class="col-xs-12 fath2">Descubre nuestras apps</span>
+																				<span class="col-xs-12 son2">¡Juegos y musica!</span>
+																			</td>
+																		</tr>
+																	</table>
+																</div>
+															</div>
+														</ul>
+														<div id="jp_container_1"  class="jp-video jp-video-270p" role="application" aria-label="media player">
+															<div class="jp-type-playlist" >
+																<span style="position: absolute;" id="detalles">
+																	<p class="nombresong"><a href="#" id="nombresong"></a></p>
+																	<p class="nombreartista" style="margin-top: -5px">de<a href="#" id="nombreartista"></a></p>
+																</span>	
+																<div id="jquery_jplayer_1" class="jp-jplayer">
+
+																</div>
+																<div class="jp-gui">
+
+																	<div class="jp-interface">
+																		<div class="jp-progress">
+																			<div class="jp-seek-bar">
+																				<div class="jp-play-bar"></div>
+																			</div>
+																		</div>
+																		<div class="jp-current-time" role="timer" aria-label="time">&nbsp;</div>
+																		<div class="jp-duration" role="timer" aria-label="duration">&nbsp;</div>
+																		<div class="jp-controls-holder">
+																			<div class="jp-controls">
+
+																				<a href="#" title="Anterior"><span class="jp-previous glyphicon glyphicon-step-backward" aria-hidden="true"></span></a>
+																				<a href="" title="Pausa" id="pausee"><span class="jp-pause glyphicon glyphicon-pause"></span></a>
+																				<a href="" id="playy"  title="Reproducir"><span class="jp-play glyphicon glyphicon-play"></span></a>
+																				<a href="#" title="Siguiente"><span class="jp-next glyphicon glyphicon-step-forward" aria-hidden="true"></span></a>
+
+																			</div>
+																			<div class="jp-volume-controls">			
+																				<a href="#" title="Silencio"><span class="jp-mute glyphicon glyphicon-volume-off" id="iconos" aria-hidden="true"></span></a>
+																				<div class="ocultoo" id="barravol">
+																					<div class="jp-volume-bar ">
+																						<div class="jp-volume-bar-value"></div>
+																					</div></div>
+
+																					<a href="#" class="ocultoo" id="volplus"><span class="jp-volume-max glyphicon glyphicon-volume-up " id="iconos" aria-hidden="true"></span></a>
+
+																				</div>
+																				<div class="jp-toggles">
+																					<a href="#" id="repetir" title="Repetir todas las canciones de la lista"><span class=" jp-repeat glyphicon glyphicon-refresh"  aria-hidden="true"></span></a>
+																					<a href="#" id="ran" title="Activar modo aleatorio"><span class=" jp-shuffle glyphicon glyphicon-random" aria-hidden="true"></span></a>
+																					<a href="#" id="cola" title="Lista de espera"><span class="glyphicon glyphicon-list-alt" id="iconos" >
+																					</span></a>
+																					<div class="hijo6 " id="hijo6" >
+
+																						<div class="jp-playlist" >
+																							<div id="listaa">
+																								<div id="sublistaa">
+																									<div>
+																										<h2 class="espera elip estilo">Lista de espera</h2>
+																										<h3 class="total elip estilo">15 canciones 4:34:43</h3>
+																										<div id="chek">
+																											<input type="checkbox" name="chk3" id="chk3"><label for="chk3"><p >Recomendaciones automaticas</p> </label>
+																										</div>
+																									</div>
+
+																								</div>
+																							</div>
+																							<div id="ul">
+																								<ul id="listplay">
+																									<!-- The method Playlist.displayPlaylist() uses this unordered list -->
+																									<li>&nbsp;</li>
+																								</ul>
+																							</div>
+																						</div>
+																					</div>
+																				</div>
+																			</div>
+																			<div class="jp-details">
+																				<div class="jp-title" aria-label="title">&nbsp;</div>
+																			</div>
+																		</div>
 																	</div>
-																	<div id="ul">
-																		<ul id="listplay">
-																			<!-- The method Playlist.displayPlaylist() uses this unordered list -->
-																			<li>&nbsp;</li>
-																		</ul>
+
+																	<div class="jp-no-solution">
+																		<span>Update Required</span>
+																		To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.
 																	</div>
 																</div>
 															</div>
-														</div>
-													</div>
-													<div class="jp-details">
-														<div class="jp-title" aria-label="title">&nbsp;</div>
-													</div>
-												</div>
-											</div>
-
-											<div class="jp-no-solution">
-												<span>Update Required</span>
-												To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.
-											</div>
-										</div>
-									</div>
 
 									<!--
 									<div id="cover">
