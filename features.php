@@ -81,39 +81,39 @@
 	     <div class="dezer">
 	           <dl>
 	           <dt><h3 class="pa"><span class="azul1">Deezer</span></h3></dt>
-	     		<dd><a href="" style="text-decoration:none" class="der">Ofertas</a></dd>
-	     		<dd><a href="" style="text-decoration:none" class="der">Ventajas</a></dd>
-	     		<dd><a href="" style="text-decoration:none" class="der">Quiénes somos</a></dd>
-	     		<dd><a href="" style="text-decoration:none" class="der">Prensa</a></dd>
-	     		<dd><a href="" style="text-decoration:none" class="der">Ofertas de empleo Deezer</a></dd>
+	     		<dd><a href="javascript:;" style="text-decoration:none" class="der">Ofertas</a></dd>
+	     		<dd><a href="javascript:;" style="text-decoration:none" class="der">Ventajas</a></dd>
+	     		<dd><a href="javascript:;" style="text-decoration:none" class="der">Quiénes somos</a></dd>
+	     		<dd><a href="javascript:;" style="text-decoration:none" class="der">Prensa</a></dd>
+	     		<dd><a href="javascript:;" style="text-decoration:none" class="der">Ofertas de empleo Deezer</a></dd>
 	     	   </dl>
 	     </div>
 	     <div class="extras">
 	           <dl>
 	           <dt><h3 class="pa"><span class="azul1">Extras</span></h3></dt>
-	     		<dd><a href="" style="text-decoration:none" class="der">Developers </a></dd>
-	     		<dd><a href="" style="text-decoration:none" class="der">Sellos y artistas </a></dd>
+	     		<dd><a href="javascript:;" style="text-decoration:none" class="der">Developers </a></dd>
+	     		<dd><a href="javascript:;" style="text-decoration:none" class="der">Sellos y artistas </a></dd>
 	     	   </dl>
 	     </div>
 	     <div class="dispositivo">
 	           <dl>
 	           <dt><h3 class="pa"><span class="azul1">Dispositivos</span></h3></dt>
-	     		<dd><a href="" style="text-decoration:none" class="der">Android</a></dd>
-	     		<dd><a href="" style="text-decoration:none" class="der">iPhone - Ipod Touch - iPad </a></dd>
-	     		<dd><a href="" style="text-decoration:none" class="der">Windows Phone </a></dd>
-	     		<dd><a href="" style="text-decoration:none" class="der">PC/Mac</a></dd>
-	     		<dd><a href="" style="text-decoration:none" class="der">Tabletas</a></dd>
-	     		<dd><a href="" style="text-decoration:none" class="der">TV</a></dd>
-	     		<dd><a href="" style="text-decoration:none" class="der">Sistemas de audio</a></dd>
-	     		<dd><a href="" style="text-decoration:none" class="der">Automóviles</a></dd>
+	     		<dd><a href="javascript:;" style="text-decoration:none" class="der">Android</a></dd>
+	     		<dd><a href="javascript:;" style="text-decoration:none" class="der">iPhone - Ipod Touch - iPad </a></dd>
+	     		<dd><a href="javascript:;" style="text-decoration:none" class="der">Windows Phone </a></dd>
+	     		<dd><a href="javascript:;" style="text-decoration:none" class="der">PC/Mac</a></dd>
+	     		<dd><a href="javascript:;" style="text-decoration:none" class="der">Tabletas</a></dd>
+	     		<dd><a href="javascript:;" style="text-decoration:none" class="der">TV</a></dd>
+	     		<dd><a href="javascript:;" style="text-decoration:none" class="der">Sistemas de audio</a></dd>
+	     		<dd><a href="javascript:;" style="text-decoration:none" class="der">Automóviles</a></dd>
 	     	   </dl>
 	     </div>
 	     <div class="legal">
 	           <dl>
 	           <dt><h3 class="pa"><span class="azul1">Legal</span></h3></dt>
-	     		<dd><a href="" style="text-decoration:none" class="der">Condiciones generales de uso</a></dd>
-	     		<dd><a href="" style="text-decoration:none" class="der">Datos personales y cookies</a></dd>
-	     		<dd><a href="" style="text-decoration:none" class="der">Aviso legal</a></dd>
+	     		<dd><a href="javascript:;" style="text-decoration:none" class="der">Condiciones generales de uso</a></dd>
+	     		<dd><a href="javascript:;" style="text-decoration:none" class="der">Datos personales y cookies</a></dd>
+	     		<dd><a href="javascript:;" style="text-decoration:none" class="der">Aviso legal</a></dd>
 	     </div>
 	     <div class="separador"></div>
 	     <div class="info">
