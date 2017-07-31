@@ -299,6 +299,7 @@ function abrir(){
 
 
 
+
 $("#cola").click(function(){
     $("#li6").css("background-color","#23232c");
          $("#li6 .si").css("color","#C2C2CA");
@@ -362,6 +363,14 @@ function playlists(){
   $("#hijo2").css({"visibility":"hidden","opacity":"0"});
   $("#drop").css({"visibility":"hidden","opacity":"0"});
   $("#ifra").html('<iframe class="contenido" src="perfil.php?accion=3" frameborder="0" id="pru" ></iframe>');
+}
+
+function albums(){
+  $("#li7 .si").css("color","#C2C2CA");
+  $("#li7").css("background-color","#23232c");
+  $("#hijo3").css({"visibility":"hidden","opacity":"0"});
+  $("#drop").css({"visibility":"hidden","opacity":"0"});
+  $("#ifra").html('<iframe class="contenido" src="perfil.php?accion=4" frameborder="0" id="pru" ></iframe>');
 }
 
 $("#modal-on").click(function(){

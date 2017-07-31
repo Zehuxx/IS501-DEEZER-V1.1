@@ -630,6 +630,12 @@ position: absolute;
   color: white;
 }
 
+.add2{
+  margin-top: 22px;
+  font-size: 16px;
+  color: white;
+}
+
 #otros tr td:hover{
     background-color: #d1d1d7;
     color: #23232d;
@@ -780,6 +786,12 @@ position: absolute;
   margin-top: 20px;
 }
 
+.margen3{
+  margin-left: 23px;
+  margin-right: 21px;
+  margin-top: 23px;
+}
+
 
 .color-primary {
     color: #007feb!important;
@@ -791,24 +803,7 @@ position: absolute;
 
 
 
-.hijo2 {
-    opacity: 0;
-    position: absolute;
-    visibility: hidden;
-    overflow: hidden;
-    width: 368px;
 
-    letter-spacing: .25px;
-    height: 701px; 
-    background-color: #F8FAFA;
-    color: #72727d;
-    font-family: "Lucida Grande",Arial,sans-serif;
-    font-size: 18px;
-    line-height: 1.33333333;
-    margin-left: 231px; 
-    margin-top: -320px;
-    transition-duration:  0.4s;
-}
 
 .hijo5 {
     opacity: 0;
@@ -838,7 +833,23 @@ position: absolute;
     transition-duration:  0.4s;
 }
 
-
+.hijo2 {
+    opacity: 0;
+    position: absolute;
+    visibility: hidden;
+    overflow: hidden;
+    width: 368px;
+    letter-spacing: .25px;
+    height: 701px; 
+    background-color: #F8FAFA;
+    color: #72727d;
+    font-family: "Lucida Grande",Arial,sans-serif;
+    font-size: 18px;
+    line-height: 1.33333333;
+    margin-left: 231px; 
+    margin-top: -320px;
+    transition-duration:  0.4s;
+}
 
 
 .hijo3 {
@@ -849,7 +860,11 @@ position: absolute;
     width: 368px;
     height: 701px; 
     background-color: #F8FAFA;
-
+    color: #72727d;
+    letter-spacing: .25px;
+    font-family: "Lucida Grande",Arial,sans-serif;
+    font-size: 18px;
+    line-height: 1.33333333;
     margin-left: 231px; 
     margin-top: -360px;
     transition-duration:  0.4s;

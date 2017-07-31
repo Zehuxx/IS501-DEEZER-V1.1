@@ -209,7 +209,7 @@
 			// Make both arrays point to the same object elements. Gives us 2 different arrays, each pointing to the same actual object. ie., Not copies of the object.
 			$.each(this.original, function(i) {
 				self.playlist[i] = self.original[i];
-			});
+			}); 
 		},
 		_refresh: function(instant) {
 			/* instant: Can be undefined, true or a function.
