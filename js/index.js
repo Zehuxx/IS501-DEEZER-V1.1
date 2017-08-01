@@ -377,3 +377,26 @@ $("#modal-on").click(function(){
   $("#newplaylist").modal("show");
 });
 
+function seleccion(id,id2,id3){
+  if (id=="act") {
+   $(".subt-descr").text("Actividades"); 
+ }else{
+  if (id=="not") {
+    $(".subt-descr").text("Notificaciones");
+  }else{
+    if (id="sig") {
+      $(".subt-descr").text("Seguidores");
+    }
+  }
+}
+
+  
+  
+
+  $("#"+id2).css("background-color","#F8FAFA");
+  $("#"+id3).css("background-color","#F8FAFA");
+  $("#"+id).css("background-color","white");
+  $("#"+id2).children("span").css("color","#92929d");
+  $("#"+id3).children("span").css("color","#92929d");
+  $("#"+id).children("span").css("color","blue");
+}

@@ -630,6 +630,141 @@ position: absolute;
   color: white;
 }
 
+#three{
+  width: 369px;
+  border:1px solid #dedee3;
+}
+#three tr td span{
+ padding: 12px 0px;
+ cursor: pointer;
+}
+
+.titulo-descr{
+padding: 17px 24px;
+}
+
+.subt-descr{
+
+  font-size: 18px;
+  color: #32323d;
+  letter-spacing: .25px;
+  font-family: "Open Sans",Arial,sans-serif;
+  font-weight: 400;
+  line-height: 1.33333333;
+}
+
+.same{
+      background-color: transparent;
+    color: #92929d;
+    display: block;
+    font-size: 14px;
+    text-align: center;
+}
+
+.facebook{
+  background-color: #3b5998;
+    border-color: #3b5998;
+}
+
+.facebook:hover {
+    background-color: #2c4372;
+    border-color: #2c4372;
+}
+
+.twitter:hover {
+    background-color: #43b7ea;
+    border-color: #43b7ea;
+}
+
+.twitter{
+background-color: #37abde;
+    border-color: #37abde;
+}
+
+.google:hover {
+    background-color: #a73725;
+    border-color: #a73725;
+}
+
+.google{
+  background-color: #df4a32;
+    border-color: #df4a32;
+}
+
+.tooltip{
+  font-size: 10px;
+}
+
+.conec{
+      font-family: "Open Sans",Arial,sans-serif;
+        color: #92929d;
+    line-height: 16px;
+    font-size: 12px;
+    text-align: center;
+    margin-top: 55px;
+ margin-left: 55px;
+ position: absolute;
+}
+
+.alone{
+  color: #23232d;
+    font-size: 14px;
+    margin-top: 24px;
+    font-family: "Open Sans",Arial,sans-serif;
+    text-align: center;
+margin-left: 137px;
+position: absolute;
+}
+
+.botones{
+  margin-top: 110px;
+  margin-left: 110px;
+}
+
+.letters{
+      display: inline-block;
+    font-family: "Open Sans",Arial,sans-serif;
+    font-weight: 700;
+    padding-left: 30px;
+    vertical-align: middle;
+}
+
+.face{
+margin-right: 20px;
+}
+
+.goo{
+margin-right: 27px;
+}
+
+.twi{
+ margin-right: 37px; 
+}
+
+.btn-social{
+    outline: 0px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 12px;
+    line-height: 16px;
+    margin: 0;
+    padding: 4px 12px;
+    position: relative;
+    text-align: center;
+    vertical-align: middle;
+    transition-duration: .15s;
+    transition-property: background-color,border-color,color,opacity;
+}
+
+
+.fried{
+  margin-top:67px;
+  margin-left: 156px; 
+}
+
 .add2{
   margin-top: 22px;
   font-size: 16px;
@@ -674,6 +809,12 @@ position: absolute;
   width: 100%
 }
 
+.lineahr3{
+  background-color: #e8e8ec;
+  height: 1px;
+  width: 100%
+}
+
 .addplay{
   width: 56px;
   height: 56px;
@@ -691,6 +832,12 @@ position: absolute;
 
 .separacion{
   height:5px;
+  
+}
+
+
+.separacion2{
+  height:10px;
   
 }
 

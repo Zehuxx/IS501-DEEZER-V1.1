@@ -324,142 +324,197 @@ function cortar3($text){
 																			<li  id="li8" onclick="li('li8');ver('hijo4','hijo2','hijo3','hijo','hijo5','hijo6');">
 																				<a href="#"  class="si">
 																					<span>
-																						<svg class="svg-icon icon3 svg-icon-time" viewBox="0 0 12 12" aria-hidden="true" height="16" width="16"><g><path d="M11,6 C11,3.23857625 8.76142375,1 6,1 C3.23857625,1 1,3.23857625 1,6 C1,8.76142375 3.23857625,11 6,11 C8.76142375,11 11,8.76142375 11,6 Z M7,6.50952148 L7,3.49047852 C7,3.21505737 6.77614237,3 6.5,3 C6.23193359,3 6,3.21959471 6,3.49047852 L6,6 L4.49538898,6 C4.2157526,6 4,6.22385763 4,6.5 C4,6.76806641 4.2217932,7 4.49538898,7 L6.50461102,7 C6.64282453,7 6.76543159,6.94531282 6.85409473,6.85665508 C6.94267961,6.76617647 7,6.64418681 7,6.50952148 Z" fill-rule="evenodd"></path></g></svg></span>Actividad
+																						<svg class="svg-icon icon3 svg-icon-time" viewBox="0 0 12 12" aria-hidden="true" height="16" width="16"><g><path d="M11,6 C11,3.23857625 8.76142375,1 6,1 C3.23857625,1 1,3.23857625 1,6 C1,8.76142375 3.23857625,11 6,11 C8.76142375,11 11,8.76142375 11,6 Z M7,6.50952148 L7,3.49047852 C7,3.21505737 6.77614237,3 6.5,3 C6.23193359,3 6,3.21959471 6,3.49047852 L6,6 L4.49538898,6 C4.2157526,6 4,6.22385763 4,6.5 C4,6.76806641 4.2217932,7 4.49538898,7 L6.50461102,7 C6.64282453,7 6.76543159,6.94531282 6.85409473,6.85665508 C6.94267961,6.76617647 7,6.64418681 7,6.50952148 Z" fill-rule="evenodd"></path></g></svg></span>Actividades
 																					</a>
 
 																				</li>
 																				<div class="hijo4" id="hijo4">
-																					<p>4</p>
-																				</div>
+																					<table id="three" border="1">
+																						<tr>
+																							<td  id="act" style="background-color: #fff" onclick="seleccion('act','not','sig');">
+																								<span class="glyphicon glyphicon-time same" style="color: blue" data-toggle="tooltip" data-placement="bottom" title="Actividad"></span>
+																							</td>
+																							<td id="not" onclick="seleccion('not','act','sig');">
+																								<span class="glyphicon glyphicon-music same" data-toggle="tooltip" data-placement="bottom" title="Notificaciones"></span>
+																							</td>
+																							<td id="sig" onclick="seleccion('sig','not','act');">
+																								<span class="glyphicon glyphicon-user same" data-toggle="tooltip" data-placement="bottom" title="Siguiendo"></span>
+																							</td>
 
+																						</table>
+																						<div class="titulo-descr">
+																							<span class="subt-descr">Actividad</span>
 
-																				<li  id="li9" onclick="li('li9');ver('hijo5','hijo2','hijo3','hijo4','hijo','hijo6')">
-																					<a href="#" class="si">
-																						<span>
-																							<svg class="svg-icon icon3 svg-icon-app" viewBox="0 0 12 12" aria-hidden="true" height="16" width="16"><g><path d="M0.375518305,6.90836424 C-0.126157409,6.40668852 -0.124187159,5.59134123 0.375518305,5.09163576 L5.09163576,0.375518305 C5.59331148,-0.126157409 6.40865877,-0.124187159 6.90836424,0.375518305 L11.6244817,5.09163576 C12.1261574,5.59331148 12.1241872,6.40865877 11.6244817,6.90836424 L6.90836424,11.6244817 C6.40668852,12.1261574 5.59134123,12.1241872 5.09163576,11.6244817 L0.375518305,6.90836424 L0.375518305,6.90836424 Z M8.56634425,6.00000601 L4.9734623,3.9469246 L4.9734623,8.0530754 L8.56634425,6.00000601 L8.56634425,6.00000601 Z"></path></g></svg></span>Aplicaciones
-																						</a> 
-
-																					</li>
-																					<div class="hijo5" id="hijo5">
-																						<span class="azul">0 <span class="apps">Aplicaciones</span></span>
-																						<div class="alrededor">
-																							<div class="paddd">
-																								<span class="reco">Deezer recomienda:</span>
-																								<div>
-																									<img src="img/disney.jpg" class="disney" width="320" height="120">
-																								</div>
-																								<div class="content">
-																									<table class="dis" >
-																										<tr>
-																											<td >
-																												<div style="padding-top:6px; "><span class="fath">Disney</span></div>
-																												<div style="padding-bottom:8px; "> <span class="son">Disney Magic !</span></div>
-																											</td>
-																											<td>
-																												<span class="glyphicon glyphicon-heart cor"></span>
-																											</td>
-																										</tr>
-																									</table>
-
-																								</div>
-
-																							</div>	
 																						</div>
-																						<div class="mar">
-																							<table >
-																								<tr>
-																									<td>
-																										<button class="plus"><span class="glyphicon glyphicon-plus"></button>
-																									</td>
-																									<td id="can">
-																										<span class="col-xs-12 fath2">Descubre nuestras apps</span>
-																										<span class="col-xs-12 son2">¡Juegos y musica!</span>
-																									</td>
-																								</tr>
-																							</table>
-																						</div>
+                                                                                        <div class="lineahr3"></div>
+                                                                                        <div class="contenido">
+                                                                                        	<img src="img/friends.png" class="fried" width="56" height="56">
+                                                                                        	<div>
+                                                                                        	<span class="alone">No estes solo.</span>
+                                                                                        	<span class="conec">Conéctate a tus redes sociales para encontrar<br> a tus amigos.</span>
+                                                                                        	</div>
+                                                                                            <div>
+                                                                                            	<table class="botones">
+                                                                                            		<tr>
+                                                                                            			<td>
+                                                                                            				<button class="btn-social facebook">
+                                                                                            				<img src="img/facebook.svg" width="20" height="20" >
+                                                                                            					<span class="letters face">Facebook</span>
+                                                                                            				</button>
+                                                                                            			</td>
+                                                                                            		</tr>
+                                                                                            		<tr class="separacion2"></tr>
+                                                                                            		<tr>
+                                                                                            			<td>
+                                                                                            				<button class="btn-social twitter">
+                                                                                            				<img src="img/twitter.svg" width="18" height="18">
+                                                                                            					<span class="letters twi">Twitter</span>
+                                                                                            				</button>
+                                                                                            			</td>
+                                                                                            		</tr>
+                                                                                            		<tr class="separacion2"></tr>
+                                                                                            		<tr>
+                                                                                            			<td>
+                                                                                            				<button class="btn-social google">
+                                                                                            				<img src="img/google.svg" width="20" height="20">
+                                                                                            					<span class="letters goo">Google+</span>
+                                                                                            				</button>
+                                                                                            			</td>
+                                                                                            		</tr>
+                                                                                            	</table>
+                                                                                            </div>
+                                                                                        	
+                                                                                        </div>
 																					</div>
-																				</ul>
-																				<div id="jp_container_1"  class="jp-video jp-video-270p" role="application" aria-label="media player">
-																					<div class="jp-type-playlist" >
-																						<span style="position: absolute;" id="detalles">
-																							<p class="nombresong"><a href="#" id="nombresong"></a></p>
-																							<p class="nombreartista" style="margin-top: -5px">de<a href="#" id="nombreartista"></a></p>
-																						</span>	
-																						<div id="jquery_jplayer_1" class="jp-jplayer">
 
+
+																					<li  id="li9" onclick="li('li9');ver('hijo5','hijo2','hijo3','hijo4','hijo','hijo6')">
+																						<a href="#" class="si">
+																							<span>
+																								<svg class="svg-icon icon3 svg-icon-app" viewBox="0 0 12 12" aria-hidden="true" height="16" width="16"><g><path d="M0.375518305,6.90836424 C-0.126157409,6.40668852 -0.124187159,5.59134123 0.375518305,5.09163576 L5.09163576,0.375518305 C5.59331148,-0.126157409 6.40865877,-0.124187159 6.90836424,0.375518305 L11.6244817,5.09163576 C12.1261574,5.59331148 12.1241872,6.40865877 11.6244817,6.90836424 L6.90836424,11.6244817 C6.40668852,12.1261574 5.59134123,12.1241872 5.09163576,11.6244817 L0.375518305,6.90836424 L0.375518305,6.90836424 Z M8.56634425,6.00000601 L4.9734623,3.9469246 L4.9734623,8.0530754 L8.56634425,6.00000601 L8.56634425,6.00000601 Z"></path></g></svg></span>Aplicaciones
+																							</a> 
+
+																						</li>
+																						<div class="hijo5" id="hijo5">
+																							<span class="azul">0 <span class="apps">Aplicaciones</span></span>
+																							<div class="alrededor">
+																								<div class="paddd">
+																									<span class="reco">Deezer recomienda:</span>
+																									<div>
+																										<img src="img/disney.jpg" class="disney" width="320" height="120">
+																									</div>
+																									<div class="content">
+																										<table class="dis" >
+																											<tr>
+																												<td >
+																													<div style="padding-top:6px; "><span class="fath">Disney</span></div>
+																													<div style="padding-bottom:8px; "> <span class="son">Disney Magic !</span></div>
+																												</td>
+																												<td>
+																													<span class="glyphicon glyphicon-heart cor"></span>
+																												</td>
+																											</tr>
+																										</table>
+
+																									</div>
+
+																								</div>	
+																							</div>
+																							<div class="mar">
+																								<table >
+																									<tr>
+																										<td>
+																											<button class="plus"><span class="glyphicon glyphicon-plus"></button>
+																										</td>
+																										<td id="can">
+																											<span class="col-xs-12 fath2">Descubre nuestras apps</span>
+																											<span class="col-xs-12 son2">¡Juegos y musica!</span>
+																										</td>
+																									</tr>
+																								</table>
+																							</div>
 																						</div>
-																						<div class="jp-gui">
+																					</ul>
+																					<div id="jp_container_1"  class="jp-video jp-video-270p" role="application" aria-label="media player">
+																						<div class="jp-type-playlist" >
+																							<span style="position: absolute;" id="detalles">
+																								<p class="nombresong"><a href="#" id="nombresong"></a></p>
+																								<p class="nombreartista" style="margin-top: -5px">de<a href="#" id="nombreartista"></a></p>
+																							</span>	
+																							<div id="jquery_jplayer_1" class="jp-jplayer">
 
-																							<div class="jp-interface">
-																								<div class="jp-progress">
-																									<div class="jp-seek-bar">
-																										<div class="jp-play-bar"></div>
+																							</div>
+																							<div class="jp-gui">
+
+																								<div class="jp-interface">
+																									<div class="jp-progress">
+																										<div class="jp-seek-bar">
+																											<div class="jp-play-bar"></div>
+																										</div>
 																									</div>
-																								</div>
-																								<div class="jp-current-time" role="timer" aria-label="time">&nbsp;</div>
-																								<div class="jp-duration" role="timer" aria-label="duration">&nbsp;</div>
-																								<div class="jp-controls-holder">
-																									<div class="jp-controls">
+																									<div class="jp-current-time" role="timer" aria-label="time">&nbsp;</div>
+																									<div class="jp-duration" role="timer" aria-label="duration">&nbsp;</div>
+																									<div class="jp-controls-holder">
+																										<div class="jp-controls">
 
-																										<a href="#" title="Anterior"><span class="jp-previous glyphicon glyphicon-step-backward" aria-hidden="true"></span></a>
-																										<a href="" title="Pausa" id="pausee"><span class="jp-pause glyphicon glyphicon-pause"></span></a>
-																										<a href="" id="playy"  title="Reproducir"><span class="jp-play glyphicon glyphicon-play"></span></a>
-																										<a href="#" title="Siguiente"><span class="jp-next glyphicon glyphicon-step-forward" aria-hidden="true"></span></a>
-
-																									</div>
-																									<div class="jp-volume-controls">			
-																										<a href="#" title="Silencio"><span class="jp-mute glyphicon glyphicon-volume-off" id="iconos" aria-hidden="true"></span></a>
-																										<div class="ocultoo" id="barravol">
-																											<div class="jp-volume-bar ">
-																												<div class="jp-volume-bar-value"></div>
-																											</div></div>
-
-																											<a href="#" class="ocultoo" id="volplus"><span class="jp-volume-max glyphicon glyphicon-volume-up " id="iconos" aria-hidden="true"></span></a>
+																											<a href="#" title="Anterior"><span class="jp-previous glyphicon glyphicon-step-backward" aria-hidden="true"></span></a>
+																											<a href="" title="Pausa" id="pausee"><span class="jp-pause glyphicon glyphicon-pause"></span></a>
+																											<a href="" id="playy"  title="Reproducir"><span class="jp-play glyphicon glyphicon-play"></span></a>
+																											<a href="#" title="Siguiente"><span class="jp-next glyphicon glyphicon-step-forward" aria-hidden="true"></span></a>
 
 																										</div>
-																										<div class="jp-toggles">
-																											<a href="#" id="repetir" title="Repetir todas las canciones de la lista"><span class=" jp-repeat glyphicon glyphicon-refresh"  aria-hidden="true"></span></a>
-																											<a href="#" id="ran" title="Activar modo aleatorio"><span class=" jp-shuffle glyphicon glyphicon-random" aria-hidden="true"></span></a>
-																											<a href="#" id="cola" title="Lista de espera"><span class="glyphicon glyphicon-list-alt" id="iconos" >
-																											</span></a>
-																											<div class="hijo6 " id="hijo6" >
+																										<div class="jp-volume-controls">			
+																											<a href="#" title="Silencio"><span class="jp-mute glyphicon glyphicon-volume-off" id="iconos" aria-hidden="true"></span></a>
+																											<div class="ocultoo" id="barravol">
+																												<div class="jp-volume-bar ">
+																													<div class="jp-volume-bar-value"></div>
+																												</div></div>
 
-																												<div class="jp-playlist" >
-																													<div id="listaa">
-																														<div id="sublistaa">
-																															<div>
-																																<h2 class="espera elip estilo">Lista de espera</h2>
-																																<h3 class="total elip estilo">15 canciones 4:34:43</h3>
-																																<div id="chek">
-																																	<input type="checkbox" name="chk3" id="chk3"><label for="chk3"><p >Recomendaciones automaticas</p> </label>
+																												<a href="#" class="ocultoo" id="volplus"><span class="jp-volume-max glyphicon glyphicon-volume-up " id="iconos" aria-hidden="true"></span></a>
+
+																											</div>
+																											<div class="jp-toggles">
+																												<a href="#" id="repetir" title="Repetir todas las canciones de la lista"><span class=" jp-repeat glyphicon glyphicon-refresh"  aria-hidden="true"></span></a>
+																												<a href="#" id="ran" title="Activar modo aleatorio"><span class=" jp-shuffle glyphicon glyphicon-random" aria-hidden="true"></span></a>
+																												<a href="#" id="cola" title="Lista de espera"><span class="glyphicon glyphicon-list-alt" id="iconos" >
+																												</span></a>
+																												<div class="hijo6 " id="hijo6" >
+
+																													<div class="jp-playlist" >
+																														<div id="listaa">
+																															<div id="sublistaa">
+																																<div>
+																																	<h2 class="espera elip estilo">Lista de espera</h2>
+																																	<h3 class="total elip estilo">15 canciones 4:34:43</h3>
+																																	<div id="chek">
+																																		<input type="checkbox" name="chk3" id="chk3"><label for="chk3"><p >Recomendaciones automaticas</p> </label>
+																																	</div>
 																																</div>
-																															</div>
 
+																															</div>
 																														</div>
-																													</div>
-																													<div id="ul">
-																														<ul id="listplay">
-																															<!-- The method Playlist.displayPlaylist() uses this unordered list -->
-																															<li>&nbsp;</li>
-																														</ul>
+																														<div id="ul">
+																															<ul id="listplay">
+																																<!-- The method Playlist.displayPlaylist() uses this unordered list -->
+																																<li>&nbsp;</li>
+																															</ul>
+																														</div>
 																													</div>
 																												</div>
 																											</div>
 																										</div>
-																									</div>
-																									<div class="jp-details">
-																										<div class="jp-title" aria-label="title">&nbsp;</div>
+																										<div class="jp-details">
+																											<div class="jp-title" aria-label="title">&nbsp;</div>
+																										</div>
 																									</div>
 																								</div>
-																							</div>
 
-																							<div class="jp-no-solution">
-																								<span>Update Required</span>
-																								To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.
+																								<div class="jp-no-solution">
+																									<span>Update Required</span>
+																									To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.
+																								</div>
 																							</div>
 																						</div>
-																					</div>
 
 									<!--
 									<div id="cover">
@@ -545,6 +600,10 @@ function cortar3($text){
 								
 								$(document).ready(function(){
 
+									$(function () {
+										$('[data-toggle="tooltip"]').tooltip();
+									});
+
 									$(".xxx").click(function(event){
 
 										event.stopPropagation();
@@ -590,17 +649,17 @@ function cortar3($text){
 										audioFullScreen: true
 									});
 
-	$(".repo").click(function() {
-		myPlaylist.add(
-			{
-				title:"Big Buck Bunny Trailer",
-				artist:"Blender Foundation",
-				m4v:"http://www.jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v",
-				ogv:"http://www.jplayer.org/video/ogv/Big_Buck_Bunny_Trailer.ogv",
-				webmv: "http://www.jplayer.org/video/webm/Big_Buck_Bunny_Trailer.webm",
-				poster:"http://www.jplayer.org/video/poster/Big_Buck_Bunny_Trailer_480x270.png"
-			});
-	});
+									$(".repo").click(function() {
+										myPlaylist.add(
+										{
+											title:"Big Buck Bunny Trailer",
+											artist:"Blender Foundation",
+											m4v:"http://www.jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v",
+											ogv:"http://www.jplayer.org/video/ogv/Big_Buck_Bunny_Trailer.ogv",
+											webmv: "http://www.jplayer.org/video/webm/Big_Buck_Bunny_Trailer.webm",
+											poster:"http://www.jplayer.org/video/poster/Big_Buck_Bunny_Trailer_480x270.png"
+										});
+									});
 
 
 /*
