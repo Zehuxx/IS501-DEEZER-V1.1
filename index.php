@@ -24,7 +24,7 @@ function cortar3($text){
 		echo substr($text, 0, 20)."..."; 
 	}else{
 		echo $text;
-	}
+	} 
 
 }
 
@@ -74,7 +74,7 @@ function cortar3($text){
 
 				
 			</li>
-			<li  ><a id="start2" href="#" class="si" onclick="reload('hijoo');arreglo('start2','first2','start','first','mod','first3','start4','first4');"><p id="first2">RECOMENDACIONES</p></a>
+			<li onclick="ifra(2);" ><a id="start2" href="#" class="si" onclick="reload('hijoo');arreglo('start2','first2','start','first','mod','first3','start4','first4');"><p id="first2">RECOMENDACIONES</p></a>
 			</li>
 			<hr>
 			<li onclick="reload('hijoo')"  id="li3">

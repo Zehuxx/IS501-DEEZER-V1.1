@@ -4,7 +4,7 @@
 	position: relative;
 }
 
-#profile-photo{
+#profile-photo{ 
 	position: absolute;
 	top: 150px;
 	left: 315px;
@@ -318,9 +318,54 @@ hr{
     position: absolute;
 }
 
+.tarjetas{
+    background-color: #fff;
+    box-shadow: 0 1px 2px rgba(25,25,34,.15);
+    margin-top: 20px;
+    position: relative;
+    width: 1020px;
+    height: 388px;
+    transition-duration: .15s;
+    transition-property: box-shadow;
+}
+
+
+.tarjetas:hover {
+    box-shadow: 0 2px 4px rgba(25,25,34,.25);
+}
+
+
+
+
+
+
+
+
+
+
+.divider-text {
+    color: #92929d;
+    font-family: "Lucida Grande",Arial,sans-serif;
+    background-color: #f8f8f9;
+    font-size: 11px;
+    padding: 0 10px;
+    margin-left: 42%;
+    margin-top: -10px;
+    display: inline-block;
+    position: absolute;
+    z-index: 2;
+}
+
 #otros tr td:hover{
         background-color: #f3f3f5;
     color: #23232d;
+}
+
+.linea{
+     height: 1px;
+    background-color: #e8e8ec;
+    width:100%; 
+    margin-top: 40px;
 }
 
 .gly{
@@ -395,6 +440,17 @@ hr{
     background-color: red;
     width:90%; 
 }
+
+.linea22{
+    position: relative;
+    top: -52px;
+    left: 103px;
+    height: 1px;
+    background-color: #e8e8ec;
+    width:380px; 
+
+}
+
 
 
 .head{
@@ -495,6 +551,12 @@ hr{
     border-radius: 4px;
 }
 
+.perf-a{
+    width: 477px;
+    height: 352px;
+    border-radius: 4px;
+}
+
 
 .perf2{
     cursor: pointer;
@@ -509,6 +571,11 @@ hr{
 
 
 .fotos{
+    position: absolute;
+    margin-left: -16px;
+}
+
+.fotos-a{
     position: absolute;
     margin-left: -16px;
 }
@@ -538,6 +605,11 @@ hr{
       text-decoration: underline;
 }
 
+.name-play-a:hover{
+
+      text-decoration: underline;
+}
+
 
 
 .name-play{
@@ -546,9 +618,15 @@ hr{
       font-size: 14px;
 }
 
+.name-play-a{
+      cursor: pointer;
+      color: #32323d;
+      font-size: 18px;
+}
 
 
-.name-play,.tipop{
+
+.name-play,.tipop,.name-play-a,.tipop-a{
 
     font-family: "Open Sans",Arial,sans-serif;
     font-weight: 400; 
@@ -564,11 +642,23 @@ font-size: 12px;
 text-decoration: underline;
 }
 
+.tipop2-a:hover{
+    
+text-decoration: underline;
+}
+
 .tipop2{
 cursor: pointer;
 color: #72727d;
 font-size: 12px;
 }
+
+.tipop2-a{
+cursor: pointer;
+color: #72727d;
+font-size: 14px;
+}
+
 
 
 
@@ -576,6 +666,12 @@ font-size: 12px;
     position: absolute;
     top: 235px;
     left:2px;
+}
+
+.informacion-a{
+    position: absolute;
+    top: 35px;
+    left:30px;
 }
 
 .informacion2{
@@ -587,6 +683,21 @@ font-size: 12px;
 }
 
 
+.shadow{
+    border-radius: 2px;
+    color: #fff;
+    display: inline-block;
+    font-family: "Open Sans",Arial,sans-serif;
+    font-size: 10px;
+    font-weight: 300;
+    line-height: 1.33333333;
+    letter-spacing: .3px;
+    padding: 3px 6px;
+    vertical-align: top;
+    background-color: #32323d;
+    white-space: nowrap;
+}
+
 
 .dash2{
     background-color: transparent;
@@ -596,6 +707,16 @@ font-size: 12px;
     height: 280px;
     position: relative;
     margin-top: 22px;
+    margin-right:35.5px;
+}
+
+.dash2-a{
+    background-color: transparent;
+    border-radius: 4px;
+    width: 225px;
+    margin-left: 545px;
+    height: 280px;
+    position: relative;
     margin-right:35.5px;
 }
 
@@ -614,8 +735,96 @@ font-size: 12px;
     margin-top: 11px;
 }
 
+.andlisten{
+    position: relative;
+    border-bottom: 1px solid #efeff2;
+    color: #c2c2ca;
+    font-family: "Open Sans",Arial,sans-serif;
+    line-height: 1.33333333;
+    font-size: 12px;
+    top: 30px;
+    padding-bottom: 4px;
+    left: -50px;
+}
+
+.discos{
+position: relative;
+cursor: pointer;
+top: -32px;
+left: 18px;
+
+}
+
+.discos:hover{
+    text-decoration: underline;
+}
+
+.art-same{
+    position: relative;
+        top: 10px;
+    left: -70px;
+}
+
+.point:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.discos-content{
+position: relative;
+left: -170px;
+top: -15px;
+}
+
+.art-content{
+position: relative;
+top: 27px;
+left: -320px;
+}
+
+.art-alb{
+    color: #92929d;
+    font-style: normal;
+    font-family: "Open Sans",Arial,sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.33333333;
+    white-space: nowrap;
+}
+
+.reinv{
+    color: #c2c2ca;
+    font-family: "Open Sans",Arial,sans-serif;
+    line-height: 1.33333333;
+    font-size: 12px;
+}
+
+.otherdetails{
+    position: relative;
+    top: 130px;
+}
+
+.image-a{
+    cursor: pointer;
+}
+
+
 .ubicar{
     top: 220px;
+    position: relative;
+    margin-top:-50px;
+    margin-left: 10px;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.adjus{
+    position: relative;
+    top: 45px;
+}
+
+.ubicar-a{
+    top: 340px;
     position: relative;
     margin-top:-50px;
     margin-left: 10px;
@@ -651,6 +860,18 @@ font-size: 12px;
 }
 
 .change{
+    background-color: #efeff2;
+    bottom: 0; 
+    content: ''; 
+    opacity: 1; 
+    position: absolute; 
+    cursor: pointer;
+    top: 0; 
+    transition-duration: .15s; 
+    transition-property: opacity; 
+}
+
+.change-a{
     background-color: #efeff2;
     bottom: 0; 
     content: ''; 
