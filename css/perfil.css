@@ -324,24 +324,135 @@ hr{
     margin-top: 20px;
     position: relative;
     width: 1020px;
-    height: 388px;
+    min-height: 388px;
+    height: auto;
     transition-duration: .15s;
     transition-property: box-shadow;
 }
 
+.comments{
+    position: relative;
+    margin-top: 350px;
+    margin-left: 90px;
+    display: none;
+    transition-duration: 0.5s;
+}
+.comments textarea{
+ resize: none;
+ width: 910px;
+ height: 100px;
+ color: #92919d;
+ font-family: "Open Sans",Arial,sans-serif;
+ font-size: 12px;
+ margin-bottom: 10px;
+}
+
+.alb-bot{
+    cursor: pointer;
+    background-color: #92929d;
+    border: 0px;
+    border-radius: 3px;
+    padding: 2px 3px;
+}
+
+.faltan{
+    color: #92929d;
+    position: relative;
+    left: -110px;
+    float: right;
+    top: 8px;
+    font-size: 11px;
+    font-family: "Lucida Grande",Arial,sans-serif;
+}
+
+.comentarios{
+    padding-top: 60px;
+}
+
+.publicar{
+    background-color: #f8f8f9;
+    border: solid 1px #d1d1d7;
+    color: #23232d;
+    font-size: 12px;
+    padding: 7px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-family: "Open Sans",Arial,sans-serif;
+    font-weight: 700;
+    position: relative;
+    right: -699px;
+    top: 5px;
+}
+
+.publicar:hover{
+    background-color: #fff;
+}
+
+.face-alb:hover{
+  background-color: #3b5998;
+}
+
+.twi-alb:hover{
+  background-color: #37abde;
+}
+
+.comm-alb{
+    position: relative;
+    left: -60px;
+    cursor: pointer;
+    top: 30px;
+}
 
 .tarjetas:hover {
     box-shadow: 0 2px 4px rgba(25,25,34,.25);
 }
 
+.fondo{
+    background-color: #f7f7f7;
+    border-radius: 3px;
+    padding: 10px;
+    position: relative;
+    top: -30px;
+    width: 910px;
+}
 
+.message{
+    font-family: "Lucida Grande",Arial,sans-serif;
+    font-size: 11px;
+    color: #72727d;
+    width: 900px;
+    line-height: 1.33333333;
+    white-space: pre-wrap;       /* css-3 */
+ white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+ white-space: -pre-wrap;      /* Opera 4-6 */
+ white-space: -o-pre-wrap;    /* Opera 7 */
+ word-wrap: break-word;       /* Internet Explorer 5.5+ */
+}
 
+.time-ago{
+    color: #72727d;
+    font-size: 11px;
+    font-family: "Lucida Grande",Arial,sans-serif;
+    line-height: 1.33333333;
+}
 
+.user-pic{
+    position: relative;
+    left: -60px;
+    cursor: pointer;
+}
 
+.user-alb{
+    color: #0a0a16;
+    cursor: pointer;
+    font-family: "Lucida Grande",Arial,sans-serif;
+    font-size: 11px;
+    line-height: 1.33333333;
+}
 
-
-
-
+.user-alb:hover{
+  text-decoration: underline;
+}
 
 .divider-text {
     color: #92929d;
@@ -451,6 +562,16 @@ hr{
 
 }
 
+
+.footer {
+    display: block;
+    background-color: #f8f8f9;
+    box-sizing: border-box;
+    height: 36px;
+    padding: 10px 20px;
+    position: relative;
+    top: 353px;
+}
 
 
 .head{
@@ -577,7 +698,7 @@ hr{
 
 .fotos-a{
     position: absolute;
-    margin-left: -16px;
+    margin-left: -17px;
 }
 
 
@@ -585,6 +706,50 @@ hr{
     cursor: default;
     position: absolute;
     margin-left: -16px;
+}
+
+.stylo{
+    color: #72727a;
+    padding-right: 5px;
+    font-size: 12px;
+}
+
+.alb-s{
+  left: -745px;
+  position: relative;
+}
+
+.alb-h{
+  left: -776px;
+  position: relative;
+}
+
+.alb-c{
+  left: -515px;
+  top: -20px;
+  position: relative;  
+}
+
+.cursor{
+    cursor: pointer;
+    
+}
+
+.ajustes{
+    height: 100px;
+        background-color: #f7f7f7;
+}
+
+.cursor:hover>span{
+    color: #32323a;
+}
+
+.stylo + span{
+    font-family: "Open Sans",Arial,sans-serif;
+    font-weight: 700;
+    color:#72727a;
+    font-size: 11px;
+    letter-spacing: normal;
 }
 
 
@@ -797,6 +962,14 @@ left: -320px;
     font-family: "Open Sans",Arial,sans-serif;
     line-height: 1.33333333;
     font-size: 12px;
+}
+
+.reinv2{
+    margin-top: 10px;
+    font-family: "Lucida Grande",Arial,sans-serif;
+    line-height: 1.33333333;
+    color: #92929d;
+    font-size: 11px;
 }
 
 .otherdetails{

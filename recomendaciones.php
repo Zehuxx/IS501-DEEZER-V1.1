@@ -97,7 +97,36 @@ function cortar($text){
 												</div>
 
 											</div>
+                                          <div class="footer">
+                                            <span class="cursor alb-h"><span class="glyphicon glyphicon-heart stylo" aria-hidden="true"></span><span>Añadir a Mi música</span></span>
+                                           <span class="cursor alb-s"><span class="glyphicon glyphicon-share stylo" aria-hidden="true"></span><span>Compartir</span></span>
+                                           <span class="cursor alb-c"><span class="glyphicon glyphicon-comment stylo" aria-hidden="true"></span><span>Comentar</span></span>
+                                          </div>
 
+                                          <div class="comments">
+                                            <img src="img/perfil.jpg" class="comm-alb" width="30" height="30">
+                                          	<textarea class="form-control ajustes"  maxlength="250">
+                                          	</textarea>
+                                             <span class="reinv2">COMPARTIR EN:</span>
+                                             <span class="alb-bot face-alb"><img src="img/facebook.svg" width="14" height="14"></span>
+                                             <span class="alb-bot twi-alb"><img src="img/twitter.svg" width="14" height="14"></span>
+                                             <span class="faltan">quedan 250 caracteres</span>
+                                             <span class="publicar">Publicar</span>
+                                             <div class="comentarios">
+                                                <?php
+                                                   for ($i=0; $i < 4; $i++) { 
+                                                   	echo
+                                                   	'<img src="img/perfil.jpg" class="user-pic" width="30" height="30">
+                                                   	<div class="fondo">
+                                                   		<span class="user-alb">Juan Soler <span class="time-ago"> - Hace 4 horas</span></span><br>
+                                                   		<span class="message" >dkskksskskkss</span>
+                                                   	</div>';
+                                                   }
+                                                ?>
+                                                
+
+                                             </div>
+                                          </div>
 
 										</div>
 
@@ -120,7 +149,14 @@ function cortar($text){
 							});
 
 							$(document).ready(function(){
-
+                                    
+                                 $(".alb-c").click(function(){
+                                 	if ($(".comments").css("display")=="none") {
+                                 	  $(".comments").css({"display":"block"});
+                                 	}else{
+                                 	 $(".comments").css({"display":"none"});
+                                 	}
+                                 });
 
 
 								$(".tot").click(function(){
