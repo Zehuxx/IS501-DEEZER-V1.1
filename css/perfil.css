@@ -737,7 +737,7 @@ hr{
 
 .ajustes{
     height: 100px;
-        background-color: #f7f7f7;
+    background-color: #f7f7f7;
 }
 
 .cursor:hover>span{
@@ -996,8 +996,12 @@ left: -320px;
     top: 45px;
 }
 
+.play-a{
+    top: 290px;
+}
+
 .ubicar-a{
-    top: 340px;
+    top: 290px;
     position: relative;
     margin-top:-50px;
     margin-left: 10px;

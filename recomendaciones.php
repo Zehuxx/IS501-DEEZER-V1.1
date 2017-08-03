@@ -52,13 +52,13 @@ function cortar($text){
 								</tr>
 							</table>
 							<div class="otherdetails">
-							<img src="img/goku.jpg" width="80" height="100" class="image-a">
-                              <span class="reinv discos">Discografía (58)</span>  
-                              
-                              <span class="reinv art-same">Artistas similares</span> 
-                              <span class="art-alb discos-content"><span class="point">Energía</span>, <span class="point">La Familia B Sides</span></span> 
-                              <span class="art-alb art-content"><span class="point">Zion & Lennox</span>, <span class="point">Dragon & Caballero</span>, <span class="point">J Balvin</span></span>
-                              <div class="linea22"></div>
+								<img src="img/goku.jpg" width="80" height="100" class="image-a">
+								<span class="reinv discos">Discografía (58)</span>  
+
+								<span class="reinv art-same">Artistas similares</span> 
+								<span class="art-alb discos-content"><span class="point">Energía</span>, <span class="point">La Familia B Sides</span></span> 
+								<span class="art-alb art-content"><span class="point">Zion & Lennox</span>, <span class="point">Dragon & Caballero</span>, <span class="point">J Balvin</span></span>
+								<div class="linea22"></div>
 							</div>
 
 						</div>
@@ -72,8 +72,9 @@ function cortar($text){
 								</div>
 
 							</div>
+							<div class="col-xs-3 circulo play-a"><span class="glyphicon glyphicon-play app" style="color: #fff" aria-hidden="true"></span></div>
 							<div class="ubicar-a">
-								<div class="col-xs-3 circulo"><span class="glyphicon glyphicon-play app" style="color: #fff" aria-hidden="true"></span></div>
+								
 								<div class="col-xs-3 circulo"><span class="glyphicon glyphicon-heart app" style="color: #007feb" aria-hidden="true"></span></div>
 								<div class="col-xs-3 circulo tot" data-trigger="focus"  data-placement="auto top"  data-toggle="popover"   data-html="true" data-content="
 								<table id='new2'>
@@ -97,36 +98,36 @@ function cortar($text){
 												</div>
 
 											</div>
-                                          <div class="footer">
-                                            <span class="cursor alb-h"><span class="glyphicon glyphicon-heart stylo" aria-hidden="true"></span><span>Añadir a Mi música</span></span>
-                                           <span class="cursor alb-s"><span class="glyphicon glyphicon-share stylo" aria-hidden="true"></span><span>Compartir</span></span>
-                                           <span class="cursor alb-c"><span class="glyphicon glyphicon-comment stylo" aria-hidden="true"></span><span>Comentar</span></span>
-                                          </div>
+											<div class="footer">
+												<span class="cursor alb-h"><span class="glyphicon glyphicon-heart stylo" aria-hidden="true"></span><span>Añadir a Mi música</span></span>
+												<span class="cursor alb-s"><span class="glyphicon glyphicon-share stylo" aria-hidden="true"></span><span>Compartir</span></span>
+												<span class="cursor alb-c"><span class="glyphicon glyphicon-comment stylo" aria-hidden="true"></span><span>Comentar</span></span>
+											</div>
 
-                                          <div class="comments">
-                                            <img src="img/perfil.jpg" class="comm-alb" width="30" height="30">
-                                          	<textarea class="form-control ajustes"  maxlength="250">
-                                          	</textarea>
-                                             <span class="reinv2">COMPARTIR EN:</span>
-                                             <span class="alb-bot face-alb"><img src="img/facebook.svg" width="14" height="14"></span>
-                                             <span class="alb-bot twi-alb"><img src="img/twitter.svg" width="14" height="14"></span>
-                                             <span class="faltan">quedan 250 caracteres</span>
-                                             <span class="publicar">Publicar</span>
-                                             <div class="comentarios">
-                                                <?php
-                                                   for ($i=0; $i < 4; $i++) { 
-                                                   	echo
-                                                   	'<img src="img/perfil.jpg" class="user-pic" width="30" height="30">
-                                                   	<div class="fondo">
-                                                   		<span class="user-alb">Juan Soler <span class="time-ago"> - Hace 4 horas</span></span><br>
-                                                   		<span class="message" >dkskksskskkss</span>
-                                                   	</div>';
-                                                   }
-                                                ?>
-                                                
+											<div class="comments">
+												<img src="img/perfil.jpg" class="comm-alb" width="30" height="30">
+												<textarea class="form-control ajustes comentario" onkeydown="calcular()" onkeyup="calcular()"  maxlength="250">
+												</textarea>
+												<span class="reinv2">COMPARTIR EN:</span>
+												<span class="alb-bot face-alb"><img src="img/facebook.svg" width="14" height="14"></span>
+												<span class="alb-bot twi-alb"><img src="img/twitter.svg" width="14" height="14"></span>
+												<span class="faltan">quedan <span class="num">250</span> caracteres</span>
+												<span class="publicar">Publicar</span>
+												<div class="comentarios">
+													<?php
+													for ($i=0; $i < 4; $i++) { 
+														echo
+														'<img src="img/perfil.jpg" class="user-pic" width="30" height="30">
+														<div class="fondo">
+															<span class="user-alb">Juan Soler <span class="time-ago"> - Hace 4 horas</span></span><br>
+															<span class="message" >dkskksskskkss</span>
+														</div>';
+													}
+													?>
 
-                                             </div>
-                                          </div>
+
+												</div>
+											</div>
 
 										</div>
 
@@ -149,14 +150,16 @@ function cortar($text){
 							});
 
 							$(document).ready(function(){
-                                    
-                                 $(".alb-c").click(function(){
-                                 	if ($(".comments").css("display")=="none") {
-                                 	  $(".comments").css({"display":"block"});
-                                 	}else{
-                                 	 $(".comments").css({"display":"none"});
-                                 	}
-                                 });
+
+								$(".alb-c").click(function(){
+									if ($(".comments").css("display")=="none") {
+										$(".comments").show();
+									}else{
+										$(".comments").hide();
+										$(".comentario").val("");
+										calcular();
+									}
+								});
 
 
 								$(".tot").click(function(){
@@ -178,6 +181,15 @@ function cortar($text){
 								});
 
 
+								$(".play-a").hover(function(){
+
+									$(".change-a").css("opacity","0.8");
+									$(".ubicar-a").css({"visibility":"visible","opacity":"1"});
+								},function(){
+									
+								});
+
+
 
 								$(".change-a").hover(function(){
 
@@ -190,11 +202,26 @@ function cortar($text){
 									$(".change-a").css("opacity","1");
 									$(".ubicar-a").css({"visibility":"hidden","opacity":"0"});
 								});
+                                     
 
-
-
+								
+                                    $(".comentario").click(function(){
+                                    		if ($(".comentario").val().length==12) {
+                                              $(".comentario").text("");
+                                    		}
+                                    	
+                                    	
+                                    });
+								
 
 							});
+							function calcular(){
+
+								var valor=$(".comentario").val().length;
+								var rvalor=250-valor;
+								$(".num").text(rvalor);
+
+							};
 						</script>
 					</body>
 					</html>
