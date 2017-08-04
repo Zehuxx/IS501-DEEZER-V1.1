@@ -330,6 +330,18 @@ hr{
     transition-property: box-shadow;
 }
 
+.tarjetas-p{
+    background-color: #fff;
+    box-shadow: 0 1px 2px rgba(25,25,34,.15);
+    margin-top: 20px;
+    position: relative;
+    width: 1020px;
+    min-height: 280px;
+    height: auto;
+    transition-duration: .15s;
+    transition-property: box-shadow;
+}
+
 .comments{
     position: relative;
     margin-top: 350px;
@@ -404,6 +416,10 @@ hr{
 }
 
 .tarjetas:hover {
+    box-shadow: 0 2px 4px rgba(25,25,34,.25);
+}
+
+.tarjetas-p:hover {
     box-shadow: 0 2px 4px rgba(25,25,34,.25);
 }
 
@@ -498,6 +514,12 @@ hr{
 }
 
 
+.popover.st.top {
+        margin-top: -108px;
+    margin-left: -139px;
+}
+
+
 .popover.top > .arrow {
   bottom: -11px;
   left: 10%;
@@ -506,6 +528,16 @@ hr{
   border-top-color: rgba(0, 0, 0, .25);
   border-bottom-width: 0;
 }
+
+.popover.st.top > .arrow {
+  bottom: -11px;
+  left: 10%;
+  margin-left: -37px;
+  border-top-color: #999;
+  border-top-color: rgba(0, 0, 0, .25);
+  border-bottom-width: 0;
+}
+
 .popover.top > .arrow:after {
   bottom: 1px;
   margin-left: 20px;
@@ -562,6 +594,15 @@ hr{
 
 }
 
+.linea22-p{
+    position: relative;
+    top: -68px;
+    height: 1px;
+    background-color: #e8e8ec;
+    width:380px; 
+
+}
+
 
 .footer {
     display: block;
@@ -571,6 +612,16 @@ hr{
     padding: 10px 20px;
     position: relative;
     top: 353px;
+}
+
+.footer-p{
+    display: block;
+    background-color: #f8f8f9;
+    box-sizing: border-box;
+    height: 36px;
+    padding: 10px 20px;
+    position: relative;
+    top: 245px;
 }
 
 
@@ -678,6 +729,12 @@ hr{
     border-radius: 4px;
 }
 
+.perf-p{
+    width: 250px;
+    height: 250px;
+    border-radius: 4px;
+}
+
 
 .perf2{
     cursor: pointer;
@@ -701,6 +758,11 @@ hr{
     margin-left: -17px;
 }
 
+.fotos-p{
+    position: absolute;
+    margin-left: -17px;
+}
+
 
 .fotos2{
     cursor: default;
@@ -719,14 +781,30 @@ hr{
   position: relative;
 }
 
+.alb-sp{
+  left: -195px;
+  position: relative;
+}
+
+
 .alb-h{
   left: -776px;
+  position: relative;
+}
+
+.alb-hp{
+  left: -230px;
   position: relative;
 }
 
 .alb-c{
   left: -515px;
   top: -20px;
+  position: relative;  
+}
+
+.alb-cp{
+  left: -160px;
   position: relative;  
 }
 
@@ -839,6 +917,12 @@ font-size: 14px;
     left:30px;
 }
 
+.informacion-p{
+    position: absolute;
+    top: 35px;
+    left:280px;
+}
+
 .informacion2{
    margin: 0 20%;
     position: absolute;
@@ -885,6 +969,16 @@ font-size: 14px;
     margin-right:35.5px;
 }
 
+.dash2-p{
+    background-color: transparent;
+    border-radius: 4px;
+    width: 225px;
+    height: 280px;
+    position: relative;
+    left: 2px;
+    margin-right:35.5px;
+}
+
 .circulo{
     margin-right: 10px;
     width: 37px;
@@ -920,6 +1014,14 @@ left: 18px;
 
 }
 
+.art-p{
+position: relative;
+top: -72px;
+
+}
+
+
+
 .discos:hover{
     text-decoration: underline;
 }
@@ -946,6 +1048,12 @@ position: relative;
 top: 27px;
 left: -320px;
 }
+
+.art-content-p{
+position: relative;
+top: -64px;
+}
+
 
 .art-alb{
     color: #92929d;
@@ -996,12 +1104,30 @@ left: -320px;
     top: 45px;
 }
 
+.adjus-p{
+    position: relative;
+    top: 15px;
+}
+
 .play-a{
     top: 290px;
 }
 
+.play-p{
+    top: 200px;
+}
+
 .ubicar-a{
     top: 290px;
+    position: relative;
+    margin-top:-50px;
+    margin-left: 10px;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.ubicar-p{
+    top: 200px;
     position: relative;
     margin-top:-50px;
     margin-left: 10px;
@@ -1049,6 +1175,18 @@ left: -320px;
 }
 
 .change-a{
+    background-color: #efeff2;
+    bottom: 0; 
+    content: ''; 
+    opacity: 1; 
+    position: absolute; 
+    cursor: pointer;
+    top: 0; 
+    transition-duration: .15s; 
+    transition-property: opacity; 
+}
+
+.change-p{
     background-color: #efeff2;
     bottom: 0; 
     content: ''; 
