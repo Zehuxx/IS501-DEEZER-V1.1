@@ -1,86 +1,250 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="vieport" content="width = device-width, initial-scale=1">
-	<title>Quienes somos</title>
-	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<link href="css/bootstrap.min.css" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="css/company.css">
-</head>
-<body style="background-image:url(img/company-background-desktop.jpg); color:#ffffff;background-repeat:no-repeat;background-size:1350px 700px;">
-	<div class="container">
-		<header>
-			<nav class="navbar navbar-inverse navbar-fixed-top" style="">
-				<div class="container-fluid">
-					<div class="navbar-header">
-						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-1">
-							<span class="sr-only">Menu</span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-						</button>
-						<a href="#" class="navbar-brand">
-							<img border="0" src="img/logoDeezer.png" width=95 height=20> 
-						</a>
-					</div>
-					<div class="collapse navbar-collapse" id="navbar-1">
-						<ul class="nav navbar-nav">
-							<li><a href="">FUNCIONALIDADES</a></li>
-							<li><a href="">DISPOSITIVOS</a></li>
-							<ul class="dropdown-menu"><li><a href="">OFERTAS</a>
-       			<li class="dropdown-header">CABECERA 1</li>
-                <li><a href="#">Link 1</a></li>
-                <li><a href="#">Link 2</a></li>
-                <li><a href="#">Link 3</a></li>
-							<li class="dropdown active">
-								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">
-									Empresa <span class="caret"></span>
-								</a>
-								<ul class="dropdown-menu">
-									<li><a href="#">ACERCA DE</a></li>
-									<li><a href="#">TRABAJOS</a></li>
-									<li><a href="#">PRENSA</a></li>
-									<li><a href="#">SELLOS Y ARTISTAS</a></li>
-									<li><a href="#">AYUDA</a></li>
-								</ul>
-							</li>
-						</ul>
-						<ul class="nav navbar-nav navbar-right">
-							<li>
-								<p class="navbar-btn">
-                   					<a href="#" class="btn btn-primary">Registrarse</a>
-               					</p>
-							</li>
-							<li>
-								<p class="navbar-btn">
-									<a href="#" class="btn btn-default">Conectarse</a>
-								</p>
-							</li>
-						</ul>
+  <head>
+    <title>¿Quienes Somos?</title>
+     <meta charset="UTF8">
+     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+     <link rel="stylesheet" type="text/css" href="css/company1.css">
+     <link rel="stylesheet" type="text/css" href="blogger/style.css">
+     <link rel="stylesheet" href="fonts/style.css">
+     <link rel="stylesheet" type="text/css" href="css/stlcomp.css">
+     <link rel="stylesheet" type="text/css" href="fantastic/css/font-awesome.min.css">
+     <style type="text/css"></style>
+  </head>
+<body>
+<div id="zona1">
+     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+     <center><strong><font size=50>DONDE VIVE LA MÚSICA</font></strong></center><br><br><br><br><br><br><br><br><br><br><br><br>
+     <center><h1><span class="icon-arrow_downward"></span></h1></center>  
+</div>
 
-					</div>
-				</div>
-			</nav>
-			<center>
-				<div class="row">
-					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 "> 
-	        			<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-	        			<font size=100>DONDE VIVE LA MÚSICA</font>
-	    			</div>
-				</div>
-	    	</center>
-		</header>
-	</div>
-	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-	<center>
-		<div class="container">
-			<h1 style="color:#800000; float: left;">Déjate sorprender por la música</h1>
+<div id="zona2">
+	<div class="row">
+		<div class="col-lg-8" style="margin-left: 380px;margin-top: 35px">
+			<h2>Déjate sorprender por la música</h2>
+			<p id="tex3">Deezer te permite escuchar la música que desees, al instante.</p>
+			<p id="tex3">Explora más de 43 millones de canciones y descubre nuevos artistas gracias a las recomendaciones personalizadas de nuestros Editores Deezer.</p>
+			<p id="tex3">Deezer funciona en todo tipo de dispositivos, con conexión a internet o sin ella, sin límites de escucha. Música a tu disposición en cualquier momento y lugar.</p>
+			<p id="tex3"><a href="#">Más información</a></p>
 		</div>
-	</center>
-	
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-</body>
+	</div>
+</div>
+
+<div id="zona3">		
+	<div class="col-lg-3" style="margin-left: 350px">
+		<br><br><br>
+	     <h2>¡Lánzate! ¡Únete a nosotros!</h2>
+	     <p id="tex3">¿Quieres imaginar el futuro de la música con nosotros?<br> ¡Queremos tener noticias tuyas!</p>
+	</div>
+</div>
+
+<div >
+  <div class="container">
+  	<div class="col-lg">
+  		<div id="carousel-1" class="carousel slide" data-ride= "carousel">
+  			
+  		</div>
+  	</div>
+  </div>
+</div>
+
+<div id="zona4">
+  
+</div>
+
+<div id= "zona5" style="  background: url(img/daniel.png ); background-repeat: no-repeat;">
+	<div class="row" style="margin-left: -758px;">
+		<div class="col-lg-2" style="margin-left: 458px; margin-top: 40px; width: 300px">
+		<h2>Biografías</h2>
+			<div>
+				<p id="tex3">"A la hora de lanzar un nuevo producto, lo más importante es que responda a una necesidad personal."</p>
+				<p id="tex3">
+					<span>Daniel Marhely</span>
+          <br>
+					<span style="font-size: 10">FOUNDER</span>
+				</p>
+				<p id="tex3"><a class="link-primary link-animated" href="/es/company/key_people">Continuación</a></p>
+			</div>
+			
+		</div>
+	</div>
+</div>
+
+<div id="zona6">
+  <div style="margin-left: 200px; background-image: url(img/world.png);background-repeat: no-repeat;">
+    <br><br>
+    <h2 style="margin-left: 183px;">Deezer en todo el mundo</h2>
+    <img id="img-gente-hablando" src="img/gente-hablando.png" class="img-responsive" style="margin-top: 370px; margin-left: 175px;">
+    <div class="container" style="margin-top: -190px; margin-left: 380px">
+      <div class="col-lg-7">
+        <h2 style="color: #33b5e5">París</h2>
+        <p id="tex3">"Deezer Sessions, hackathons... En la oficina de París siempre pasan cosas y la música se escucha por todas partes. Se respira un gran ambiente de camaradería y amistad."</p>
+        <p>Camille Promérat - <span style="color: #33b5e5;">Copywriter</span></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="zona7">
+  <div class="row" style="margin-left: 300px;">
+  <br><br><br>
+    <div class="col-lg-4">
+      <img id="img-col1-company" src="img/img-col1-company.png">
+      <h2>¡Lánzate! ¡Únete a nosotros!</h2>
+      <p id="tex3">¿Quieres imaginar el futuro de la música con nosotros?</p>
+      <p id="tex3">¡Queremos tener noticias tuyas!</p>
+      <p id="tex3"><a class="link-primary link-animated" href="/es/company/jobs">Ver posiciones</a></p>
+    </div>
+    <div class="col-lg-4">
+      <img id="img-col2-company" src="img/img-col2-company.jpg">
+      <h2>Sellos<br>y artistas</h2>
+      <p id="tex3">Comparte tu música con todo el mundo gracias a Deezer.</p>
+      <p id="tex3">
+        <a class="link-primary link-animated" href="/es/company/label_artists">Más información</a>
+      </p>
+    </div>
+    <div class="col-lg-4">
+      <img id="img-col3-company" src="img/img-col3-company.jpg">
+      <h2>Deezer para desarrolladores</h2>
+      <p id="tex3">Crea algo asombroso en torno a nuestra API abierta.</p>
+      <p id="tex3">
+        <a href=#>Más información</a>
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="siguenos" style="margin-top: 0px">
+    <h2 class="sig">Síguenos</h2>
+    <div class="social">
+           <a class="soc" href="http://facebook.com/"><i class="fa fa-facebook fa-3x"></i></a>
+           <a class="soc" href="http://plus.google.com/"><i class="fa fa-google-plus fa-3x"></i></a>
+           <a class="soc" href="http://twitter.com/"><i class="fa fa-twitter fa-3x"></i></a>
+           <a class="soc" href="http://youtube.com/"><i class="fa fa-youtube fa-3x"></i> </a>
+           <a class="soc" href="http://instagram.com/"><i class="fa fa-instagram fa-3x"></i></a>
+           <a class="soc" href="http://www.deezer-blog.com/"><span id="parf1" class="icon-blogger"></span></a>
+           <a class="soc" href="http://linkedin.com/"><i class="fa fa-linkedin fa-3x"></i></a>
+           <a class="soc" href="http://jobteaser.com/"><i class="fa fa-bolt fa-3x"></i></a>
+        </div>
+  </div>
+
+  <div class="otrasopciones">
+       <div class="dezer">
+             <dl>
+             <dt><h3 class="pa"><span class="azul1">Deezer</span></h3></dt>
+             <dd><a href="javascript:;" style="text-decoration:none" class="der">Ofertas</a></dd>
+             <dd><a href="javascript:;" style="text-decoration:none" class="der">Ventajas</a></dd>
+             <dd><a href="javascript:;" style="text-decoration:none" class="der">Quiénes somos</a></dd>
+             <dd><a href="javascript:;" style="text-decoration:none" class="der">Prensa</a></dd>
+             <dd><a href="javascript:;" style="text-decoration:none" class="der">Ofertas de empleo Deezer</a></dd>
+           </dl>
+       </div>
+
+       <div class="extras">
+            <dl>
+             <dt><h3 class="pa"><span class="azul1">Extras</span></h3></dt>
+             <dd><a href="javascript:;" style="text-decoration:none" class="der">Developers </a></dd>
+             <dd><a href="javascript:;" style="text-decoration:none" class="der">Sellos y artistas </a></dd>
+           </dl>
+       </div>
+
+       <div class="dispositivo">
+             <dl>
+             <dt><h3 class="pa"><span class="azul1">Dispositivos</span></h3></dt>
+               <dd><a href="javascript:;" style="text-decoration:none" class="der">Android</a></dd>
+               <dd><a href="javascript:;" style="text-decoration:none" class="der">iPhone - Ipod Touch - iPad </a></dd>
+               <dd><a href="javascript:;" style="text-decoration:none" class="der">Windows Phone </a></dd>
+               <dd><a href="javascript:;" style="text-decoration:none" class="der">PC/Mac</a></dd>
+               <dd><a href="javascript:;" style="text-decoration:none" class="der">Tabletas</a></dd>
+               <dd><a href="javascript:;" style="text-decoration:none" class="der">TV</a></dd>
+               <dd><a href="javascript:;" style="text-decoration:none" class="der">Sistemas de audio</a></dd>
+               <dd><a href="javascript:;" style="text-decoration:none" class="der">Automóviles</a></dd>
+           </dl>
+       </div>
+
+       <div class="legal">
+             <dl>
+             <dt><h3 class="pa"><span class="azul1">Legal</span></h3></dt>
+              <dd><a href="javascript:;" style="text-decoration:none" class="der">Condiciones generales de uso</a></dd>
+              <dd><a href="javascript:;" style="text-decoration:none" class="der">Datos personales y cookies</a></dd>
+              <dd><a href="javascript:;" style="text-decoration:none" class="der">Aviso legal</a></dd>
+              </dl>
+       </div>  
+
+       <div class="separador"></div>
+
+       <div class="info">
+        <p class="per">Música a la carta con Deezer - Copyright 2006-2017 Your country is : HN · Generated by blm-web-40 · pop ny</p>
+        <select id="lenguajes">
+
+                                    <option value="en" >
+                English             </option>
+                                                <option value="us" >
+                English (us)              </option>
+                                                <option value="ar" >
+                العربیة             </option>
+                                                <option value="cs" >
+                Čeština             </option>
+                                                <option value="da" >
+                Dansk             </option>
+                                                <option value="de" >
+                Deutsch             </option>
+                                                <option value="es" selected="selected">
+                Español             </option>
+                                                <option value="mx" >
+                Español (mx)              </option>
+                                                <option value="fr" >
+                Français              </option>
+                                                <option value="id" >
+                Indonesia             </option>
+                                                <option value="it" >
+                Italiano              </option>
+                                                <option value="hu" >
+                Magyar              </option>
+                                                <option value="ms" >
+                Melayu              </option>
+                                                <option value="nl" >
+                Nederlands              </option>
+                                                <option value="no" >
+                Norsk             </option>
+                                                <option value="pl" >
+                Polski              </option>
+                                                <option value="br" >
+                Português (br)              </option>
+                                                <option value="pt" >
+                Português (pt)              </option>
+                                                <option value="ru" >
+                Pусский             </option>
+                                                <option value="ro" >
+                Română              </option>
+                                                <option value="rs" >
+                Srpski              </option>
+                                                <option value="fi" >
+                Suomi             </option>
+                                                <option value="se" >
+                Svenska             </option>
+                                                <option value="sq" >
+                Shqip             </option>
+                                                <option value="sk" >
+                Slovenčina              </option>
+                                                <option value="sl" >
+                Slovenščina             </option>
+                                                <option value="tr" >
+                Türkçe              </option>
+                                                <option value="me" >
+                Crnogorski              </option>
+                                                <option value="th" >
+                ภาษาไทย             </option>
+                                                <option value="cn" >
+                中文              </option>
+                                                <option value="hr" >
+                Hrvatski              </option>
+                                                <option value="ko" >
+                한국어             </option>
+                      
+        </select>
+       </div>  
+</div>
+</body> 
+    
 </html>
