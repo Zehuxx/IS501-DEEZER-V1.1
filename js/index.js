@@ -2,11 +2,11 @@ function ifra(link){
     if (link==1)
     	$("#ifra").html('<iframe class="contenido" src="configuraciones.php" frameborder="0"  ></iframe>');
     if(link==2)
-    	$("#ifra").html("<iframe class='contenido' src='notific.php' frameborder='0' ></iframe>");
+    	$("#ifra").html("<iframe class='contenido' src='recomendaciones.php' frameborder='0' ></iframe>");
      if(link==3)
     	$("#ifra").html("<iframe class='contenido' src='disposi.php' frameborder='0' ></iframe>");
 }
- 
+  
 function ifra2(link){
     if (link==1)
     	$("#ifra2").html('<iframe class="contenido2" src="informacion.php" frameborder="0"></iframe>');
@@ -299,6 +299,7 @@ function abrir(){
 
 
 
+
 $("#cola").click(function(){
     $("#li6").css("background-color","#23232c");
          $("#li6 .si").css("color","#C2C2CA");
@@ -364,7 +365,38 @@ function playlists(){
   $("#ifra").html('<iframe class="contenido" src="perfil.php?accion=3" frameborder="0" id="pru" ></iframe>');
 }
 
+function albums(){
+  $("#li7 .si").css("color","#C2C2CA");
+  $("#li7").css("background-color","#23232c");
+  $("#hijo3").css({"visibility":"hidden","opacity":"0"});
+  $("#drop").css({"visibility":"hidden","opacity":"0"});
+  $("#ifra").html('<iframe class="contenido" src="perfil.php?accion=4" frameborder="0" id="pru" ></iframe>');
+}
+
 $("#modal-on").click(function(){
   $("#newplaylist").modal("show");
 });
 
+function seleccion(id,id2,id3){
+  if (id=="act") {
+   $(".subt-descr").text("Actividades"); 
+ }else{
+  if (id=="not") {
+    $(".subt-descr").text("Notificaciones");
+  }else{
+    if (id="sig") {
+      $(".subt-descr").text("Seguidores");
+    }
+  }
+}
+
+  
+  
+
+  $("#"+id2).css("background-color","#F8FAFA");
+  $("#"+id3).css("background-color","#F8FAFA");
+  $("#"+id).css("background-color","white");
+  $("#"+id2).children("span").css("color","#92929d");
+  $("#"+id3).children("span").css("color","#92929d");
+  $("#"+id).children("span").css("color","blue");
+}
