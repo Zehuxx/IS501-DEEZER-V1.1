@@ -87,10 +87,10 @@
      <center>
      <div id="hija">
            <div class="panel-body" id="contenedor"><p id="t1">
-           <i class="material-icons">desktop_windows</i><p id="t2">Música ilimitada en tu ordenador o tablet</p>
-           <span class="glyphicon glyphicon-ok" style="color: gray; left: -52px;top: -6px;"></span>
-           <span class="glyphicon glyphicon-ok" style="color: blue; left: 135px;top: -6px;"></span>
-           <span class="glyphicon glyphicon-ok" style="color: #BC0B4E; left: 324px; top:-4px;"></span></p>
+           <i class="fa fa-desktop"></i><p id="t2">Música ilimitada en tu ordenador o tablet</p>
+           <span class="glyphicon glyphicon-ok" style="color: gray; left: -52px;top: 2px;"></span>
+           <span class="glyphicon glyphicon-ok" style="color: blue; left: 135px;top: 2px;"></span>
+           <span class="glyphicon glyphicon-ok" style="color: #BC0B4E; left: 324px; top:1px;"></span></p>
            </div>
       </div><br>
 
