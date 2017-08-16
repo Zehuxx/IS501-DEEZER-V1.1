@@ -70,6 +70,18 @@
 	$("#coment").click(function(){
 		$(this).css("border","1px solid blue")
 	})
+	$(document).ready(function(){
+    $("#coment").bind("input keyup paste", function (){
+    var maximo = 250;
+    var disponivel = maximo - $(this).val().length;
+    if(disponivel < 0) {
+    var texto = $(this).val().substr(0, maximo); 
+    $(this).val(texto);
+    disponivel = 0;
+    }
+    $("#num2").text(disponivel);
+    });
+    });
 </script>
 </body>
 </html>

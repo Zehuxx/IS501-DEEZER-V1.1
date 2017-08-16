@@ -1,0 +1,73 @@
+#contenedor
+{
+	width: 1129px;
+	background:#F8F8F9;
+}
+
+#meu
+{
+	float: left;
+	margin-left: 35px;
+	margin-top: 15px;
+}
+
+#artista
+{
+	background-image: url(../temp/img2.jpg);
+	background-repeat:no-repeat;
+    background-size: cover;
+	float: left;
+	position: relative;
+	background-size: cover;
+	width: 234px;
+	height: 234px;
+	margin-left: 15px;
+	margin-right: 15px;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	border-radius: 100%;
+}
+
+#options
+{
+	float: left;
+	position: relative;
+	width: 120px;
+	height: 120px;
+	margin-left: 53px;
+	margin-top: 174px;
+	display: none;
+}
+
+.glyphicon-play
+{
+	color: white;
+	float: left;
+	margin-left: 15px;
+	margin-top: 12px;
+}
+
+ .glyphicon-heart 
+ {
+    color: white;
+	float: left;
+	margin-left: 14px;
+	margin-top: 12px;
+ }
+
+#option
+{
+	width: 43px;
+	height: 43px;
+	float: left;
+	border-radius: 100%;
+	background: black;
+	margin-left: 15px;
+	opacity: 1;
+}
+
+.visible
+{
+	opacity: 0.8;
+	cursor: pointer;
+}

@@ -10,13 +10,13 @@ $("#link1").click(function(){
 
 if($("#link2").click()){
 $("#link2").click(function(){
-	$("iframe").attr("src","dispositivos.php");
+	$("iframe").attr("src","topcanciones.php");
 })
 }
 
 if($("#link3").click()){
 $("#link3").click(function(){
-	$("iframe").attr("src","ofertas.php");
+	$("iframe").attr("src","artsimi.php");
 })
 }
 

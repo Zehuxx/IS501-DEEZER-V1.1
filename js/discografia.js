@@ -12,3 +12,16 @@ $("#btnmas").hover(
                         $("#btnmas").css("border-bottom","none");
 	                 }
 	              )
+
+$(".can").hover(
+                 	function()
+                 	{
+                 		$(this).addClass("hova");
+                 		$(this).find(".ub").show();
+	                },
+                 	function()
+                 	{
+                 		$(this).removeClass("hova");
+                 		$(this).find(".ub").hide();          		
+	                }
+	            )

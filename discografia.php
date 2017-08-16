@@ -18,7 +18,34 @@
     <a id="link1" href="javascript:;">Top canciones ></a>
 	<div id="top_canciones">
 	    <div id="musica">
-	    	
+	    	<div id="cancion" class="can">
+	    	<span id="num">1</span>
+	    	<span class="glyphicon glyphicon-heart"></span>
+	    	<a href="javascript:;" id="nomb">Musica mia</a>
+	    	<div class="ub"><span id="per" class="glyphicon glyphicon-option-horizontal"></span></div>
+	    	</div>
+
+	    	<div id="cancion" class="can">
+	    	<span id="num">2</span>
+	    	<span class="glyphicon glyphicon-heart"></span>
+	    	<a href="javascript:;" id="nomb">Musica mia</a>
+	    	<div class="ub"><span id="per" class="glyphicon glyphicon-option-horizontal"></span></div>
+	    	</div>
+
+	    	<div id="cancion" class="can">
+	    	<span id="num">3</span>
+	    	<span class="glyphicon glyphicon-heart"></span>
+	    	<a href="javascript:;" id="nomb">Musica mia</a>
+	    	<div class="ub"><span id="per" class="glyphicon glyphicon-option-horizontal"></span></div>
+	    	</div>
+
+	    	<div id="cancion1" class="can">
+	    	<span id="num">4</span>
+	    	<span class="glyphicon glyphicon-heart"></span>
+	    	<a href="javascript:;" id="nomb">Musica mia</a>
+	    	<div class="ub"><span id="per" class="glyphicon glyphicon-option-horizontal"></span></div>
+	    	</div>
+
 	    </div>
 	    <div id="btnmas"><a id="mas" href="javascript:;">Ver más canciones ></a></div>
 	</div>

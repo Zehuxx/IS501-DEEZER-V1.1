@@ -136,7 +136,7 @@ div a:hover
 	width: 686px;
 	position: relative;
 	margin-left: 15px;
-	margin-top: 10px;
+	margin-top: 2px;
 	background:#efeff2;
 	border-top-right-radius: 4px;
 	border-top-left-radius: 4px;
@@ -169,6 +169,83 @@ div a:hover
 	height: 220px;
 	float: left;
 	margin-left: 15px;
-	margin-top: 10px;
-	border: 1px solid red;
+	margin-top: 15px;
+}
+
+#cancion
+{
+	width: 686px;
+	height: 50px;
+	float: left;
+	border-bottom: 1px solid #efeff2;
+}
+
+#cancion1
+{
+	width: 686px;
+	height: 50px;
+	float: left;
+}
+
+#num
+{
+	float: left;
+	margin-left: 15px;
+	margin-top: 15px;
+	font-family: "Open Sans",Arial,sans-serif;
+	font-weight: 400;
+	color: #c2c2ca;
+	width: 10px;
+	height: 10px;
+}
+
+.glyphicon-heart
+{
+	color: #99999e;
+	float: left;
+	margin-left: 25px;
+	margin-top: 18px;
+	cursor: pointer;
+}
+
+#nomb
+{
+	font-family: "Open Sans",Arial,sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    float: left;
+	margin-left: 35px;
+	margin-top: 16px;
+}
+
+.glyphicon-option-horizontal
+{
+	color:#99999e;
+	float: right;
+	margin-right:25px;
+	margin-top:20px;
+	cursor:pointer;
+}
+
+.hova
+{
+	background:#efeff2;
+	border-top-right-radius: 4px;
+	border-top-left-radius: 4px;
+	border-bottom-right-radius: 4px;
+	border-bottom-left-radius: 4px;
+	cursor: pointer;
+}
+
+.per
+{
+	display: none;
+}
+
+.ub
+{
+	display:none;
+	height: 28px;
+	width: 28px;
+	float: right;
 }
