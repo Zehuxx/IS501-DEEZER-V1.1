@@ -52,6 +52,9 @@
 
 	<a id="link2" href="javascript:;">Playlists ></a>
 	<div id="playlist">
+	<div class="play">
+		
+	</div>
 	</div>
      
      <a id="link3" href="javascript:;">Último lanzamiento ></a>

@@ -1,14 +1,19 @@
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();
+
+
 $(".cat").hover(
                  	function()
                  	{
                  		$(this).css({"background-color":"#efeff2","border-top-right-radius":"4px","border-top-left-radius":"4px","border-bottom-right-radius":"4px","border-bottom-left-radius":"4px","cursor":"pointer"});
                  		$(this).find(".aparece").css("visibility","visible");
+                                $(this).find(".oculto").css("visibility","visible");
 	                },
                  	function()
                  	{
                  		$(this).css({"background-color":"#fff","border-top-right-radius":"0px","border-top-left-radius":"0px","border-bottom-right-radius":"0px","border-bottom-left-radius":"0px","cursor":"pointer"});
                  		$(this).find(".aparece").css("visibility","hidden");
-                                       		
+                                $(this).find(".oculto").css("visibility","hidden");      		
 	                }
 	            )
 
@@ -46,7 +51,11 @@ $(".aparca").hover(
                     )
 
 $(".aparece").click(function(){
-        alert("hola nigas");
+        $(".aparece").attr("data-toggle","popover");
+        $(".aparece").attr("data-placement","right");
+        $(".aparece").attr ("title","Popover Header");
+        $(".aparece").attr ("data-content","Some content inside the popover");
+        $('[data-toggle="popover"]').popover();
 })
 
 $(".displa").hover(
@@ -74,3 +83,5 @@ $("#btnescuchar").hover(
                                 $("#btnescuchar").css("cursor","pointer");
                          }
                       )
+
+});

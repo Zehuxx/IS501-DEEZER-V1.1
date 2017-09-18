@@ -4,10 +4,7 @@
 	background:#fff;
 	height: 3483px;
 }
- body
- {
- 	width: 1129px;
- }
+
 #infoparte
 {
 	width: 1038px;
@@ -357,4 +354,34 @@
     float: left;
     margin-top: 7px;
     margin-left: 10px;
+}
+
+#btnplay
+{
+	width: 28px;
+	height: 28px;
+	display: inline;
+	float: left;
+	border-radius: 100%;
+	background-color: black;
+	margin-top: -23px;
+	margin-left: -5px;
+	position: relative;
+	visibility: hidden;
+}
+
+.fa-play
+{
+	color: white;
+	float: left;
+	font-size: 11px;
+	margin-left: 11px;
+	margin-top: 7px;
+}
+
+#python
+{
+	background:url(../temp/imgp.jpg);
+    background-repeat:no-repeat; 
+    background-size: cover;
 }

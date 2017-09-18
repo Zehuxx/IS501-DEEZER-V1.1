@@ -249,3 +249,18 @@ div a:hover
 	width: 28px;
 	float: right;
 }
+
+.play
+{
+	width: 52px;
+	height: 52px;
+	background-color: red;
+	float: left;
+	position: relative;
+	margin-top: 5px;
+	border-top-right-radius: 3px;
+	border-top-left-radius: 3px;
+	border-bottom-right-radius: 3px;
+	border-bottom-left-radius: 3px;
+}
+
