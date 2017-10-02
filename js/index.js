@@ -55,7 +55,7 @@ function reload(hijo){
      if (hijo=="hijo2") {
         $("#hijo2").css({"visibility":"hidden","opacity":"0"});
         
-    }
+    } 
      if (hijo=="hijo3") {
         $("#hijo3").css({"visibility":"hidden","opacity":"0"});
     }
@@ -309,7 +309,12 @@ $("#cola").click(function(){
          $("#li8 .si").css("color","#C2C2CA");
          $("#li9").css("background-color","#23232c");
          $("#li9 .si").css("color","#C2C2CA");
-
+         $("#hijo").css({"visibility":"hidden","opacity":"0"});
+            $("#hijo2").css({"visibility":"hidden","opacity":"0"});
+            $("#hijo3").css({"visibility":"hidden","opacity":"0"});
+            $("#hijo4").css({"visibility":"hidden","opacity":"0"});
+            $("#hijo5").css({"visibility":"hidden","opacity":"0"});
+            $("#hijo6").css({"visibility":"hidden","opacity":"0"});
     if ($("#hijo6").css("visibility")=="visible") {
          $("#hijo6").css({"visibility":"hidden","opacity":"0"});
          $("#drop").css({"visibility":"hidden","opacity":"0"});

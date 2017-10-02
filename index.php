@@ -72,7 +72,7 @@ function cortar3($text){
 
 			<li  id="start" onclick="reload('hijoo');arreglo('start','first','mod','first3','start2','first2','start4','first4');" ><a href="#"  class="si"> <p id="first" >INICIO</p></a>
 
-				
+				 
 			</li>
 			<li onclick="ifra(2);" ><a id="start2" href="#" class="si" onclick="reload('hijoo');arreglo('start2','first2','start','first','mod','first3','start4','first4');"><p id="first2">RECOMENDACIONES</p></a>
 			</li>
@@ -475,6 +475,7 @@ function cortar3($text){
 																											</div>
 																											<div class="jp-toggles">
 																												<a href="#" id="repetir" title="Repetir todas las canciones de la lista"><span class=" jp-repeat glyphicon glyphicon-refresh"  aria-hidden="true"></span></a>
+																												
 																												<a href="#" id="ran" title="Activar modo aleatorio"><span class=" jp-shuffle glyphicon glyphicon-random" aria-hidden="true"></span></a>
 																												<a href="#" id="cola" title="Lista de espera"><span class="glyphicon glyphicon-list-alt" id="iconos" >
 																												</span></a>
