@@ -71,7 +71,7 @@
 					Datos Privados
 					<hr>
 				</div>
-				<table style="margin-left: -31px">
+				<table style="margin-left: -45px">
 					<tr>
 						<td style="text-align: right;padding-bottom: 15px">
 							<label class="extras">Apellido(s)</label>
@@ -125,14 +125,7 @@
 							
 						</td>
 					</tr>
-					<tr>
-						<td style="text-align: right;padding-bottom: 15px">
-							<label class="extras">Direccion</label>
-						</td>
-						<td style="padding-left: 15px;padding-bottom: 15px">
-							<input type="text" class="form-control">
-						</td>
-					</tr>
+					
 					<tr>
 						<td style="text-align: right;padding-bottom: 15px">
 							<label class="extras">Codigo postal</label>
@@ -141,14 +134,7 @@
 							<input type="text" class="form-control">
 						</td>
 					</tr>
-					<tr>
-						<td style="text-align: right;padding-bottom: 15px">
-							<label class="extras">ciudad</label>
-						</td>
-						<td style="padding-left: 15px;padding-bottom: 15px">
-							<input type="text" class="form-control">
-						</td>
-					</tr>
+					
 					<tr>
 						<td style="text-align: right;padding-bottom: 15px">
 							<label class="extras" class="form-control">Movil</label>
@@ -157,20 +143,10 @@
 							<input type="text" class="form-control">
 						</td>
 					</tr>
-					<tr>
-						<td style="text-align: right;padding-bottom: 15px">
-							<label class="extras">Idioma</label>
-						</td>
-						<td >
-							<select  class="form-control" style="margin-left:15px;margin-bottom: 15px;width: 300px">
-								<option>jjs</option>
-								<option>sds</option>
-							</select>
-						</td>
-					</tr>
+					
 					<tr>
 						<td colspan="2">
-							<button class="btn btn-primary" type="button" style="margin-left: 163px"><span class="label">Guardar</span></button>
+							<button class="btn btn-primary" type="button" style="margin-left: 180px"><span class="label">Guardar</span></button>
 						</td>
 					</tr>
 				</table>

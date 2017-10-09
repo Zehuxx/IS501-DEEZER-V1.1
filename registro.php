@@ -7,7 +7,7 @@
 	
 	   <link rel="icon" href="img/fav.ico" type="image/x-icon">
 	   <link rel="stylesheet" type="text/css" href="css/estilos.css">
-	   <link href="css/bootstrap.min.css" rel="stylesheet">
+	   <link href="css/bootstrap.css" rel="stylesheet">
 <style type="text/css">
   body{
     overflow: hidden;
@@ -18,7 +18,7 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-lg-12 col-md-6 col-xs-12">
-          <button type="button" style="float: right;" class="btn btn-danger">Conectarse</button>
+          <button type="button" id="pp" style="float: right;" class="btn btn-danger">Conectarse</button>
         </div>
         <center><div class="col-lg-12 col-md-12 col-xs-12 " style="padding-top: 40px">
              
@@ -30,18 +30,18 @@
    <button type="summit" class="btn btn-default btn-primary" style="width: 140px;  height: 40px; float: left;"><img src="img/facebook.svg" width="27" class="bot" height="27"> Facebook</button>
    <button type="summit" class="btn btn-default btn-danger" style="width: 140px;  height: 40px;float: right;"><img src="img/google.svg" width="22" class="bot" height="22"> Google+</button><br><br>
 
-    <input type="dirc" name="direccion" class="form-control"  style="width: 300px;height: 40px;float: center;" placeholder="Correo electrónico" >
-    <input type="dirc" name="direccion" class="form-control"  style="width: 300px;height: 40px;float: center;" placeholder="Contraseña (6 caracteres mínimo)"  >
-    <input type="dirc" name="direccion" class="form-control"  style="width: 300px;height: 40px;float: center;" placeholder="Nombre de usuario">
+    <input type="email" id="txt-correo" class="form-control"  style="width: 300px;height: 40px;float: center;" placeholder="Correo electrónico" >
+    <input type="text" id="txt-contrasena" class="form-control"  style="width: 300px;height: 40px;float: center;" placeholder="Contraseña (6 caracteres mínimo)"  >
+    <input type="text" id="txt-nombreu" class="form-control"  style="width: 300px;height: 40px;float: center;" placeholder="Nombre de usuario">
 
-    <select  class="form-control" style="width: 150px; float: left;">
-                   <option value="sexo">Sexo</option> 
-                   <option value="mujer">Mujer</option>
-                   <option value="hombre">Hombre</option>
-    </select>
+    <select  class="form-control" id="slc-sexo" style="width: 150px; float: left;">
+                   <option value="">Sexo</option> 
+                   <option value="1">Mujer</option>
+                   <option value="2">Hombre</option>
+    </select> 
     
-    <select  class="form-control" style="margin-bottom: 20px; width: 150px; float: right;">
-                           <option value="edad">Edad</option> 
+    <select  class="form-control" id="slc-edad" style="margin-bottom: 20px; width: 150px; float: right;">
+                           <option value="">Edad</option> 
                               <?php
                                   for ($i=1; $i <100 ; $i++) { 
                                     echo "<option value=".$i.">".$i."</option>";
@@ -49,7 +49,7 @@
                               ?>
     </select>
     
-         <button id="Reg" class="btn btn-lg btn-primary" type="submit" style="width:300px">Registrarse</button><br>
+         <button id="btn-registro" class="btn btn-lg btn-primary" type="submit" style="width:300px">Registrarse</button><br>
 
               <h6>Al hacer clic en "Registrase", aceptas las condiciones</h7></br>generales de uso.</h7>
 
@@ -124,6 +124,8 @@
                 한국어             </option>
                       
         </select></div></center>
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script src="js/validarRegistro.js"></script>
 	</body>
   <br><center>
   <h6><span style="margin: 5px" >Ofertas</span>
