@@ -5,7 +5,7 @@
 class Conexion
 {
 	private $usuario="SYSTEM";
-	private $contrasena="hola";
+	private $contrasena="oracle";
 	private $instancia="LOCALHOST/XE";
 	private $enlace;
 

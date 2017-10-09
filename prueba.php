@@ -12,34 +12,12 @@
 
   $conexion = new Conexion();
   $conexion->establecerConexion();
-  $consulta=$conexion->ejecutarInstruccion("select * from hr.employees");
-  echo '<table border="1">
-          <tr>
-          <td>EMPLOYEE_ID</td>
-          <td>FIRST_NAME</td>
-          <td>LAST_NAME</td>
-          <td>EMAIL</td>
-          <td>PHONE_NUMBER</td>
-          <td>HIRE_DATE</td>
-          <td>JOB_ID</td>
-          <td>SALARY</td>
-          <td>COMMISSION_PCT</td>
-          <td>MANAGER_ID</td>
-          <td>DEPARTAMENT_ID</td>
-          </tr>';
+  $consulta=$conexion->ejecutarInstruccion("select COUNT(*) AS CITY  from hr.locations");
+  echo '<table border="1">';
+         
 while ($row = $conexion->obtenerRegistro($consulta)) {
 echo '<tr>
-      <td>'.$row["EMPLOYEE_ID"].'</td>'.
-      '<td>'.$row["FIRST_NAME"].'</td>'.
-      '<td>'.$row["LAST_NAME"].'</td>'.
-      '<td>'.$row["EMAIL"].'</td>'.
-      '<td>'.$row["PHONE_NUMBER"].'</td>'.
-      '<td>'.$row["HIRE_DATE"].'</td>'.
-      '<td>'.$row["JOB_ID"].'</td>'.
-      '<td>'.$row["SALARY"].'</td>'.
-      '<td>'.$row["COMMISSION_PCT"].'</td>'.
-      '<td>'.$row["MANAGER_ID"].'</td>'.
-      '<td>'.$row["DEPARTMENT_ID"].'</td>'.
+      <td>'.$row["CITY"].'</td>'.
       '</tr>';
 }
 echo '</table>';
