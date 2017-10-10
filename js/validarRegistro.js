@@ -12,7 +12,7 @@ $("#btn-registro").click(function(){
 
     //alert(nombreu+' '+correo+' '+sexo+' '+edad+' '+contrasena);
 	var dato=new Array();
-	dato[0]=nombreu;
+	dato[0]=nombreu; 
 	dato[1]=correo;
 	dato[2]=sexo;
 	dato[3]=edad;

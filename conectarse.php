@@ -5,12 +5,11 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="vieport" content="width = device-width, initial-scale=1">
 	<title>Conectarse</title>
-<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link href="css/bootstrap.css" rel="stylesheet">
 </head>
 <body style="background-image:url(img/Conectarse3IMG.jpg); color:#ffffff;background-repeat:no-repeat;background-size:cover;">
 	<div class="container-fluid">
-	    <div class="row">
+	    <div class="row"> 
 	    	<br>
 	        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 	        	<img src="img/logoDeezer.png" width="180" height="40">
@@ -29,18 +28,18 @@
 				<div>
 					<br>
 					<form>
-						<input type="dirc" name="direccion" class="form-control" style="width: 300px;height: 40px;float: center;" placeholder="Correo electronico" >
-				    	<input type="password" name="direccion" class="form-control" style="width: 300px;height: 40px;float: center;" placeholder="contraseña">
+						<input type="text" id="nombreu" class="form-control" style="width: 300px;height: 40px;float: center;" placeholder="Nombre de Usuario" >
+				    	<input type="password" id="contrasena" class="form-control" style="width: 300px;height: 40px;float: center;" placeholder="Contraseña">
 					</form>
 	   			</div> 
 	   			<h6>¿Has olvidado tu contraseña?</h6>
-			    <button id="Reg" class="btn btn-lg btn-primary" type="submit" style="padding:7px 100px 7px 100px ">Conectarse</button>
+			    <button id="btn-conectarse" class="btn btn-lg btn-primary" type="submit" style="padding:7px 100px 7px 100px ">Conectarse</button>
 			    <br>
 	    	</div>
 	    	</center>
 		</div>
 	</div> 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	 <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script src="js/login.js"></script>
 </body>
 </html>
