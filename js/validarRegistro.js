@@ -5,7 +5,7 @@ $("#btn-registro").click(function(){
     var age=$("#slc-edad");
     var password=$("#txt-contrasena");
 	var nombreu=user.val();
-	var correo=email.val();
+	var correo=email.val(); 
 	var sexo=sex.val();
 	var edad=age.val();
 	var contrasena=password.val();

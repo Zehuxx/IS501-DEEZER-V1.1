@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>informacion</title>
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="css/personalizado.css">
 	<style type="text/css">
 		body{
@@ -11,7 +11,7 @@
 	</style>
 </head>
 <body style="background-color: #f1f1f1">
-<div class="container-fluid">
+<div class="container-fluid"> 
 	<div class="row">
 		<div class="col-lg-12 col-sm-12 col-md-12 col-xs-12 afuera">
 			<div class="col-lg-12 col-sm-12 col-md-12 col-xs-12 dentro ">
@@ -31,8 +31,7 @@
 			<table>
 				<tr>
 				    <td style="text-align: right;padding-right: 10px;"><label class="extras">Tu correo electrónico:</label></td>
-					<td width="300"><input type="text" class="form-control " > </td>
-					<td><button class="mod">Modificar</button></td>
+					<td width="300"><input type="text" id="txt-correo" class="form-control " > </td>
 
 				</tr>
 				<tr>
@@ -40,8 +39,7 @@
 				</tr>
 				<tr >
                     <td style="text-align: right;padding-right: 10px;"><label class="extras">Tu contraseña:</label></td>
-					<td><input type="text" class="form-control "></td>
-					<td><button class="mod">Modificar</button></td>
+					<td><input type="text" id="txt-contrasena" class="form-control "></td>
 				</tr>
 			</table>
 				<div class="datoss">
@@ -63,7 +61,7 @@
 							<label class="extras">Nombre de Usuario</label>
 						</td>
 						<td width="313" style="padding-left: 15px">
-							<input type="text" class="form-control">
+							<input type="text" class="form-control" id="txt-nombreu">
 						</td>
 					</tr>
 				</table>
@@ -74,10 +72,10 @@
 				<table style="margin-left: -45px">
 					<tr>
 						<td style="text-align: right;padding-bottom: 15px">
-							<label class="extras">Apellido(s)</label>
+							<label class="extras">Apellido</label>
 						</td>
 						<td width="300" style="padding-left: 15px;padding-bottom: 15px">
-							<input type="text" class="form-control">
+							<input type="text" id="txt-apellido" class="form-control">
 						</td>
 					</tr>
 					<tr>
@@ -85,7 +83,7 @@
 							<label class="extras">Nombre</label>
 						</td>
 						<td style="padding-left: 15px;padding-bottom: 15px">
-							<input type="text" class="form-control">
+							<input type="text" id="txt-nombre" class="form-control">
 						</td>
 					</tr>
 					<tr>
@@ -94,7 +92,8 @@
 						</td>
 						<td >
 							<div class="col-xs-4">
-								<select  class="form-control" style="margin-bottom: 15px;width: 80px">
+								<select  class="form-control" id="dia" style="margin-bottom: 15px;width: 80px">
+									<option value="N/A">N/A</option>
 								<?php
                                   for ($i=1; $i <32 ; $i++) { 
                                   	echo "<option value=".$i.">".$i."</option>";
@@ -103,7 +102,8 @@
 							</select>
 							</div>
 							<div class="col-xs-4">
-								<select  class="form-control" style="margin-left:6px;margin-bottom: 15px;width: 80px;">
+								<select  class="form-control" id="mes" style="margin-left:6px;margin-bottom: 15px;width: 80px;">
+									<option value="N/A">N/A</option>
 								<?php
                                   for ($i=1; $i <13 ; $i++) { 
                                   	echo "<option value=".$i.">".$i."</option>";
@@ -112,7 +112,8 @@
 							</select>
 							</div>
 							<div class="col-xs-4">
-								<select  class="form-control" style="margin-left:10px;margin-bottom: 15px;width: 80px;">
+								<select  class="form-control" id="year" style="margin-left:10px;margin-bottom: 15px;width: 80px;">
+									<option value="N/A">N/A</option>
 								<?php
                                   for ($i=1900; $i <2017 ; $i++) { 
                                   	echo "<option value=".$i.">".$i."</option>";
@@ -131,7 +132,7 @@
 							<label class="extras">Codigo postal</label>
 						</td>
 						<td style="padding-left: 15px;padding-bottom: 15px">
-							<input type="text" class="form-control">
+							<input type="text" id="txt-codigop" class="form-control">
 						</td>
 					</tr>
 					
@@ -140,13 +141,13 @@
 							<label class="extras" class="form-control">Movil</label>
 						</td>
 						<td style="padding-left: 15px;padding-bottom: 15px">
-							<input type="text" class="form-control">
+							<input type="text" id="txt-phone" class="form-control">
 						</td>
 					</tr>
 					
 					<tr>
 						<td colspan="2">
-							<button class="btn btn-primary" type="button" style="margin-left: 180px"><span class="label">Guardar</span></button>
+							<button class="btn btn-primary" id="btn-save" type="button" style="margin-left: 180px"><span class="label">Guardar</span></button>
 						</td>
 					</tr>
 				</table>
@@ -163,8 +164,8 @@
 		</div>
 	</div>
 </div>
-<script type="text/javascript" src="js/jquery.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/jquery.min.js"></script> 
 	<script src="js/index.js"></script>
+	<script src="js/informacion.js"></script>
 </body>
 </html>
