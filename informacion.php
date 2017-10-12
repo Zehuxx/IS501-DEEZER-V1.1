@@ -9,7 +9,7 @@
 			width: 100%;
 		}
 	</style>
-</head>
+</head> 
 <body style="background-color: #f1f1f1">
 <div class="container-fluid"> 
 	<div class="row">
@@ -51,8 +51,11 @@
 						<td style="text-align: right;padding-left: 10px;padding-bottom: 17px">
 							<label class="extras">Sexo</label>
 							<td style="padding-left: 15px;padding-bottom: 17px">
-							<label class="radios"><input type="radio" name="sexo"  value="Hombre"> Hombre</label>&nbsp&nbsp
-							<label class="radios"><input type="radio" name="sexo"  value="Mujer"> Mujer</label>
+							<select class="form-control" id="slc-sexo">
+								<option value="N/A">Sexo</option>
+								<option value="1">Femenino</option>
+								<option value="2">Masculino</option>
+							</select>
 							</td>
 						</td>
 					</tr>
