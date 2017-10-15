@@ -1,3 +1,6 @@
+<?php
+ include ("class/class-conexion.php");
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,8 +12,10 @@
 			width: 100%;
 		}
 	</style>
+	
 </head> 
 <body style="background-color: #f1f1f1">
+	<div class="loader" style="display: block;"></div>
 <div class="container-fluid"> 
 	<div class="row">
 		<div class="col-lg-12 col-sm-12 col-md-12 col-xs-12 afuera">
@@ -132,10 +137,23 @@
 					
 					<tr>
 						<td style="text-align: right;padding-bottom: 15px">
-							<label class="extras">Codigo postal</label>
+							<label class="extras">Pais</label>
 						</td>
 						<td style="padding-left: 15px;padding-bottom: 15px">
-							<input type="text" id="txt-codigop" class="form-control">
+							<select id="slc-pais" class="form-control">
+								<option value="">N/A</option>
+
+								<?php
+								$conexion = new Conexion();
+								$conexion->establecerConexion();
+                                $lugares=$conexion->ejecutarInstruccion("select CODIGO_LUGAR,NOMBRE_LUGAR from TBL_LUGARES"); 
+								while ($row = $conexion->obtenerRegistro($lugares)) {
+									echo '<option value='.$row["CODIGO_LUGAR"].'>'.$row["NOMBRE_LUGAR"].'</option>';	
+								}
+								$conexion->cerrarConexion();
+								?>
+							</select>
+							
 						</td>
 					</tr>
 					
@@ -147,7 +165,11 @@
 							<input type="text" id="txt-phone" class="form-control">
 						</td>
 					</tr>
-					
+					<tr>
+						<td colspan="2">
+							<div id="resultado" style="padding-bottom: 15px;"></div>
+						</td>
+					</tr>
 					<tr>
 						<td colspan="2">
 							<button class="btn btn-primary" id="btn-save" type="button" style="margin-left: 180px"><span class="label">Guardar</span></button>
@@ -167,8 +189,14 @@
 		</div>
 	</div>
 </div>
-<script type="text/javascript" src="js/jquery.min.js"></script> 
+    <script type="text/javascript" src="js/jquery.min.js"></script> 
 	<script src="js/index.js"></script>
 	<script src="js/informacion.js"></script>
+	
+	<script type="text/javascript">
+    
+       $(".loader").css("display","none");
+
+</script>
 </body>
 </html>

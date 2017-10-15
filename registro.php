@@ -11,7 +11,7 @@
 <style type="text/css">
   body{
     overflow: hidden;
-  }
+  } 
 </style>
 	</head><br>
 	<body style="background-image:url(img/Musica.png); color:#ffffff;">
@@ -48,12 +48,15 @@
                                   }
                               ?>
     </select>
-    
+   
          <button id="btn-registro" class="btn btn-lg btn-primary" type="submit" style="width:300px">Registrarse</button><br>
-
+<h5  id="resultado" style="border-radius: 4px;color: black;width: 300px;font-size: 18px;" class="bg-danger"><center>nombre de usuario en uso</center></h5>
               <h6>Al hacer clic en "Registrase", aceptas las condiciones</h7></br>generales de uso.</h7>
 
-        </div></center>
+        </div>
+         
+      </center> 
+       
       </div>
     </div><br>
     <select class="form-control" style="margin-top: 20px; width: 100px; float: left;">

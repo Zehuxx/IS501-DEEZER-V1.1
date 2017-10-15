@@ -9,7 +9,7 @@ $('#btn-conectarse').click(function(){
 
 	var dato2=new Array();
 	dato2[0]=user;
-	dato2[1]=password;
+	dato2[1]=password; 
 
 	for (var i = 0; i < dato.length; i++) {
 		if (dato[i]==null || dato[i].length == 0 || /^\s+$/.test(dato[i])) {
@@ -22,7 +22,7 @@ $('#btn-conectarse').click(function(){
 
     	}else{
     		if (dato[i]==nombreu) {
-    			if (dato[i].match(/^[A-Za-z]+\d+$/)) {
+    			if (dato[i].match(/^[A-Za-z]+[A-Za-z0-9]*$/)) {
                    if ((dato[i].length>=2 && dato[i].length<=12)) {
                       user.removeClass('has-error');
                    }else{

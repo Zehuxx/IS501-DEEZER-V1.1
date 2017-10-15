@@ -4,7 +4,7 @@
 */
 class Conexion
 {
-	private $usuario="SYSTEM";
+	private $usuario="DEEZER";
 	private $contrasena="oracle";
 	private $instancia="LOCALHOST/XE";
 	private $enlace;
@@ -24,7 +24,7 @@ class Conexion
     
     public function ejecutarInstruccion($sql){
 			$stid = oci_parse($this->enlace, $sql);
-            oci_execute($stid, OCI_DEFAULT);
+            oci_execute($stid);
             return $stid;
 		}
 	

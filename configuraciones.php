@@ -16,8 +16,10 @@
 	
 </head>
 <body>
+	
 <div class="container-fluid">
 	<div class="row">
+		
 		<div class="col-lg-12 col-md-12 col-xs-12 col-sm-12 contenedor">
 			<ul class="bar" >
 				<li><a id="dis" onclick="ifra2(3);cambiarborde('dis','not','dat')" href="#">Mis dispositivos conectados</a></li>
@@ -33,5 +35,6 @@
 <script type="text/javascript" src="js/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/index.js"></script>
+	
 </body>
 </html>

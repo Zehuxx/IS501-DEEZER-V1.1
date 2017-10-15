@@ -14,7 +14,7 @@ $("#btn-registro").click(function(){
 	var dato=new Array();
 	dato[0]=nombreu; 
 	dato[1]=correo;
-	dato[2]=sexo;
+	dato[2]=sexo; 
 	dato[3]=edad;
 	dato[4]=contrasena;
 
@@ -45,7 +45,7 @@ $("#btn-registro").click(function(){
     	}else{
 
     		if (dato[i]==nombreu) {
-    			if (dato[i].match(/^[A-Za-z]+\d+$/)) {
+    			if (dato[i].match(/^[A-Za-z]+[A-Za-z0-9]*$/)) {
                    if ((dato[i].length>=2 && dato[i].length<=12)) {
                       user.removeClass('has-error');
                    }else{
@@ -80,7 +80,7 @@ $("#btn-registro").click(function(){
             	sex.removeClass('has-error');
             }
 
-    	}
+    	} 
     }
 
  var error=0;

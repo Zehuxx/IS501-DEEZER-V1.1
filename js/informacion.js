@@ -7,12 +7,12 @@ $("#btn-save").click(function(){
     var month=$("#mes");
     var phone=$("#txt-phone");
     var year=$("#year");
-    var codep=$("#txt-codigop");
+    var codep=$("#slc-pais");
     var name=$("#txt-nombre");
     var lname=$("#txt-apellido");
     var password=$("#txt-contrasena");
     var sex=$("#slc-sexo");
- 
+  
 	var nombreu=user.val();
 	var correo=email.val(); 
 	var telefono=phone.val(); 
@@ -127,7 +127,7 @@ $("#btn-save").click(function(){
             }
 
             if (dato[i]==codigop) {
-            	if (!/^[0-9]*$/.test(dato[i])) {
+            	if (dato[i]=="N/A") {
                     codep.addClass("has-error");
             	}else{
                     codep.removeClass("has-error");
@@ -187,8 +187,8 @@ $("#btn-save").click(function(){
         dataType:'json',
         success:function(respuesta){
           if (respuesta.codigo==1){
-              //window.location.href="my-drive/bienvenida.php";
-              alert(respuesta.mensaje);
+              $("#resultado").html('<div class="bg-success"><center>'+respuesta.mensaje+'</center></div>');
+             
           }else{
             
           }

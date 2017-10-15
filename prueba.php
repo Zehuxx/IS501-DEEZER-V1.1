@@ -5,7 +5,7 @@
 
 </head>
 <body> 
-
+ 
 
 <?php
   include ("class/class-conexion.php");
@@ -18,7 +18,7 @@
 while ($row = $conexion->obtenerRegistro($consulta)) {
 echo '<tr>
       <td>'.$row["CITY"].'</td>'.
-      '</tr>';
+      '</tr>'; 
 }
 echo '</table>';
 

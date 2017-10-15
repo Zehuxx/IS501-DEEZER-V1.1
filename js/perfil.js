@@ -280,7 +280,7 @@ function borde22(id){
         dd.classList.add("margen");
         $(bbb).css("color","#C2C2CA");
         $(ddd).css("color","white");
-       }
+       } 
        if (c1) {
         c1.classList.remove("bordee");
         d1.classList.add("bordee");
@@ -332,7 +332,14 @@ function borde22(id){
 
 
 function info(){
+  var c1=window.parent.document.getElementById("mod");
+  var ccc=window.parent.document.getElementById("first3");
+  
+  $(c1).removeClass("bordee");
+  $(ccc).css("color","#C2C2CA");
+  $(ccc).removeClass("margen");
  $('#ifra', window.parent.document).html('<iframe class="contenido" src="configuraciones.php" frameborder="0"  ></iframe>');
+  
 }
 
 function comprobar(){
