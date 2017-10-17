@@ -23,6 +23,26 @@
     	  	<div id="deporte" class="list"></div>
     	  	<div id="niños" class="list"></div>
     	  </div>
+    	  <div id="seleccion"><a id="selecciontxt">Seleccion de playlist</a></div>
+    	  <div id="selec"><p id="selectxt">Una seleccion de los editores para ti</p></div> 
+    	  <div id="playlist_editores">
+    	  	<div id="playlt1" class="playlt"></div>
+    	  	<div id="playlt2" class="playlt"></div>
+    	  	<div id="playlt3" class="playlt"></div>
+    	  	<div id="playlt4" class="playlt"></div>
+    	  </div>
+    	  <div id="popular"><a id="populartxt">Popular ></a></div>
+    	  <div id="popul">
+    	  	<div id="pop1" class="popl"></div>
+    	  	<div id="pop2" class="popl"></div>
+    	  	<div id="pop3" class="popl"></div>
+    	  	<div id="pop4" class="popl"></div>
+    	  </div>
+    	  <div id="exitos"><a id="exitostxt">Lista de exitos ></a></div>
+    	  <div id="top_pais">
+    	  	<div id="imgtop"></div>
+    	  </div>
+    	  <div id="listacanciones"></div>
         </center>
     </div>	
 
