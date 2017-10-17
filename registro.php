@@ -18,7 +18,7 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-lg-12 col-md-6 col-xs-12">
-          <button type="button" id="pp" style="float: right;" class="btn btn-danger">Conectarse</button>
+          <button type="button" id="pp" onclick="window.open('conectarse.php','_self')" style="float: right;" class="btn btn-danger">Conectarse</button>
         </div>
         <center><div class="col-lg-12 col-md-12 col-xs-12 " style="padding-top: 40px">
              
