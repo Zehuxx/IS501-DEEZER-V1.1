@@ -7,7 +7,7 @@ $conexion->establecerConexion();
 $resultado=array();
 switch ($_GET['accion']){ 
 	
-	case '1':
+	case '1': 
 		$nombreu=$_POST["nombreu"];
 		$correo=$_POST["correo"];
 		$contrasena=$_POST["contrasena"];
