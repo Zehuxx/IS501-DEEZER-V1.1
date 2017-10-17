@@ -59,7 +59,6 @@
 {
 	height: 84px;
 	width: 180px;
-	background-color: blue;
 	border-bottom-left-radius:4px;
 	border-bottom-right-radius:4px;
 	border-top-left-radius:4px;
@@ -124,9 +123,11 @@
 	border-top-left-radius:4px;
 	border-top-right-radius:4px;
 	float: left;
-	background-color: blue;
 	margin-right: 15px;
 	margin-left: 22px;
+	background-image: url(../temp/disturbed.jpg);
+	background-repeat:no-repeat;
+	background-size: cover;
 }
 
 #popular
@@ -165,9 +166,11 @@
 	border-top-left-radius:4px;
 	border-top-right-radius:4px;
 	float: left;
-	background-color: blue;
 	margin-right: 15px;
 	margin-left: 22px;
+	background-image: url(../temp/cover.jpg);
+	background-repeat:no-repeat;
+	background-size: cover;
 }
 
 #exitos
@@ -201,6 +204,7 @@
 	border-top-right-radius:4px;
 	float: left;
 	margin-left: 160px;
+	margin-top: 25px;
 }
 
 #imgtop
@@ -224,13 +228,182 @@
 {
 	width: 502px;
 	height: 173.6px;
-	background-color: blue;
 	float: right;
 	margin-right: 155px;
-	margin-top: 25px;
+	margin-top: 45px;
+}
+
+h6
+{
+	color: #92929d;
+	font-weight: 400;
+	font-family: Lucida Grande,Arial,sans-serif;
+	float: left;
 }
 
 body
 {
-	height: 15000px;
+	height: 2098px;
+}
+
+.cancion
+{
+	width: 460px;
+	height: 24px;
+	float: left;
+	margin-top: 1px;
+	margin-bottom: 3px;
+	margin-left: 3px;
+}
+
+.numc
+{
+	color: #c2c2ca;
+    font-size: 11px;
+    font-family: Lucida Grande,Arial,sans-;
+    float: left;
+    margin-top: 2.9px;
+}
+
+.nmbcancion
+{
+	color: #323242;
+    cursor: pointer;
+    float: left;
+    margin-left: 4px;
+    font-weight: 400;
+}
+
+.artir
+{
+	color: #72727d;
+    font-family: Open Sans,Arial,sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    float: left;
+    margin-left: 5px;
+    margin-top: 2px;
+}
+
+.arti
+{
+	color: #72727d;
+    font-family: Open Sans,Arial,sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    float: left;
+    margin-left: 5px;
+    margin-top: 2px;
+    cursor: pointer;
+}
+
+#lanzamientos
+{
+	width: 210.1px;
+	height: 26px;
+	float: left;
+	margin-top: 345px;
+	margin-left: -490px;
+}
+
+#lanzamientostxt
+{
+	color: #32323d;
+	cursor: pointer;
+    position: relative;
+    font-family: Open Sans,Arial,sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    float: left;
+}
+
+#lanzamiento
+{
+	width: 1086px;
+	height: 327px;
+	margin-top: 420px;
+}
+
+.lanzamiet
+{
+	width: 234px;
+	height: 234px;
+	border-bottom-left-radius:4px;
+	border-bottom-right-radius:4px;
+	border-top-left-radius:4px;
+	border-top-right-radius:4px;
+	float: left;
+	margin-right: 15px;
+	margin-left: 22px;
+	position: relative;
+	background-image: url(../temp/sysow.jpeg);
+	background-repeat:no-repeat;
+	background-size: cover;
+}
+
+#metal
+{
+	background-image: url(../temp/metal.jpg);
+	background-repeat:no-repeat;
+	background-size: cover;
+}
+
+#Rock
+{
+	background-image: url(../temp/rock.jpg);
+	background-repeat:no-repeat;
+	background-size: cover;
+}
+
+#Dance
+{
+	background-image: url(../temp/dance.jpg);
+	background-repeat:no-repeat;
+	background-size: cover;
+}
+
+#indie
+{
+	background-image: url(../temp/indie.jpg);
+	background-repeat:no-repeat;
+	background-size: cover;
+}
+
+#Momentos
+{
+	background-image: url(../temp/momentos.jpg);
+	background-repeat:no-repeat;
+	background-size: cover;
+}
+
+.txt
+{
+	float: left;
+	margin-top: 25px;
+	margin-left: 65px;
+	font-family: Open Sans,Arial,sans-serif;
+    font-weight: 800;
+    font-size: 18px;
+    color: #ffffff;
+}
+
+.txt2
+{
+	float: left;
+	margin-top: 25px;
+	margin-left: 35px;
+	font-family: Open Sans,Arial,sans-serif;
+    font-weight: 800;
+    font-size: 18px;
+    color: #ffffff;
+}
+
+.txt1
+{
+	float: left;
+	margin-top: 15px;
+	font-family: Open Sans,Arial,sans-serif;
+    font-weight: 800;
+    font-size: 18px;
+    color: #ffffff;
 }
