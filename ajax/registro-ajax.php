@@ -39,8 +39,6 @@ switch ($_GET['accion']){
             
             $resultado["codigo"]=1;
             $resultado["mensaje"]="Registro exitoso";
-
-
         }
 
 

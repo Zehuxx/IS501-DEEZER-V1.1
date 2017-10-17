@@ -50,7 +50,10 @@
     </select>
    
          <button id="btn-registro" class="btn btn-lg btn-primary" type="submit" style="width:300px">Registrarse</button><br>
-<h5  id="resultado" style="border-radius: 4px;color: black;width: 300px;font-size: 18px;" class="bg-danger"><center>nombre de usuario en uso</center></h5>
+         <div id="resultado">
+           
+         </div>
+
               <h6>Al hacer clic en "Registrase", aceptas las condiciones</h7></br>generales de uso.</h7>
 
         </div>
