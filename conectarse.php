@@ -14,7 +14,7 @@
 	    	<br>
 	        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 	        	<img src="img/logoDeezer.png" width="180" height="40">
-	            <button type="button" style="float: right;" class="btn btn-danger">Registrarse</button>
+	            <button type="button" onclick="window.open('registro.php','_self')" style="float: right;" class="btn btn-danger">Registrarse</button>
 	        </div>
 	        <center>
 	        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 " style="padding-top: 20px">   

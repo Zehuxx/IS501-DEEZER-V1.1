@@ -1,4 +1,8 @@
 <?php
+ session_start();
+ $_SESSION['codigo_usuario']=1; 
+ if(!isset($_SESSION['codigo_usuario']))
+ header('Location:http://localhost/IS501-DEEZER-V1.1/conectarse.php');
 function cortar($text){
 
 	if ((strlen($text)>25)) {
@@ -120,7 +124,7 @@ function cortar3($text){
 						<li><a href="#">Trabajos<span class=" glyphicon glyphicon-chevron-right flecha"></span></a></li>
 						<hr>
 
-						<button class="cerrarsesion" type="button"><span class="label">Desconectarse</span></button>
+						<button class="cerrarsesion" onclick="window.open('cerrarSesion.php','_self');" type="button"><span class="label">Desconectarse</span></button>
 
 					</ul>
 
