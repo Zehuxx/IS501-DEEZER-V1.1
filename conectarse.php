@@ -6,6 +6,7 @@
 <meta name="vieport" content="width = device-width, initial-scale=1">
 	<title>Conectarse</title>
 <link href="css/bootstrap.css" rel="stylesheet">
+
 </head>
 <body style="background-image:url(img/Conectarse3IMG.jpg); color:#ffffff;background-repeat:no-repeat;background-size:cover;">
 	<div class="container-fluid">
@@ -21,19 +22,20 @@
 			    <font size=5>Escucha las canciones de tu Flow en Deezer <br>
 				y descubre las colecciones de música por género.<br>
 			    <div>
-			    	<br>
+			    	<br> 
 				    <button type="summit" class="btn btn-default btn-primary" style="width: 150px; height: 40px;float: center"><span style="float: left"><img src="img/facebook.svg" width="27" height="27"> Facebook</span> </button>
 				    <button type="summit" class="btn btn-default btn-danger" style="width: 150px;height: 40px;float: center;"><span style="float: left"><img src="img/google.svg" width="30" height="20"> Google+<span></button>
 				</div>
 				<div>
 					<br>
 					<form>
-						<input type="text" id="nombreu" class="form-control" style="width: 300px;height: 40px;float: center;" placeholder="Nombre de Usuario" >
+						<input type="text" id="nombreu" class="form-control" style="width: 300px;height: 40px;margin-bottom: 3px;float: center;" placeholder="Nombre de Usuario" >
 				    	<input type="password" id="contrasena" class="form-control" style="width: 300px;height: 40px;float: center;" placeholder="Contraseña">
 					</form>
 	   			</div> 
-	   			<h6>¿Has olvidado tu contraseña?</h6>
-			    <button id="btn-conectarse" class="btn btn-lg btn-primary" type="submit" style="padding:7px 100px 7px 100px ">Conectarse</button>
+	   			<div id="resultado">
+	   			</div>
+			    <button id="btn-conectarse" class="btn btn-lg btn-primary" type="submit" style="padding:7px;width: 300px;margin-left: 8px">Conectarse</button>
 			    <br>
 	    	</div>
 	    	</center>
