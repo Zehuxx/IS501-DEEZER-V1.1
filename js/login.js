@@ -15,7 +15,7 @@ $('#btn-conectarse').click(function(){
 		if (dato[i]==null || dato[i].length == 0 || /^\s+$/.test(dato[i])) {
     		if (dato[i]==nombreu) 
            	user.addClass('has-error');
-           	
+           	 
 
            	if (dato[i]==contrasena)
            		password.addClass('has-error');
@@ -59,10 +59,10 @@ $('#btn-conectarse').click(function(){
         dataType:'json',
         success:function(respuesta){
           if (respuesta.codigo==1){
-              //window.location.href="my-drive/bienvenida.php";
-              alert(respuesta.mensaje);
+            $("#resultado").html('<h5 style="border-radius: 4px;color: black;width: 300px;font-size: 18px;margin-top: 3px;margin-bottom: 3px;" class="bg-success"><center>'+respuesta.mensaje+'</center></h5>');
+              window.location.href="index.php";
           }else{
-            
+            $("#resultado").html('<h5 style="border-radius: 4px;color: black;width: 300px;font-size: 18px;margin-top: 3px;margin-bottom: 3px;" class="bg-danger"><center>'+respuesta.mensaje+'</center></h5>');
           }
         }
      });

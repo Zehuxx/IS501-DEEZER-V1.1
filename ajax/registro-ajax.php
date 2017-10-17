@@ -1,5 +1,5 @@
 <?php
-//$_GET['accion']='1';
+//$_GET['accion']='2';
 include ("../class/class-conexion.php");
 $conexion = new Conexion();
 $conexion->establecerConexion();
@@ -16,6 +16,7 @@ switch ($_GET['accion']){
 		$cont=0;
 		$correoconsulta=$conexion->ejecutarInstruccion("
         SELECT COUNT(1) COINCIDENCIAS FROM (SELECT NOMBRE_USUARIO FROM TBL_USUARIOS WHERE CORREO ='$correo')");
+        
 		while ($row = $conexion->obtenerRegistro($correoconsulta)) {
 			if ($row["COINCIDENCIAS"]=="1") {
 				$resultado['codigo1']=0;
@@ -26,6 +27,7 @@ switch ($_GET['accion']){
 
 		$nombreuconsulta=$conexion->ejecutarInstruccion("SELECT COUNT(1) COINCIDENCIAS FROM (SELECT NOMBRE_USUARIO FROM TBL_USUARIOS
         WHERE NOMBRE_USUARIO ='$nombreu')");
+
 		while ($row = $conexion->obtenerRegistro($nombreuconsulta)) {
             if ($row["COINCIDENCIAS"]=="1") {
             	$resultado['codigo2']=0;
@@ -33,6 +35,7 @@ switch ($_GET['accion']){
 				$cont++;
             }
 		}
+
         if ($cont==0) {
         	$insertpersona=$conexion->ejecutarInstruccion("INSERT INTO   TBL_PERSONAS (CODIGO_PERSONA, CODIGO_SEXO) VALUES (SEQ_CODPERSONAS.NEXTVAL,'$sexo')");
            $insertusuario=$conexion->ejecutarInstruccion("INSERT INTO TBL_USUARIOS (CODIGO_USUARIO, NOMBRE_USUARIO, CONTRASENA, FECHA_INSCRIPCION, EDAD, CORREO) VALUES (SEQ_CODUSUARIOS.NEXTVAL, '$nombreu', '$contrasena',SYSDATE, '$edad', '$correo')");
@@ -44,11 +47,23 @@ switch ($_GET['accion']){
 
 		break;
 	case '2':
-	    $nombreu=$_POST['nombreu'];
-	    $contrasena=$_POST['contrasena'];
-	    $resultado['codigo']=1;
-        $resultado["mensaje"]='Nombre Usuario= '.$nombreu.' '.'Contraseña= '.$contrasena;
-        
+	    $nombreu=$_POST["nombreu"];
+	    $contrasena=$_POST["contrasena"];
+
+	    $registros=$conexion->ejecutarInstruccion("SELECT COUNT(1) COINCIDENCIAS FROM (SELECT CODIGO_USUARIO FROM TBL_USUARIOS WHERE NOMBRE_USUARIO ='$nombreu' AND CONTRASENA='$contrasena')");
+
+	    while ($row = $conexion->obtenerRegistro($registros)) {
+	    	if ($row["COINCIDENCIAS"]=="1") {
+        	$codigo=$conexion->ejecutarInstruccion("SELECT CODIGO_USUARIO FROM TBL_USUARIOS WHERE NOMBRE_USUARIO ='$nombreu' AND CONTRASENA='$contrasena'");
+        	 $codigo_usuario=$codigo["CODIGO_USUARIO"];
+             $resultado["codigo"]=1;
+		     $resultado["mensaje"]="Login exitoso";
+        }else{
+          $resultado["codigo"]=0;
+		  $resultado["mensaje"]="Usuario o Contrasena incorrecta";
+	         }
+	    } 
+
 	break;
 	case '3':
 	    $nombreu=$_POST['nombreu'];

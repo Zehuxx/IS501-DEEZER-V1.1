@@ -21,6 +21,7 @@ class Conexion
 	public function cerrarConexion(){
 			oci_close($this->enlace);
 		}
+
     
     public function ejecutarInstruccion($sql){
 			$stid = oci_parse($this->enlace, $sql);
