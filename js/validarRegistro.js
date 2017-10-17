@@ -99,10 +99,18 @@ $("#btn-registro").click(function(){
         dataType:'json',
         success:function(respuesta){
           if (respuesta.codigo==1){
-              //window.location.href="my-drive/bienvenida.php";
-              alert(respuesta.mensaje);
+               $("#resultado").html('<h5 style="border-radius: 4px;color: black;width: 300px;font-size: 18px;" class="bg-success"><center>'+ respuesta.mensaje+'</center></h5>');
+               window.location.href="index.php";
           }else{
-            
+            if (respuesta.codigo1==0) {
+                $("#resultado").html('<h5 style="border-radius: 4px;color: black;width: 300px;font-size: 18px;" class="bg-danger"><center>'+ respuesta.mensaje1+'</center></h5>');
+            }
+            if (respuesta.codigo2==0) {
+               $("#resultado").html('<h5 style="border-radius: 4px;color: black;width: 300px;font-size: 18px;" class="bg-danger"><center>'+ respuesta.mensaje2+'</center></h5>');
+            }
+            if (respuesta.codigo2==0 && respuesta.codigo1==0) {
+              $("#resultado").html('<h5 style="border-radius: 4px;color: black;width: 300px;font-size: 18px;" class="bg-danger"><center>Correo y Usuario en uso</center></h5>');
+            }
           }
         }
      });
