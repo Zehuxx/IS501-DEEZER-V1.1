@@ -1,35 +1,31 @@
 $('#btn-conectarse').click(function(){
-	var user=$("#nombreu");
+	var email=$("#nombreu");
 	var password=$("#contrasena");
-	var nombreu=user.val();
+	var correo=email.val();
 	var contrasena=password.val();
 	var dato=new Array();
-	dato[0]=nombreu; 
+	dato[0]=correo; 
 	dato[1]=contrasena;
 
 	var dato2=new Array();
-	dato2[0]=user;
+	dato2[0]=email;
 	dato2[1]=password; 
 
 	for (var i = 0; i < dato.length; i++) {
 		if (dato[i]==null || dato[i].length == 0 || /^\s+$/.test(dato[i])) {
-    		if (dato[i]==nombreu) 
-           	user.addClass('has-error');
+    		if (dato[i]==correo) 
+           	email.addClass('has-error');
            	 
 
            	if (dato[i]==contrasena)
            		password.addClass('has-error');
 
     	}else{
-    		if (dato[i]==nombreu) {
-    			if (dato[i].match(/^[A-Za-z]+[A-Za-z0-9]*$/)) {
-                   if ((dato[i].length>=2 && dato[i].length<=12)) {
-                      user.removeClass('has-error');
-                   }else{
-                       user.addClass('has-error');
-                   }
+    		if (dato[i]==correo) {
+    			if (dato[i].match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{3})+$/)) {
+                      email.removeClass('has-error');
     			}else{
-                     user.addClass('has-error');
+                     email.addClass('has-error');
     			}
     		}
 
@@ -51,7 +47,7 @@ $('#btn-conectarse').click(function(){
  }
 
   if (error==0) {
-     var parametros="nombreu="+nombreu+"&"+"contrasena="+contrasena;
+     var parametros="correo="+correo+"&"+"contrasena="+contrasena;
      $.ajax({
         url:"ajax/registro-ajax.php?accion=2",
         data:parametros,

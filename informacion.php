@@ -1,5 +1,16 @@
 <?php
- include ("class/class-conexion.php");
+session_start();
+ if(!isset($_SESSION['codigo_usuario']))
+ header('Location:http://localhost/IS501-DEEZER-V1.1/conectarse.php');
+include ("class/class-conexion.php");
+$conexion = new Conexion();
+$conexion->establecerConexion();
+$informacion=$conexion->ejecutarInstruccion("SELECT NVL(A.CODIGO_LUGAR,0) AS CODIGO_LUGAR,A.NOMBRE_USUARIO,A.CORREO,A.CONTRASENA,B.APELLIDO AS APELLIDO,B.CODIGO_SEXO,B.NOMBRE AS NOMBRE,B.TELEFONO AS TELEFONO,NVL(TO_CHAR(B.FECHA_NACIMIENTO,'DD'),0) AS DIA,NVL(TO_CHAR(B.FECHA_NACIMIENTO,'MM'),0) AS MES,NVL(TO_CHAR(B.FECHA_NACIMIENTO,'YYYY'),0) AS ANO
+FROM TBL_USUARIOS A
+INNER JOIN TBL_PERSONAS B
+ON(A.CODIGO_USUARIO=B.CODIGO_PERSONA)
+WHERE A.CODIGO_USUARIO=".$_SESSION["codigo_usuario"]."");
+ while ($row = $conexion->obtenerRegistro($informacion)) {
 ?>
 <!DOCTYPE html>
 <html>
@@ -9,7 +20,7 @@
 	<link rel="stylesheet" type="text/css" href="css/personalizado.css">
 	<style type="text/css">
 		body{
-			width: 100%;
+			width: 100%; 
 		}
 	</style>
 	
@@ -29,14 +40,14 @@
 				<p class="titulo">Mi oferta</p>
 				<hr>
 				<div class="alinear" >
-				 <div class="letrass"> Estás disfrutando de la versión gratuita de Deezer.<button  class="suscripcion"><a style="text-decoration:none;color:black;" href="">Administrar mi suscripción</a> </button></div>
+				 <div class="letrass"> Estás disfrutando de la versión gratuita de Deezer.<button  class="suscripcion"><a style="text-decoration:none;color:black;" href="javascript:;">Administrar mi suscripción</a> </button></div>
 			<p class="titulo">Inicia Sesion</p>
 			<hr>
 			<div >
 			<table>
 				<tr>
 				    <td style="text-align: right;padding-right: 10px;"><label class="extras">Tu correo electrónico:</label></td>
-					<td width="300"><input type="text" id="txt-correo" class="form-control " > </td>
+					<td width="300"><input type="text" id="txt-correo" disabled="disabled" value="<?php echo $row['CORREO']; ?>" class="form-control " > </td>
 
 				</tr>
 				<tr>
@@ -44,7 +55,8 @@
 				</tr>
 				<tr >
                     <td style="text-align: right;padding-right: 10px;"><label class="extras">Tu contraseña:</label></td>
-					<td><input type="text" id="txt-contrasena" class="form-control "></td>
+					<td><input type="password" id="txt-contrasena" value="<?php echo $row['CONTRASENA']; ?>" class="form-control "></td>
+					<td><button id="changepass" class="mod">Modificar</button></td>
 				</tr>
 			</table>
 				<div class="datoss">
@@ -56,10 +68,19 @@
 						<td style="text-align: right;padding-left: 10px;padding-bottom: 17px">
 							<label class="extras">Sexo</label>
 							<td style="padding-left: 15px;padding-bottom: 17px">
-							<select class="form-control" id="slc-sexo">
+							<select class="form-control"  id="slc-sexo">
 								<option value="N/A">Sexo</option>
-								<option value="1">Femenino</option>
-								<option value="2">Masculino</option>
+								<?php 
+                                 if ($row['CODIGO_SEXO']==1) {
+                                 	echo '<option value="1" selected>Femenino</option>'.
+                                         '<option value="2">Masculino</option>';
+                                 }else{
+                                    echo '<option value="1">Femenino</option>'.
+                                         '<option value="2" selected>Masculino</option>';
+                                 }
+
+								?>
+								
 							</select>
 							</td>
 						</td>
@@ -69,7 +90,7 @@
 							<label class="extras">Nombre de Usuario</label>
 						</td>
 						<td width="313" style="padding-left: 15px">
-							<input type="text" class="form-control" id="txt-nombreu">
+							<input type="text" class="form-control" value="<?php echo $row['NOMBRE_USUARIO']; ?>" id="txt-nombreu">
 						</td>
 					</tr>
 				</table>
@@ -83,7 +104,14 @@
 							<label class="extras">Apellido</label>
 						</td>
 						<td width="300" style="padding-left: 15px;padding-bottom: 15px">
-							<input type="text" id="txt-apellido" class="form-control">
+							<input type="text" id="txt-apellido" value="<?php
+                               if($row['APELLIDO']==null){
+                                   echo ""; 
+                               }else{
+                               	   echo $row['APELLIDO'];
+                               }
+                               ?>" class="form-control">
+                               
 						</td>
 					</tr>
 					<tr>
@@ -91,7 +119,14 @@
 							<label class="extras">Nombre</label>
 						</td>
 						<td style="padding-left: 15px;padding-bottom: 15px">
-							<input type="text" id="txt-nombre" class="form-control">
+							<input type="text" id="txt-nombre" value="<?php 
+                               if($row['NOMBRE']==null){
+                                   echo ""; 
+                               }else{
+                               	   echo $row['NOMBRE'];
+                               }
+
+							?>" class="form-control">
 						</td>
 					</tr>
 					<tr>
@@ -104,7 +139,11 @@
 									<option value="N/A">N/A</option>
 								<?php
                                   for ($i=1; $i <32 ; $i++) { 
-                                  	echo "<option value=".$i.">".$i."</option>";
+                                  	if ($row['DIA']==$i) {
+                                  		echo "<option value=".$i." selected>".$i."</option>";
+                                  	}else{
+                                        echo "<option value=".$i." >".$i."</option>";
+                                  	}
                                   }
 								?>
 							</select>
@@ -114,7 +153,11 @@
 									<option value="N/A">N/A</option>
 								<?php
                                   for ($i=1; $i <13 ; $i++) { 
-                                  	echo "<option value=".$i.">".$i."</option>";
+                                  	if ($row['MES']==$i) {
+                                  		echo "<option value=".$i." selected>".$i."</option>";
+                                  	}else{
+                                        echo "<option value=".$i." >".$i."</option>";
+                                  	}
                                   }
 								?>
 							</select>
@@ -124,7 +167,11 @@
 									<option value="N/A">N/A</option>
 								<?php
                                   for ($i=1900; $i <2017 ; $i++) { 
-                                  	echo "<option value=".$i.">".$i."</option>";
+                                  	if ($row['ANO']==$i) {
+                                  		echo "<option value=".$i." selected>".$i."</option>";
+                                  	}else{
+                                        echo "<option value=".$i." >".$i."</option>";
+                                  	}
                                   }
 								?>
 							</select>
@@ -140,17 +187,22 @@
 							<label class="extras">Pais</label>
 						</td>
 						<td style="padding-left: 15px;padding-bottom: 15px">
-							<select id="slc-pais" class="form-control">
+							<select id="slc-pais"  class="form-control">
 								<option value="">N/A</option>
 
 								<?php
 								$conexion = new Conexion();
 								$conexion->establecerConexion();
                                 $lugares=$conexion->ejecutarInstruccion("select CODIGO_LUGAR,NOMBRE_LUGAR from TBL_LUGARES"); 
-								while ($row = $conexion->obtenerRegistro($lugares)) {
-									echo '<option value='.$row["CODIGO_LUGAR"].'>'.$row["NOMBRE_LUGAR"].'</option>';	
+								while ($row2 = $conexion->obtenerRegistro($lugares)) {
+									if ($row2["CODIGO_LUGAR"]==$row['CODIGO_LUGAR']) {
+                                  		echo "<option value=".$row2["CODIGO_LUGAR"]." selected>".$row2["NOMBRE_LUGAR"]."</option>";	
+                                  	}else{
+                                        echo "<option value=".$row2["CODIGO_LUGAR"].">".$row2["NOMBRE_LUGAR"]."</option>";
+                                  	}
+									
 								}
-								$conexion->cerrarConexion();
+								
 								?>
 							</select>
 							
@@ -162,15 +214,25 @@
 							<label class="extras" class="form-control">Movil</label>
 						</td>
 						<td style="padding-left: 15px;padding-bottom: 15px">
-							<input type="text" id="txt-phone" class="form-control">
+							<input type="text" id="txt-phone" value="<?php 
+                              if($row['TELEFONO']==null){
+                                   echo ""; 
+                               }else{
+                               	   echo $row['TELEFONO'];
+                               }
+							 ?>" class="form-control">
 						</td>
 					</tr>
+					<?php }
+                     $conexion->cerrarConexion();
+					?>
 					<tr>
 						<td colspan="2">
 							<div id="resultado" style="padding-bottom: 15px;"></div>
 						</td>
 					</tr>
 					<tr>
+
 						<td colspan="2">
 							<button class="btn btn-primary" id="btn-save" type="button" style="margin-left: 180px"><span class="label">Guardar</span></button>
 						</td>

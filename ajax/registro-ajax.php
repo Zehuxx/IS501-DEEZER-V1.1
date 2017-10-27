@@ -5,7 +5,7 @@ include ("../class/class-conexion.php");
 $conexion = new Conexion();
 $conexion->establecerConexion();
 
-$resultado=array();
+$resultado=array(); 
 switch ($_GET['accion']){ 
 	
 	case '1': 
@@ -54,14 +54,14 @@ switch ($_GET['accion']){
 
 		break;
 	case '2':
-	    $nombreu=$_POST['nombreu'];
+	    $correo=$_POST['correo'];
 	    $contrasena=$_POST['contrasena'];
 
-	    $registros=$conexion->ejecutarInstruccion("SELECT COUNT(1) COINCIDENCIAS FROM (SELECT CODIGO_USUARIO FROM TBL_USUARIOS WHERE NOMBRE_USUARIO ='$nombreu' AND CONTRASENA='$contrasena')");
+	    $registros=$conexion->ejecutarInstruccion("SELECT COUNT(1) COINCIDENCIAS FROM (SELECT CODIGO_USUARIO FROM TBL_USUARIOS WHERE CORREO ='$correo' AND CONTRASENA='$contrasena')");
 
 	    while ($row = $conexion->obtenerRegistro($registros)) {
 	    	if ($row["COINCIDENCIAS"]=="1") {
-	    		$codigo=$conexion->ejecutarInstruccion("SELECT CODIGO_USUARIO FROM TBL_USUARIOS WHERE NOMBRE_USUARIO ='$nombreu' AND CONTRASENA='$contrasena'");
+	    		$codigo=$conexion->ejecutarInstruccion("SELECT CODIGO_USUARIO FROM TBL_USUARIOS WHERE CORREO ='$correo' AND CONTRASENA='$contrasena'");
 	    		while ($row2=$conexion->obtenerRegistro($codigo)) {
 	    			 $_SESSION["codigo_usuario"]=$row2["CODIGO_USUARIO"];
 	    		}
@@ -69,27 +69,12 @@ switch ($_GET['accion']){
 		     $resultado["mensaje"]="Login exitoso";
         }else{
           $resultado["codigo"]=0;
-		  $resultado["mensaje"]="Usuario o Contrasena incorrecta";
+		  $resultado["mensaje"]="Correo o Contrasena incorrecta";
 	         }
 	    } 
 
 	break;
-	case '3':
-	    $nombreu=$_POST['nombreu'];
-	    $contrasena=$_POST['contrasena'];
-	    $sexo=$_POST['sexo'];
-	    $dia=$_POST['dia'];
-	    $mes=$_POST['mes'];
-	    $ano=$_POST['ano'];
-	    $apellido=$_POST['apellido'];
-	    $telefono=$_POST['telefono'];
-	    $nombre=$_POST['nombre'];
-	    $codigop=$_POST['codigop'];
-	    $correo=$_POST['correo'];
-	    $resultado['codigo']=1;
-        $resultado["mensaje"]='Nombre Usuario= '.$nombreu.' '.'Contraseña= '.$contrasena.' '.'Correo= '.$correo.' '.'sexo= '.$sexo.' '.'dia= '.$dia.' '.'mes= '.$mes.' '.'año= '.$ano.' '.'nombre= '.$nombre.' '.'apellido= '.$apellido.' '.'Codigop= '.$codigop.' '.'telefono= '.$telefono;
-        //$info=$conexion->ejecutarInstruccion("select CODIGO_LUGAR,NOMBRE_LUGAR from TBL_LUGARES");
-	break;
+	
 	default:
 	
 	break;
