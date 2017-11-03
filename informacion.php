@@ -5,7 +5,7 @@ session_start();
 include ("class/class-conexion.php");
 $conexion = new Conexion();
 $conexion->establecerConexion();
-$informacion=$conexion->ejecutarInstruccion("SELECT NVL(A.CODIGO_LUGAR,0) AS CODIGO_LUGAR,A.NOMBRE_USUARIO,A.CORREO,A.CONTRASENA,B.APELLIDO AS APELLIDO,B.CODIGO_SEXO,B.NOMBRE AS NOMBRE,B.TELEFONO AS TELEFONO,NVL(TO_CHAR(B.FECHA_NACIMIENTO,'DD'),0) AS DIA,NVL(TO_CHAR(B.FECHA_NACIMIENTO,'MM'),0) AS MES,NVL(TO_CHAR(B.FECHA_NACIMIENTO,'YYYY'),0) AS ANO
+$informacion=$conexion->ejecutarInstruccion("SELECT NVL(A.CODIGO_LUGAR,0) AS CODIGO_LUGAR,A.NOMBRE_USUARIO,A.CORREO,B.APELLIDO AS APELLIDO,B.CODIGO_SEXO,B.NOMBRE AS NOMBRE,B.TELEFONO AS TELEFONO,NVL(TO_CHAR(B.FECHA_NACIMIENTO,'DD'),0) AS DIA,NVL(TO_CHAR(B.FECHA_NACIMIENTO,'MM'),0) AS MES,NVL(TO_CHAR(B.FECHA_NACIMIENTO,'YYYY'),0) AS ANO
 FROM TBL_USUARIOS A
 INNER JOIN TBL_PERSONAS B
 ON(A.CODIGO_USUARIO=B.CODIGO_PERSONA)
@@ -22,7 +22,9 @@ WHERE A.CODIGO_USUARIO=".$_SESSION["codigo_usuario"]."");
 		body{
 			width: 100%; 
 		}
+
 	</style>
+
 	
 </head> 
 <body style="background-color: #f1f1f1">
@@ -55,8 +57,7 @@ WHERE A.CODIGO_USUARIO=".$_SESSION["codigo_usuario"]."");
 				</tr>
 				<tr >
                     <td style="text-align: right;padding-right: 10px;"><label class="extras">Tu contraseña:</label></td>
-					<td><input type="password" id="txt-contrasena" value="<?php echo $row['CONTRASENA']; ?>" class="form-control "></td>
-					<td><button id="changepass" class="mod">Modificar</button></td>
+					<td><button id="changepass" onclick="modddd();" class="mod">Modificar</button></td>
 				</tr>
 			</table>
 				<div class="datoss">
@@ -177,9 +178,6 @@ WHERE A.CODIGO_USUARIO=".$_SESSION["codigo_usuario"]."");
 							</select>
 							</div>
 						</td>
-						<td>
-							
-						</td>
 					</tr>
 					
 					<tr>
@@ -251,13 +249,30 @@ WHERE A.CODIGO_USUARIO=".$_SESSION["codigo_usuario"]."");
 		</div>
 	</div>
 </div>
+
+
     <script type="text/javascript" src="js/jquery.min.js"></script> 
+    <script src="js/bootstrap.min.js"></script>
 	<script src="js/index.js"></script>
 	<script src="js/informacion.js"></script>
 	
 	<script type="text/javascript">
     
        $(".loader").css("display","none");
+
+
+
+
+    
+     	$('#modal-password',window.parent.parent.document).on('hide.bs.modal', function (e) {
+           if($("#dropp",window.parent.parent.document).hasClass("modal-backdrop")){
+           $(".modal-backdrop",window.parent.parent.document).remove();
+           }
+         });
+ 
+
+      
+   
 
 </script>
 </body>

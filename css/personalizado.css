@@ -213,6 +213,20 @@ html{
   font-size: 12px;
 }
 
+     .modal-dialogg {
+  position: relative;
+  width: auto;
+  margin-top: 100px;
+  margin-left: 240px;
+      margin-right: 267px;
+}
+.coll{
+  background-color: #f5f5f5;
+}
+.pass{
+  margin-left: 184px;
+}
+
 .hijo li:focus,
 .hijo li:hover{
   background-color: #efeff2;
@@ -1266,6 +1280,10 @@ color: #72727d;
   width: 100%;
 }
 
+.espacio{
+  padding-right: -2px;
+}
+
  .imagen{
   margin-top: 20px;
 }
@@ -1311,7 +1329,6 @@ color: #72727d;
     border-radius: 4px;
     background-color: #f8f8f9;
     border: solid 1px #d1d1d7;
-    margin-left: 10px;
 }
 
 .letrass{

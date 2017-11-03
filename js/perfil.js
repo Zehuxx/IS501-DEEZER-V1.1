@@ -393,7 +393,7 @@ if ($('body').hasClass('modal-open')) {
   
 }
    
-}
+} 
 
 
 

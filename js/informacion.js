@@ -15,7 +15,7 @@ $("#btn-save").click(function(){
 	var telefono=phone.val(); 
 	var ano=year.val();
 	var codigop=codep.val();
-	var nombre=name.val();
+	var nombre=name.val(); 
 	var apellido=lname.val();
 	var dia=day.val();
 	var mes=month.val();
@@ -224,3 +224,16 @@ for (var i = 0; i < dato.length; i++) {
   }
 
 });
+
+function modddd(){
+  $('#modal-password',window.parent.parent.document).modal('show');
+  
+  $("body",window.parent.parent.document).append('<div class="modal-backdrop fade in" id="dropp"  ></div>');
+  $('body').css("padding-right","0px");
+  if ($('body').hasClass('modal-open')) {
+  $('body').removeClass('modal-open');
+  $('.fade').removeClass("modal-backdrop"); 
+  
+}
+   
+}

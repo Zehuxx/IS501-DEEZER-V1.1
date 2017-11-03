@@ -405,3 +405,4 @@ function seleccion(id,id2,id3){
   $("#"+id3).children("span").css("color","#92929d");
   $("#"+id).children("span").css("color","blue");
 }
+

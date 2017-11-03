@@ -591,7 +591,57 @@ function cortar3($text){
 									</div>
 								</div>
 							</div>
+                            
 
+                            <div class="modal fade" tabindex="-1" role="dialog" id="modal-password" aria-hidden="true">
+              
+              <div class="modal-dialogg" role="document" style="width:900px" >
+                <div class="modal-content">
+                <div class="modal-header">
+                
+                 <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12 coll">
+                 	<center><h3>RENOVAR TU CONTRASEÑA DE DEEZER</h3></center>
+                   <table class="pass">
+                   	<tr>
+                   		<td style="text-align: right;padding-bottom: 15px">
+							<label class="extras">Ingesar Contraseña:</label>
+						</td>
+						<td style="padding-left: 15px;padding-bottom: 15px">
+							<input type="text" id="txt-password" placeholder="Contraseña"  class="form-control">
+						</td>
+                   	</tr>
+                   	<tr>
+                   		<td style="text-align: right;padding-bottom: 15px">
+							<label class="extras">Ingesar Nueva Contraseña:</label>
+						</td>
+						<td style="padding-left: 15px;padding-bottom: 15px">
+							<input type="text" id="txt-newpassword" placeholder="Nueva Contraseña"  class="form-control">
+						</td>
+                   	</tr>
+                   	<tr>
+                   		<td style="text-align: right;padding-bottom: 15px">
+							<label class="extras">Confirmar Contraseña:</label>
+						</td>
+						<td style="padding-left: 15px;padding-bottom: 15px">
+							<input type="text" id="txt-confpassword" placeholder="Confirmar Contraseña"  class="form-control">
+						</td>
+                   	</tr>
+                   	<tr>
+                   		<td colspan="2">
+                   			 <button class="btn btn-success" style="margin-left: 171px"><span class="laber">Continuar</span></button>
+                             <button class="btn btn-danger" data-dismiss="modal" style="margin-left: 30px" ><span class="laber">Cancelar</span></button>
+                   		</td>
+                   	</tr>
+                   </table>
+                  </div>
+
+                  
+                </div>
+                
+              </div><!-- /.modal-content -->
+               
+          </div><!-- /.modal-dialog --> 
+</div><!-- /.modal --> 
 
 
 

@@ -136,7 +136,7 @@
 		$(function () {
           $('[data-toggle="popover"]').popover();
         });
-
+ 
      $(document).ready(function(){
 
      	$('#newplaylist',window.parent.parent.document).on('hide.bs.modal', function (e) {
