@@ -1,11 +1,15 @@
+body
+{
+    margin: 0; 
+    padding: 0;
+}
+
 #contenedor
 {
 	height: 337px;
 	width: 1129px;
 	background:#F8F8F9;
-	float: left;
-	margin-left: -8px;
-	margin-top: -8px;
+	position: relative;
 }
 
 h2

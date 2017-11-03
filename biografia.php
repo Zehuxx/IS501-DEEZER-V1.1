@@ -6,6 +6,7 @@
 	<link rel="stylesheet" type="text/css" href="css/biografia.css">
 </head>
 <body>
+<center>
 <div id="contenedor">
 <center>
 <div id="biografia">
@@ -20,6 +21,8 @@ Alux Nahual está integrado actualmente por los miembros originales: Álvaro Agu
 </div>
 </center>
 </div>
+</center>
+
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script type="text/javascript">

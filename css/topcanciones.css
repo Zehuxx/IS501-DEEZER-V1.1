@@ -2,7 +2,8 @@
 {
 	width: 1129px;
 	background:#fff;
-	height: 3483px;
+	height: 2604px;
+	position: relative;
 }
 
 #infoparte
@@ -19,7 +20,7 @@
 
 #canciones
 {
-	margin-top: 15px;
+	height: 2548px;
 }
 
 #listcanciones
@@ -85,7 +86,7 @@
     color: #32323d;
 }
 
-.glyphicon-heart
+.glyphicon-heart-empty
 {
 	color: #99999e;
 	float: left;
