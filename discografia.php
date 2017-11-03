@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>deezer</title>
+	<title>Discografia</title>
 	<meta charset="utf-8">
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/discografia.css">

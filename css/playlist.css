@@ -1,0 +1,48 @@
+body
+{
+	margin: 0;
+	padding: 0;
+}
+
+.Contenedor
+{
+	float: left;
+	margin-top: 15px;
+	margin-left: 15px;
+	position: relative;
+}
+
+.playlist
+{
+	width: 234px;
+	height: 234px;
+	float: left;
+	position: relative;
+	background-color: red;
+	border-top-right-radius: 3px;
+	border-top-left-radius: 3px;
+	border-bottom-right-radius: 3px;
+	border-bottom-left-radius: 3px;
+}
+
+#nombre_playlist
+{
+	color: #32323d;
+    font-family: Open Sans,Arial,sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    float:left;
+    margin-top: 250px;
+    margin-left: -230px;
+}
+
+#fans_canciones
+{
+	color: #72727d;
+    font-family: Open Sans,Arial,sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    float: left;
+    margin-top: 270px;
+    margin-left: -230px;
+}

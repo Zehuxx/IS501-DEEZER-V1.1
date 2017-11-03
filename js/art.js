@@ -22,7 +22,7 @@ $("#link3").click(function(){
 
 if($("#link4").click()){
 $("#link4").click(function(){
-	$("iframe").attr("src","features.php");
+	$("iframe").attr("src","playlist.php");
 })
 }
 
