@@ -406,3 +406,89 @@ function seleccion(id,id2,id3){
   $("#"+id).children("span").css("color","blue");
 }
 
+$("#changepass").click(function(){
+var password=$("#txt-password");
+var newpassword=$("#txt-newpassword");
+var cpassword=$("#txt-confpassword");
+var contrasena=password.val();
+var nuevacontrasena=newpassword.val();
+var confcontrasena=cpassword.val();
+var dato=new Array();
+dato[0]=contrasena;
+dato[1]=nuevacontrasena;
+dato[2]=confcontrasena;
+var dato2=new Array();
+dato2[0]=password;
+dato2[1]=newpassword;
+dato2[2]=cpassword;
+
+for (var i = 0; i < dato.length; i++) {
+      if (dato[i]==null || dato[i].length == 0 || /^\s+$/.test(dato[i])) {
+           if (dato[i] == contrasena || nuevacontrasena || confcontrasena)
+                      if (dato[i]==contrasena) 
+                      password.addClass('has-error');
+                     
+                      if (dato[i]==nuevacontrasena) 
+                        newpassword.addClass('has-error');
+                      
+                      if (dato[i]==confcontrasena) {
+                        cpassword.addClass('has-error');
+                      }
+                     
+        }else{
+           if (dato[i] == contrasena || nuevacontrasena || confcontrasena) {
+              if (!/^[A-Za-z\d]{6,15}$/.test(dato[i])) {
+                     if (dato[i]==contrasena) 
+                      password.addClass('has-error');
+                     
+                      if (dato[i]==nuevacontrasena) 
+                        newpassword.addClass('has-error');
+                 
+                      if (dato[i]==confcontrasena) 
+                        cpassword.addClass('has-error');
+                  }else{
+                    if (dato[i]==contrasena) 
+                      password.removeClass('has-error');
+                     
+                      if (dato[i]==nuevacontrasena) 
+                        newpassword.removeClass('has-error');
+                 
+                      if (dato[i]==confcontrasena) 
+                        cpassword.removeClass('has-error');
+                  }
+            if (nuevacontrasena!=confcontrasena) {
+               newpassword.addClass("has-error");
+               cpassword.addClass("has-error");
+            }
+        }
+   }
+}
+ var error=0;
+    for (var i = 0; i < dato2.length; i++) {
+      if (dato2[i].hasClass('has-error')) {
+       error++;
+     }     
+   }
+
+   if (error==0) {
+     var parametros="contrasena="+contrasena+"&"+"nuevacontrasena="+nuevacontrasena+"&"+"confcontrasena="+confcontrasena;
+     //alert(parametros);
+     $.ajax({
+        url:"ajax/informacion-ajax.php?accion=2",
+        data:parametros,
+        method:"POST",
+        dataType:'json',
+        success:function(respuesta){
+          if (respuesta.codigo==1){
+              $("#result").html('<div class="bg-success"><center>'+respuesta.mensaje+'</center></div>');
+          }else{
+             $("#result").html('<div class="bg-danger"><center>'+respuesta.mensaje+'</center></div>');
+          }
+        }
+     });
+  }else{
+    //hay campos mal llenados o vacios
+    //alert('errores: '+error);
+  }
+
+});
