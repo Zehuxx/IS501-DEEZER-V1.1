@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>Top-Canciones</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="css/topcanciones.css">
 	<link href="css/bootstrap.min.css" rel="stylesheet">
