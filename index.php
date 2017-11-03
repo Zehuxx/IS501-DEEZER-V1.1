@@ -3,6 +3,7 @@
  //$_SESSION['codigo_usuario']=1; 
  if(!isset($_SESSION['codigo_usuario']))
  header('Location:http://localhost/IS501-DEEZER-V1.1/conectarse.php');
+
 function cortar($text){
 
 	if ((strlen($text)>25)) {

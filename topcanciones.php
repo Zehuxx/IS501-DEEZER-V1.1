@@ -33,7 +33,7 @@
 	                   <div id="cont1"><span>'.$i.'</span>
 	                   <div id="btnplay" class="oculto"><i class="fa fa-play"></i></div>
 	                   </div>
-	                   <div id="cont2" class="aparca" data-toggle="tooltip" data-placement="top" title="Añadir a mis favoritos"><span class="glyphicon glyphicon-heart"></span></div>
+	                   <div id="cont2" class="aparca" data-toggle="tooltip" data-placement="top" title="Añadir a mis favoritos"><span class="glyphicon glyphicon-heart-empty"></span></div>
 	                   <div id="cont3"><a id="nomb" class="songs">Donkey Kong</a></div>
                        <div id="cont4" class="aparece" data-toggle="tooltip" data-placement="top" title="Añadir a una playlist"><span id="plus">+</span></div>
 	                   <div id="cont5" class="aparece" data-toggle="tooltip" data-placement="top" title="Ver menu"><span class="glyphicon glyphicon-option-horizontal"></span></div>
@@ -57,7 +57,7 @@
 	                   <div id="cont1"><span>49</span>
 	                   <div id="btnplay" class="oculto"><i class="fa fa-play"></i></div>
 	                   </div>
-	                   <div id="cont2" class="aparca"data-toggle="tooltip" data-placement="top" title="Añadir a mis favoritos"><span class="glyphicon glyphicon-heart"></span></div>
+	                   <div id="cont2" class="aparca" data-toggle="tooltip" data-placement="top" title="Añadir a mis favoritos"><span class="glyphicon glyphicon-heart-empty"></span></div>
 	                   <div id="cont3"><a id="nomb" class="songs">Donkey Kong</a></div>
                        <div id="cont4" class="aparece" data-toggle="tooltip" data-placement="top" title="Añadir a una playlist"><span id="plus">+</span></div>
 	                   <div id="cont5" class="aparece" data-toggle="tooltip" data-placement="top" title="Ver menu"><span class="glyphicon glyphicon-option-horizontal"></span></div>

@@ -44,12 +44,10 @@
 	      </table>
 	   </div>
 
-	   <iframe frameborder="0" src="discografia.php"></iframe>
+	   <iframe id="miIframe" frameborder="0" src="discografia.php" onload="autofitIframe(this)";></iframe>
 </center>
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script type="text/javascript" src="js/art.js"></script>
 </body>
 </html>   
-
-https://pcgames-download.com/2017/09/fifa-18-steampunks-crack-torrent-uptobox-rapidgator-download/

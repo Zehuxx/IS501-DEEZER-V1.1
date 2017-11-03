@@ -20,30 +20,34 @@
 	    <div id="musica">
 	    	<div id="cancion" class="can">
 	    	<span id="num">1</span>
-	    	<span class="glyphicon glyphicon-heart"></span>
-	    	<a href="javascript:;" id="nomb">Musica mia</a>
-	    	<div class="ub"><span id="per" class="glyphicon glyphicon-option-horizontal"></span></div>
+	    	<div class="cont" data-toggle="tooltip" data-placement="top" title="Añadir a mis favoritos"><span class="glyphicon glyphicon-heart-empty" id="gl"></span></div>
+	    	<div id="btnplay" class="oculto"><i class="fa fa-play"></i></div>
+	    	<div class="nobcancion"><a href="javascript:;" id="nomb">Musica mia</a></div>
+	    	<div class="ub" data-toggle="tooltip" data-placement="top" title="Ver menu"><span id="per" class="glyphicon glyphicon-option-horizontal"></span></div>
 	    	</div>
 
 	    	<div id="cancion" class="can">
 	    	<span id="num">2</span>
-	    	<span class="glyphicon glyphicon-heart"></span>
-	    	<a href="javascript:;" id="nomb">Musica mia</a>
-	    	<div class="ub"><span id="per" class="glyphicon glyphicon-option-horizontal"></span></div>
+	    	<div class="cont" data-toggle="tooltip" data-placement="top" title="Añadir a mis favoritos"><span class="glyphicon glyphicon-heart-empty" id="gl"></span></div>
+	    	<div id="btnplay" class="oculto"><i class="fa fa-play"></i></div>
+	    	<div class="nobcancion"><a href="javascript:;" id="nomb">Musica mia</a></div>
+	    	<div class="ub" data-toggle="tooltip" data-placement="top" title="Ver menu"><span id="per" class="glyphicon glyphicon-option-horizontal"></span></div>
 	    	</div>
 
 	    	<div id="cancion" class="can">
 	    	<span id="num">3</span>
-	    	<span class="glyphicon glyphicon-heart"></span>
-	    	<a href="javascript:;" id="nomb">Musica mia</a>
-	    	<div class="ub"><span id="per" class="glyphicon glyphicon-option-horizontal"></span></div>
+	    	<div class="cont" data-toggle="tooltip" data-placement="top" title="Añadir a mis favoritos"><span class="glyphicon glyphicon-heart-empty" id="gl"></span></div>
+	    	<div id="btnplay" class="oculto"><i class="fa fa-play"></i></div>
+	    	<div class="nobcancion"><a href="javascript:;" id="nomb">Musica mia</a></div>
+	    	<div class="ub" data-toggle="tooltip" data-placement="top" title="Ver menu"><span id="per" class="glyphicon glyphicon-option-horizontal"></span></div>
 	    	</div>
 
 	    	<div id="cancion1" class="can">
 	    	<span id="num">4</span>
-	    	<span class="glyphicon glyphicon-heart"></span>
-	    	<a href="javascript:;" id="nomb">Musica mia</a>
-	    	<div class="ub"><span id="per" class="glyphicon glyphicon-option-horizontal"></span></div>
+	    	<div class="cont" data-toggle="tooltip" data-placement="top" title="Añadir a mis favoritos"><span class="glyphicon glyphicon-heart-empty" id="gl"></span></div>
+	    	<div id="btnplay" class="oculto"><i class="fa fa-play"></i></div>
+	    	<div class="nobcancion"><a href="javascript:;" id="nomb">Musica mia</a></div>
+	    	<div class="ub" data-toggle="tooltip" data-placement="top" title="Ver menu"><span id="per" class="glyphicon glyphicon-option-horizontal"></span></div>
 	    	</div>
 
 	    </div>
@@ -57,13 +61,27 @@
 	   </div>
 	   <a id="npl">Verano Gallo 2016</a>
 	   <span id="cantidad_canciones">26 canciones-963 fans</span>
+	   <div class="opcion1"><span id="per" class="glyphicon glyphicon-option-horizontal"></span></div>
 	   <span class="glyphicon glyphicon-heart-empty"></span>
 	  </div>
 	</div>
      
      <a id="link3" href="javascript:;">Último lanzamiento ></a>
 	<div id="lanzamiento">
-		<div id="ultimolanzamiento"></div>
+		<div id="ultimolanzamiento">
+			<div class="opciones">
+				<div id="reproducir">
+					<i class="fa fa-play"> </i>
+				</div>
+				<div id="favorito">
+					<i class="fa fa-heart"></i>
+				</div>
+				<div id="menudes">
+					<i class="fa fa-ellipsis-h"></i>
+
+				</div>
+			</div>
+		</div>
 		<a id="album">Sueños de jade</a>
 		<span id="salida">11-02-2016</span>
 	<div id="listac">
@@ -73,9 +91,10 @@
 		echo'<div id="musicaalbum">
 	    	<div id="cancione" class="cann">
 	    	<span id="num">'.$i.'</span>
-	    	<span class="glyphicon glyphicon-heart"></span>
+	    	<div id="btnplay1" class="oculto"><i class="fa fa-play"></i></div>
+	    	<div class="cont1" data-toggle="tooltip" data-placement="top" title="Añadir a mis favoritos"><span class="glyphicon glyphicon-heart-empty" id="gl1"></span></div>
 	    	<a href="javascript:;" id="nomb">Musica mia</a>
-	    	<div class="ub"><span id="per" class="glyphicon glyphicon-option-horizontal"></span></div>
+	    	<div class="ub1" data-toggle="tooltip" data-placement="top" title="Ver menu"><span id="per" class="glyphicon glyphicon-option-horizontal"></span></div>
 	    	</div>
 	    </div>';
 	    }
@@ -83,9 +102,10 @@
 	    <div id="musicaalbum">
 	    	<div id="cancione1" class="cann">
 	    	<span id="num">7</span>
-	    	<span class="glyphicon glyphicon-heart"></span>
+	    	<div id="btnplay1" class="oculto"><i class="fa fa-play"></i></div>
+	    	<div class="cont1" data-toggle="tooltip" data-placement="top" title="Añadir a mis favoritos"><span class="glyphicon glyphicon-heart-empty" id="gl1"></span></div>
 	    	<a href="javascript:;" id="nomb">Musica mia</a>
-	    	<div class="ub"><span id="per" class="glyphicon glyphicon-option-horizontal"></span></div>
+	    	<div class="ub1" data-toggle="tooltip" data-placement="top" title="Ver menu"><span id="per" class="glyphicon glyphicon-option-horizontal"></span></div>
 	    	</div>
 	    </div>
 	</div>
@@ -103,6 +123,7 @@
 	     <a id="nartist">Artista'.$i.'</a>
 	     <span id="nfans">66,000 fans</span>
 	     <div class="glp">
+	     <div class="opcion"><span id="per" class="glyphicon glyphicon-option-horizontal"></span></div>
 	     <span class="glyphicon glyphicon-heart-empty"></span>
 	     </div>
 	  </div>';
@@ -118,9 +139,10 @@
     for ($i=1; $i <= 4 ; $i++) 
     {
     echo '<div id="artista" class="art">
-             <div id="options" class="opt">
-                  <div id="option"><span class="glyphicon glyphicon-play app"></span></div>
-                  <div id="option"><span class="glyphicon glyphicon-heart app"></span></div>
+             <div class="opt">
+                <div class="rplay"><i class="fa fa-play"> </i></div>
+                <div class="ffav"><i class="fa fa-heart"> </i></div>
+                <div class="moptions"><i class="fa fa-ellipsis-h"> </i></div>
              </div>
           </div>'; 
     echo '<tr>
@@ -139,9 +161,10 @@
     for ($i=1; $i <= 1 ; $i++) 
     {
     echo '<div id="artista" class="art">
-             <div id="options" class="opt">
-                  <div id="option"><span class="glyphicon glyphicon-play app"></span></div>
-                  <div id="option"><span class="glyphicon glyphicon-heart app"></span></div>
+<div class="opt">
+                <div class="rplay"><i class="fa fa-play"> </i></div>
+                <div class="ffav"><i class="fa fa-heart"> </i></div>
+                <div class="moptions"><i class="fa fa-ellipsis-h"> </i></div>
              </div>
           </div>'; 
     echo '<tr>
@@ -152,7 +175,7 @@
     }
   ?>
    </div>
-    </div>//
+    </div>
 
 </div>
 
