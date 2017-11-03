@@ -29,7 +29,7 @@
 				<div>
 					<br>
 					<form>
-						<input type="text" id="nombreu" class="form-control" style="width: 300px;height: 40px;margin-bottom: 3px;float: center;" placeholder="Nombre de Usuario" >
+						<input type="text" id="nombreu" class="form-control" style="width: 300px;height: 40px;margin-bottom: 3px;float: center;" placeholder="Correo Electronico" >
 				    	<input type="password" id="contrasena" class="form-control" style="width: 300px;height: 40px;float: center;" placeholder="Contraseña">
 					</form>
 	   			</div> 

@@ -2,19 +2,16 @@
 $("#btn-save").click(function(){
 
     var user=$("#txt-nombreu");
-    var email=$("#txt-correo");
     var day=$("#dia");
-    var month=$("#mes");
+    var month=$("#mes"); 
     var phone=$("#txt-phone");
     var year=$("#year");
     var codep=$("#slc-pais");
     var name=$("#txt-nombre");
     var lname=$("#txt-apellido");
-    var password=$("#txt-contrasena");
     var sex=$("#slc-sexo");
   
 	var nombreu=user.val();
-	var correo=email.val(); 
 	var telefono=phone.val(); 
 	var ano=year.val();
 	var codigop=codep.val();
@@ -22,46 +19,35 @@ $("#btn-save").click(function(){
 	var apellido=lname.val();
 	var dia=day.val();
 	var mes=month.val();
-	var contrasena=password.val();
-  var sexo=sex.val();
+	var sexo=sex.val();
 	var dato=new Array();
 	dato[0]=nombreu; 
-	dato[1]=correo;
-	dato[2]=dia;
-	dato[3]=mes;
-	dato[4]=apellido;
-	dato[5]=codigop;
-	dato[6]=nombre; 
-	dato[7]=ano;
-	dato[8]=telefono;
-	dato[9]=contrasena;
-  dato[10]=sexo;
+	dato[1]=dia;
+	dato[2]=mes;
+	dato[3]=apellido;
+	dato[4]=codigop;
+	dato[5]=nombre; 
+	dato[6]=ano;
+	dato[7]=telefono;
+  dato[8]=sexo;
 
 
 	var dato2=new Array();
-	dato2[0]=user; 
-	dato2[1]=email;
-	dato2[2]=day;
-	dato2[3]=month;
-	dato2[4]=lname;
-	dato2[5]=codep;
-	dato2[6]=name; 
-	dato2[7]=year;
-	dato2[8]=phone;
-	dato2[9]=password;
-  dato2[10]=sex;
+	dato2[0]=user;
+	dato2[1]=day;
+	dato2[2]=month;
+	dato2[3]=lname;
+	dato2[4]=codep;
+	dato2[5]=name; 
+	dato2[6]=year;
+	dato2[7]=phone;
+  dato2[8]=sex;
 
 	for (var i = 0; i < dato.length; i++) {
     	if (dato[i]==null || dato[i].length == 0 || /^\s+$/.test(dato[i])) {
     		if (dato[i]==nombreu) 
            		user.addClass('has-error');
-           	
-           	if (dato[i]==correo) 
-               email.addClass('has-error');
-
-           	if (dato[i]==contrasena)
-           		password.addClass('has-error');
-
+      
            	if (dato[i]==apellido) 
            		lname.addClass('has-error');
            	
@@ -85,22 +71,6 @@ $("#btn-save").click(function(){
                      user.addClass('has-error');
     			}
     		}
-            
-            if (dato[i]==correo) {
-            	if (!(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{3})$/.test(dato[i]))) {
-            		email.addClass('has-error');
-            	}else{
-            		email.removeClass('has-error');
-            	}
-            }
-
-            if (dato[i]==contrasena) {
-            	if (!/^[A-Za-z\d]{6,15}$/.test(dato[i])) {
-                     password.addClass('has-error');
-           		  }else{
-           			 password.removeClass('has-error');
-           		  }
-            }
 
             if (dato[i]==dia) {
             	if (dato[i]=="N/A") {
@@ -143,7 +113,7 @@ $("#btn-save").click(function(){
             }
 
             if (dato[i]==telefono) {
-            	if (!/^[+]{1}[0-9]{3}(\s){1}[0-9]{8}$/.test(dato[i])) {
+            	if (!/^[0-9]{3}(\s){1}[0-9]{8}$/.test(dato[i])) {
                     phone.addClass("has-error");
             	}else{
                     phone.removeClass("has-error");
@@ -178,10 +148,10 @@ $("#btn-save").click(function(){
   
 
     if (error==0) {
-     var parametros="nombreu="+nombreu+"&"+"telefono="+telefono+"&"+"sexo="+sexo+"&"+"correo="+correo+"&"+"contrasena="+contrasena+"&"+"ano="+ano+"&"+"codigop="+codigop+"&"+"nombre="+nombre+"&"+"dia="+dia+"&"+"mes="+mes+"&"+"apellido="+apellido;
+     var parametros="nombreu="+nombreu+"&"+"telefono="+telefono+"&"+"sexo="+sexo+"&"+"ano="+ano+"&"+"codigop="+codigop+"&"+"nombre="+nombre+"&"+"dia="+dia+"&"+"mes="+mes+"&"+"apellido="+apellido;
      //alert(parametros);
      $.ajax({
-        url:"ajax/registro-ajax.php?accion=3",
+        url:"ajax/informacion-ajax.php?accion=1",
         data:parametros,
         method:"POST",
         dataType:'json',
@@ -200,3 +170,57 @@ $("#btn-save").click(function(){
   }
 });
 
+
+$("#changepass").click(function(){
+var password=$("#txt-contrasena");
+var contrasena=password.val();
+var dato=new Array();
+dato[0]=contrasena;
+var dato2=new Array();
+dato2[0]=password;
+
+for (var i = 0; i < dato.length; i++) {
+      if (dato[i]==null || dato[i].length == 0 || /^\s+$/.test(dato[i])) {
+           if (dato[i]==contrasena)
+              password.addClass('has-error');
+        }else{
+           if (dato[i]==contrasena) {
+              if (!/^[A-Za-z\d]{6,15}$/.test(dato[i])) {
+                     password.addClass('has-error');
+                }else{
+                 password.removeClass('has-error');
+                }
+            }
+        }
+}
+
+ var error=0;
+    for (var i = 0; i < dato2.length; i++) {
+      if (dato2[i].hasClass('has-error')) {
+       error++;
+     }     
+   }
+
+   if (error==0) {
+     var parametros="contrasena="+contrasena;
+     //alert(parametros);
+     $.ajax({
+        url:"ajax/informacion-ajax.php?accion=2",
+        data:parametros,
+        method:"POST",
+        dataType:'json',
+        success:function(respuesta){
+          if (respuesta.codigo==1){
+              $("#resultado").html('<div class="bg-success"><center>'+respuesta.mensaje+'</center></div>');
+             
+          }else{
+            
+          }
+        }
+     });
+  }else{
+    //hay campos mal llenados o vacios
+    //alert('errores: '+error);
+  }
+
+});
