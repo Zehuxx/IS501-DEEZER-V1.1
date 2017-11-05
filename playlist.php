@@ -10,10 +10,10 @@
 <body>
 <div class="Contenedor">
 	<div class="playlist">
-		<div class="opciones">
-			<div class="opt"></div>
-			<div class="opt"></div>
-			<div class="opt"></div>
+		<div class="opt">
+			<div class="rplay"><i class="fa fa-play"></i></div>
+            <div class="ffav"><i class="fa fa-heart"></i></div>
+            <div class="moptions"><i class="fa fa-ellipsis-h"> </i></div>
 		</div>
 	</div>
 	<tr>
@@ -21,5 +21,10 @@
 	       <td><span id="fans_canciones">26 Canciones-1000 Fans</span></td>
     </tr>
 </div>
+
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/playlist.js"></script>
 </body>
 </html>
