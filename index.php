@@ -623,13 +623,16 @@ function cortar3($text){
                    		<td style="text-align: right;padding-bottom: 15px">
 							<label class="extras">Confirmar Contraseña:</label>
 						</td>
-						<td style="padding-left: 15px;padding-bottom: 15px">
+						<td style="padding-left: 15px;padding-bottom: 10px">
 							<input type="text" id="txt-confpassword" placeholder="Confirmar Contraseña"  class="form-control">
 						</td>
                    	</tr>
                    	<tr>
+                   		<td colspan="2" style="padding-bottom: 10px""><div id="result"></div></td>
+                   	</tr>
+                   	<tr>
                    		<td colspan="2">
-                   			 <button class="btn btn-success" style="margin-left: 171px"><span class="laber">Continuar</span></button>
+                   			 <button class="btn btn-success" id="changepass"  style="margin-left: 171px"><span class="laber">Continuar</span></button>
                              <button class="btn btn-danger" data-dismiss="modal" style="margin-left: 30px" ><span class="laber">Cancelar</span></button>
                    		</td>
                    	</tr>

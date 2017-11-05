@@ -57,7 +57,7 @@ WHERE A.CODIGO_USUARIO=".$_SESSION["codigo_usuario"]."");
 				</tr>
 				<tr >
                     <td style="text-align: right;padding-right: 10px;"><label class="extras">Tu contraseña:</label></td>
-					<td><button id="changepass" onclick="modddd();" class="mod">Modificar</button></td>
+					<td><button onclick="modddd();" class="mod">Modificar</button></td>
 				</tr>
 			</table>
 				<div class="datoss">
