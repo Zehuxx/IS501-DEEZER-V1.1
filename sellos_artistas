@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>¿Quienes Somos?</title>
+     <meta charset="UTF8">
+     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+     <link rel="stylesheet" type="text/css" href="css/company1.css">
+     <link rel="stylesheet" type="text/css" href="blogger/style.css">
+     <link rel="stylesheet" href="fonts/style.css">
+     <link rel="stylesheet" type="text/css" href="css/stlcomp.css">
+     <link rel="stylesheet" type="text/css" href="fantastic/css/font-awesome.min.css">
+     <style type="text/css"></style>
+  </head>
+<body>
+<div id="zona1">
+     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+     <center><strong><font size=50>DONDE VIVE LA MÚSICA</font></strong></center><br><br><br><br><br><br><br><br><br><br><br><br>
+     <center><h1><span class="icon-arrow_downward"></span></h1></center>  
+</div>
+
+<div id="zona2">
+  <div class="row">
+    <div class="col-lg-8" style="margin-left: 380px;margin-top: 35px">
+      <h2>Déjate sorprender por la música</h2>
+      <p id="tex3">Deezer te permite escuchar la música que desees, al instante.</p>
+      <p id="tex3">Explora más de 43 millones de canciones y descubre nuevos artistas gracias a las recomendaciones personalizadas de nuestros Editores Deezer.</p>
+      <p id="tex3">Deezer funciona en todo tipo de dispositivos, con conexión a internet o sin ella, sin límites de escucha. Música a tu disposición en cualquier momento y lugar.</p>
+      <p id="tex3"><a href="#">Más información</a></p>
+    </div>
+  </div>
+</div>
+
+<div id="zona3">    
+  <div class="col-lg-3" style="margin-left: 350px">
+    <br><br><br>
+       <h2>¡Lánzate! ¡Únete a nosotros!</h2>
+       <p id="tex3">¿Quieres imaginar el futuro de la música con nosotros?<br> ¡Queremos tener noticias tuyas!</p>
+  </div>
+</div>
+
+<div >
+  <div class="container">
+    <div class="col-lg">
+      <div id="carousel-1" class="carousel slide" data-ride= "carousel">
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="zona4">
+  
+</div>
+
+<div id= "zona5" style="  background: url(img/daniel.png ); background-repeat: no-repeat;">
+  <div class="row" style="margin-left: -758px;">
+    <div class="col-lg-2" style="margin-left: 458px; margin-top: 40px; width: 300px">
+    <h2>Biografías</h2>
+      <div>
+        <p id="tex3">"A la hora de lanzar un nuevo producto, lo más importante es que responda a una necesidad personal."</p>
+        <p id="tex3">
+          <span>Daniel Marhely</span>
+          <br>
+          <span style="font-size: 10">FOUNDER</span>
+        </p>
+        <p id="tex3"><a class="link-primary link-animated" href="/es/company/key_people">Continuación</a></p>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
