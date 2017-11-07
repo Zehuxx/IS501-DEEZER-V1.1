@@ -1,4 +1,7 @@
 <?php
+include ("../class/class-conexion.php");
+$conexion = new Conexion();
+$conexion->establecerConexion();
    function cortar($text){
    	;
      if ((strlen($text)>30)) {
@@ -6,7 +9,7 @@
      }else{
      	echo $text;
      }
-
+ 
    }
 ?>
 
