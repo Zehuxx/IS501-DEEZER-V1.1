@@ -1,7 +1,14 @@
 <?php
-include ("../class/class-conexion.php");
+session_start();
+include ("class/class-conexion.php");
 $conexion = new Conexion();
 $conexion->establecerConexion();
+$paylist=$conexion->ejecutarInstruccion("SELECT A.CODIGO_PLAYLIST,A.NOMBRE_PLAYLIST,A.NUMERO_SEGUIDORES,A.COVER
+                                          FROM TBL_PLAYLIST A
+                                          INNER JOIN(SELECT CODIGO_SEGUIDOR,CODIGO_PLAYLIST
+                                          FROM TBL_SEGUIDORES_PLAYLIST
+                                          WHERE CODIGO_SEGUIDOR=".$_SESSION['codigo_usuario'].") B
+                                          ON(A.CODIGO_PLAYLIST=B.CODIGO_PLAYLIST)");
    function cortar($text){
    	;
      if ((strlen($text)>30)) {
@@ -31,7 +38,7 @@ $conexion->establecerConexion();
 		<div class="row">
 			<div class="col-lg-12 col-sm-12 col-xs-12 col-md-12 x">
 				<div class="col-lg-12 col-sm-12 col-xs-12 col-md-12 inic2">
-					<h2 class="head col-xs-2"><span class="color-primary">13 </span>Playlists</h2>
+					<h2 class="head col-xs-2"><span class="color-primary pay"></span>Playlists</h2>
 					<table  >
 						<tr>
 							<td style="padding-right: 10px;padding-left: 230px">
@@ -71,12 +78,12 @@ $conexion->establecerConexion();
 					</div>
 
 					<?php 
-                       for ($i=0; $i < 10 ; $i++) { 
+                      while ($row = $conexion->obtenerRegistro($paylist)) {
                        	echo 
                        	'<div class="col-md-3 dash2">
                        		<div class="change">
                        			<div class="fotos" >
-                       				<img src="img/goku.jpg" class="perf">
+                       				<img src="'.$row['COVER'].'" class="perf">
 
                        			</div>
 
@@ -102,7 +109,7 @@ $conexion->establecerConexion();
                        						<table>
                        							<tr>
                        								<td>
-                       									<span class="name-play">'; echo cortar("kfdkfkdfkdf");echo '</span>
+                       									<span class="name-play">'; echo cortar("".$row['NOMBRE_PLAYLIST']."");echo '</span>
                        								</td>
                        								<tr>
                        									<td>
@@ -124,7 +131,7 @@ $conexion->establecerConexion();
 
 
 
-
+<input type="text" id="fav" value="<?php echo $favoritos=$conexion->cantidadRegistros($paylist); ?>" style="visibility: hidden;">
 				</div>
 			</div>
 		</div>
@@ -141,7 +148,7 @@ $conexion->establecerConexion();
         });
  
      $(document).ready(function(){
-
+      $(".pay").text($("#fav").val()+" ");
      	$('#newplaylist',window.parent.parent.document).on('hide.bs.modal', function (e) {
      if($("#dropp",window.parent.parent.document).hasClass("modal-backdrop")){
     $(".modal-backdrop",window.parent.parent.document).remove();
