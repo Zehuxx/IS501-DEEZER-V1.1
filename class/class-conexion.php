@@ -32,6 +32,11 @@ class Conexion
 	public function obtenerRegistro($resultado){
 			return oci_fetch_array($resultado, OCI_ASSOC+OCI_RETURN_NULLS);
 		}
+
+    public function cantidadRegistros($resultad){
+			return oci_num_rows($resultad);
+		}
+		
 }
 
 

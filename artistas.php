@@ -1,4 +1,18 @@
 <?php
+session_start();
+include ("class/class-conexion.php");
+$conexion = new Conexion();
+$conexion->establecerConexion();
+$artistas=$conexion->ejecutarInstruccion("SELECT A.CODIGO_ARTISTA,A.NOMBRE_ARTISTICO,A.COVER,NVL(C.SEGUIDORES,0) AS SEGUIDORES
+                                                    FROM TBL_ARTISTAS A
+                                                    INNER JOIN (SELECT CODIGO_ARTISTA
+                                                    FROM TBL_SEGUIDORES_ARTISTA
+                                                    WHERE CODIGO_USUARIO=".$_SESSION['codigo_usuario'].") B
+                                                    ON(A.CODIGO_ARTISTA = B.CODIGO_ARTISTA)
+                                                    LEFT JOIN (SELECT CODIGO_ARTISTA,COUNT(1) AS SEGUIDORES
+                                                    FROM TBL_SEGUIDORES_ARTISTA
+                                                    GROUP BY CODIGO_ARTISTA) C
+                                                    ON(B.CODIGO_ARTISTA = C.CODIGO_ARTISTA)");
    function cortar($text){
    	;
      if ((strlen($text)>25)) {
@@ -6,8 +20,11 @@
      }else{
      	echo $text;
      }
+ 
+   }
 
-   } 
+ 
+
 ?>
 
 <!DOCTYPE html>
@@ -28,7 +45,7 @@
 		<div class="row">
 			<div class="col-lg-12 col-sm-12 col-xs-12 col-md-12 x">
 				<div class="col-lg-12 col-sm-12 col-xs-12 col-md-12 inic2">
-					<h2 class="head col-xs-2"><span class="color-primary">13 </span>Artistas</h2>
+					<h2 class="head col-xs-2"><span class="color-primary arts"></span>Artistas</h2>
 					<table  >
 						<tr>
 							<td style="padding-right: 10px;padding-left: 440px">
@@ -47,12 +64,12 @@
 
 
 					<?php 
-                       for ($i=0; $i < 10 ; $i++) { 
+                       while ($row = $conexion->obtenerRegistro($artistas)) {
                        	echo 
                        	'<div class="col-md-3 dash2">
                        		<div class="change2">
                        			<div class="fotos2" >
-                       				<img src="img/goku.jpg" class="perf2">
+                       				<img src="'.$row['COVER'].'" class="perf2">
 
                        			</div>
 
@@ -67,11 +84,11 @@
                        						<table>
                        							<tr>
                        								<td>
-                       									<span class="name-play">'; echo cortar("kfdkfkdfkdffgrgrtdgrhtttt d");echo '</span>
+                       									<span class="name-play">'; echo cortar("".$row['NOMBRE_ARTISTICO']."");echo '</span>
                        								</td>
                        								<tr>
                        									<td>
-                       										<span class="tipop">2.344.2323 seguidores</span>
+                       										<span class="tipop">'.$row['SEGUIDORES'].' seguidores</span>
                        									</td>
                        								</tr>
                        							</tr>
@@ -83,13 +100,11 @@
 
 
                        }
-
+   
+          
 					?>
 					
-
-
-
-
+<input type="text" id="fav" value="<?php echo $favoritos=$conexion->cantidadRegistros($artistas); ?>" style="visibility: hidden;">
 				</div>
 			</div>
 		</div>
@@ -101,14 +116,14 @@
 	<script src="js/bootstrap.js"></script>
 	<script src="js/perfil.js"></script>
 	<script type="text/javascript">
+    
 		$(function () {
           $('[data-toggle="popover"]').popover();
         });
-
+  
      $(document).ready(function(){
-
+    $(".arts").text($("#fav").val()+" ");
     
-
 
  $(".ubicar2").hover(function(){
 
@@ -133,6 +148,7 @@ $(".perf2").hover(function(){
 
 
      });
+
 	</script>
 </body>
 </html>

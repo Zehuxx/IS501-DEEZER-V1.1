@@ -1,4 +1,20 @@
 <?php
+session_start();
+include ("class/class-conexion.php");
+$conexion = new Conexion();
+$conexion->establecerConexion();
+$albums=$conexion->ejecutarInstruccion("SELECT A.CODIGO_ALBUM,A.NOMBRE_ALBUM,NVL(B.NOMBRE_ARTISTAS,' ') AS NOMBRE_ARTISTAS,A.COVER
+                                        FROM TBL_ALBUMES A
+                                        LEFT JOIN (SELECT A.CODIGO_ALBUM,LISTAGG(NOMBRE_ARTISTICO, ', ') WITHIN GROUP (ORDER BY A.CODIGO_ALBUM) over (partition by A.CODIGO_ALBUM) NOMBRE_ARTISTAS
+                                        FROM TBL_ALBUMES_X_ARTISTAS A
+                                        LEFT JOIN TBL_ARTISTAS B
+                                        ON(A.CODIGO_ARTISTA=B.CODIGO_ARTISTA)) B
+                                        ON(A.CODIGO_ALBUM=B.CODIGO_ALBUM)
+                                        RIGHT JOIN (SELECT CODIGO_ALBUM
+                                        FROM TBL_SEGUIDORES_ALBUM
+                                        WHERE CODIGO_USUARIO=".$_SESSION['codigo_usuario'].") C
+                                        ON(A.CODIGO_ALBUM=C.CODIGO_ALBUM)
+                                        GROUP BY A.CODIGO_ALBUM,A.NOMBRE_ALBUM,B.NOMBRE_ARTISTAS,A.COVER");
    function cortar($text){
    	;
      if ((strlen($text)>30)) {
@@ -28,7 +44,7 @@
 		<div class="row">
 			<div class="col-lg-12 col-sm-12 col-xs-12 col-md-12 x">
 				<div class="col-lg-12 col-sm-12 col-xs-12 col-md-12 inic2">
-					<h2 class="head col-xs-2"><span class="color-primary">13 </span>Albumes</h2>
+					<h2 class="head col-xs-2"><span class="color-primary alb"></span>Albumes</h2>
 					<table  >
 						<tr>
 							<td style="padding-right: 10px;padding-left: 440px">
@@ -49,12 +65,12 @@
 
 
 					<?php 
-                       for ($i=0; $i < 10 ; $i++) { 
+                    while ($row = $conexion->obtenerRegistro($albums)) {
                        	echo 
                        	'<div class="col-md-3 dash2">
                        		<div class="change">
                        			<div class="fotos" >
-                       				<img src="img/goku.jpg" class="perf">
+                       				<img src="'.$row['COVER'].'" class="perf">
 
                        			</div>
 
@@ -86,11 +102,11 @@
                        						<table>
                        							<tr>
                        								<td>
-                       									<span class="name-play">'; echo cortar("kfdkfkdfkdf");echo '</span>
+                       									<span class="name-play">'; echo cortar("".$row['NOMBRE_ALBUM']."");echo '</span>
                        								</td>
                        								<tr>
                        									<td>
-                       										<span class="tipop">de <span class="tipop2">';echo cortar("artistasjdsdddddddddddjjksdkdkskdkskd");echo '</span></span>
+                       										<span class="tipop">de <span class="tipop2">';echo cortar("".$row['NOMBRE_ARTISTAS']."");echo '</span></span>
                        									</td>
                        								</tr>
                        							</tr>
@@ -108,7 +124,7 @@
 
 
 
-
+<input type="text" id="fav" value="<?php echo $favoritos=$conexion->cantidadRegistros($albums); ?>" style="visibility: hidden;">
 				</div>
 			</div>
 		</div>
@@ -126,7 +142,7 @@
 
      $(document).ready(function(){
 
-
+$(".alb").text($("#fav").val()+" ");
 
  $(".tot").click(function(){
   $(this).popover('toggle');
