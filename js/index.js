@@ -1,3 +1,4 @@
+
 function ifra(link){
     if (link==1)
     	$("#ifra").html('<iframe class="contenido" src="configuraciones.php" frameborder="0"  ></iframe>');
@@ -492,3 +493,7 @@ for (var i = 0; i < dato.length; i++) {
   }
 
 });
+
+
+
+

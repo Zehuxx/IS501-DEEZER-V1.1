@@ -272,17 +272,27 @@
 				});
 				listItem += ")</span>";
 			}
-
+            
 			// The title is given next in the HTML otherwise the float:right on the free media corrupts in IE6/7
-            var titulo = media.title.slice(0, 30);
-            var artista = media.artist.slice(0, 30);
-            if (titulo.length>=30) {
-							titulo=titulo+"...";
-						}
 
-						if (artista.length>=30) {
-							artista=artista+"...";
-						}
+			    
+                var titulo = media.title.slice(0, 30);
+                if (titulo.length>=30) {
+				titulo=titulo+"...";
+			    }
+             
+
+            
+             	var artista = media.artist.slice(0, 30);
+
+
+             	if (artista.length>=30) {
+             		artista=artista+"...";
+             	}
+             
+			
+			
+
 			listItem += "<a href='javascript:;' class='titulos " + this.options.playlistOptions.itemClass + "' tabindex='0'>" + titulo +"</a>";
 			listItem += " <br><span class='jp-artist'>de <a href='javascript:;' class='artistas' >"+ artista + "</></span>"; 
 			listItem += "</div></li>";
