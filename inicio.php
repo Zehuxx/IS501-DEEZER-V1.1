@@ -41,6 +41,18 @@
     	  <div id="exitos"><a id="exitostxt">Lista de exitos ></a></div>
     	  <div id="top_pais">
     	  	<div id="imgtop"></div>
+                                            <table>
+                                                <tr>
+                                                    <td>
+                                                       <div class="top">Top Honduras</div>
+                                                    </td>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="subtop">100 canciones - 457 479 fans</div>
+                                                        </td>
+                                                    </tr>
+                                                </tr>
+                                            </table>
     	  </div>
     	  <div id="listacanciones">
     	  	<h6>Canciones</h6>

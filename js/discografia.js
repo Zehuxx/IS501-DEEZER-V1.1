@@ -164,12 +164,12 @@ $(".art").hover(
                     function()
                     {
                         $(this).addClass("visible");
-                        $(this).find(".opt").show()
+                        $(this).find(".opt").css("visibility","visible")
                     },
                     function()
                     {
                         $(this).removeClass("visible");
-                         $(this).find(".opt").hide()           
+                         $(this).find(".opt").css("visibility","hidden")           
                     }
                 )
 

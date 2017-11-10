@@ -491,7 +491,7 @@ div a:hover
 	height: 36px;
 	margin-left: 13px;
 	margin-top: 179px;
-	display: none;
+	visibility: hidden;
 	
 }
 

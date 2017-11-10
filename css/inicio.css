@@ -241,11 +241,41 @@ h6
 	float: left;
 }
 
+
 body
 {
 	height: 2098px;
 }
 
+
+.button1 {background-color: #4CAF50;} 
+.subtop
+{
+
+	width: 240px;
+	height: 25px;
+	float: center;
+	margin-left: 0px;
+	font-size: 18px;
+	font-weight: 400;
+	font-family: Lucida Grande,Arial,sans-serif;
+	text-align: right;
+	color: #92929d;
+}
+
+.top
+{
+
+	width: 160px;
+	height: 25px;
+	float: center;
+	margin-top: 150px;
+	margin-left: 80px;
+	font-size: 19px;
+	font-weight: 550;
+	font-family: Lucida Grande,Arial,sans-serif;
+	text-align: right;
+}
 .cancion
 {
 	width: 460px;
