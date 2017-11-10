@@ -8,12 +8,38 @@
 	<link rel="stylesheet" type="text/css" href="fantastic/css/font-awesome.min.css">
 </head>
 <body>
+<center>
 
+<div class="container"> 
+<br>
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+    <div class="carousel-inner">
+      <div class="item active">
+        <img src="img/bannershakira.png" alt="Shakira" style="width:100%;">
+      </div>
+
+      <div class="item">
+        <img src="img/bannermaluma.jpg" alt="Maluma" style="width:100%;">
+      </div>
+    
+      <div class="item">
+        <img src="img/bannermigente.jpg" alt="Migente" style="width:100%;">
+      </div>
+    </div>
+
+  </div>
+</div>
+</center>
   <center>
 
     <div id="contenedor">
     	<center>
-    	  <div id="flow"></div>
+    	  <!--<div id="flow">
+           
+
+
+          </div>-->
     	  <div id="explorar"><a id="explorartxt">Explorar ></a></div>
     	  <div id="descubre"><p id="descubretxt">Descubre los canales de musica, entretenimiento y podcast</p></div>
     	  <div id="genero">
