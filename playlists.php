@@ -16,7 +16,7 @@ $paylist=$conexion->ejecutarInstruccion("SELECT A.CODIGO_PLAYLIST,A.NOMBRE_PLAYL
      }else{
      	echo $text;
      }
- 
+  
    }
 ?>
 
@@ -89,7 +89,7 @@ $paylist=$conexion->ejecutarInstruccion("SELECT A.CODIGO_PLAYLIST,A.NOMBRE_PLAYL
 
                        		</div>
                        		<div class="ubicar">
-                       			<div class="col-xs-3 circulo"><span class="glyphicon glyphicon-play app" style="color: #fff" aria-hidden="true"></span></div>
+                       			<div class="col-xs-3 circulo" onclick="play('.$row['CODIGO_PLAYLIST'].');"><span class="glyphicon glyphicon-play app" style="color: #fff" aria-hidden="true"></span></div>
                        			<div class="col-xs-3 circulo"><span class="glyphicon glyphicon-heart app" style="color: #007feb" aria-hidden="true"></span></div>
                        			<div class="col-xs-3 circulo tot" data-trigger="manual"  data-placement="auto top"  data-toggle="popover"   data-html="true" data-content="
                        			<table id=\'otros\'>
@@ -143,6 +143,20 @@ $paylist=$conexion->ejecutarInstruccion("SELECT A.CODIGO_PLAYLIST,A.NOMBRE_PLAYL
 	<script src="js/bootstrap.js"></script>
 	<script src="js/perfil.js"></script>
 	<script type="text/javascript">
+    function play(codigoplaylist){
+var parametros="codigoplaylist="+codigoplaylist;
+ $.ajax({
+        url:"ajax/reproducto-ajax.php?accion=1",
+        data:parametros,
+        method:"POST",
+        dataType:'json',
+        success:function(respuesta){
+          window.parent.top.myPlaylist.setPlaylist(respuesta);
+          window.parent.top.myPlaylist.option('autoPlay', true);
+        }
+     });
+
+}
 		$(function () {
           $('[data-toggle="popover"]').popover();
         });
