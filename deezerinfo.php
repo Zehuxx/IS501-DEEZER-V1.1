@@ -41,11 +41,11 @@
 								<a href="#" id="qqqq" onclick="borde('empr','fun','dis','ofer');ifra3(4);"
 								class="direc">EMPRESA</a>
 								<ul id="lista">
-									<a href=""><li><span>ACERCA DE</span> </li></a>
-									<a href=""><li><span>TRABAJOS</span> </li></a>
-									<a href=""><li><span>PRENSA</span></li></a> 
-									<a href=""><li><span>SELLOS Y ARTISTAS</span></li></a> 
-									<a href=""><li><span>AYUDA</span> </li></a>
+									<a href="javascript:;"><li><span>ACERCA DE</span> </li></a>
+									<a href="javascript:;"><li><span>TRABAJOS</span> </li></a>
+									<a href="javascript:;"><li><span>PRENSA</span></li></a> 
+									<a href="javascript:;"><li><span>SELLOS Y ARTISTAS</span></li></a> 
+									<a href="javascript:;"><li><span>AYUDA</span> </li></a>
 								</ul>
 							</td>
 						</tr>

@@ -1,3 +1,8 @@
+function pop(){
+  $('[data-toggle="popover"]').popover('hide');
+}
+
+
 $("#btn-registro").click(function(){
     var user=$("#txt-nombreu");
     var email=$("#txt-correo");

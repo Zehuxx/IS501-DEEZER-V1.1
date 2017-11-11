@@ -1,3 +1,9 @@
+
+function pop(){
+  $('[data-toggle="popover"]').popover('hide');
+}
+
+
 $('#btn-conectarse').click(function(){
 	var email=$("#nombreu");
 	var password=$("#contrasena");

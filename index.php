@@ -608,7 +608,7 @@ function cortar3($text){
 															<label class="extras">Ingesar Contraseña:</label>
 														</td>
 														<td style="padding-left: 15px;padding-bottom: 15px">
-															<input type="text" id="txt-password" placeholder="Contraseña"  class="form-control">
+															<input type="text" onclick="pop();" id="txt-password" placeholder="Contraseña"  class="form-control" data-toggle="popover" data-html="true" data-content="<h5 style='color:black'>-Usa [6-15] caracteres</h5>" data-placement="right" data-container="body">
 														</td>
 													</tr>
 													<tr>
@@ -616,7 +616,7 @@ function cortar3($text){
 															<label class="extras">Ingesar Nueva Contraseña:</label>
 														</td>
 														<td style="padding-left: 15px;padding-bottom: 15px">
-															<input type="text" id="txt-newpassword" placeholder="Nueva Contraseña"  class="form-control">
+															<input type="text" onclick="pop();" id="txt-newpassword" placeholder="Nueva Contraseña"  class="form-control" data-toggle="popover" data-html="true" data-content="<h5 style='color:black'>-Usa [6-15] caracteres<br>-Asegurate de que las contraseñas coincidan</h5>" data-placement="right" data-container="body">
 														</td>
 													</tr>
 													<tr>
@@ -624,7 +624,7 @@ function cortar3($text){
 															<label class="extras">Confirmar Contraseña:</label>
 														</td>
 														<td style="padding-left: 15px;padding-bottom: 10px">
-															<input type="text" id="txt-confpassword" placeholder="Confirmar Contraseña"  class="form-control">
+															<input type="text" onclick="pop();" id="txt-confpassword" placeholder="Confirmar Contraseña"  class="form-control" data-toggle="popover" data-html="true" data-content="<h5 style='color:black'>-Usa [6-15] caracteres<br>-Asegurate de que las contraseñas coincidan</h5>" data-placement="right" data-container="body">
 														</td>
 													</tr>
 													<tr>
@@ -656,7 +656,9 @@ function cortar3($text){
 							<script type="text/javascript" src="js/jplayer.playlist.js"></script>
 							<script id="repro" type="text/javascript">
 
-
+								$(function () {
+									$('[data-toggle="popover"]').popover();
+								});
 								
 								$(document).ready(function(){
 									
@@ -721,36 +723,36 @@ function cortar3($text){
 
 });
 
-									var myPlaylist = new jPlayerPlaylist({
-										jPlayer: "#jquery_jplayer_1",
-										cssSelectorAncestor: "#jp_container_1"
-									},  [
-									
-									{
-										title:"voikdsssssssssksddddddddddlsdddddddddddddddddces",
-										artist:"rev theory",
-										mp3:"http://localhost/IS501-DEEZER-V1.1/musica/randi.mp3",
-										poster: "http://localhost/IS501-DEEZER-V1.1/musica/covers/orton.jpg"
-									}
-									], {
-										swfPath: "../../dist/jplayer",
-										supplied: "webmv, ogv, m4v, oga, mp3",
-										useStateClassSkin: true,
-										autoBlur: false,
-										smoothPlayBar: true,
-										keyEnabled: true,
-										audioFullScreen: true
-									});
+								var myPlaylist = new jPlayerPlaylist({
+									jPlayer: "#jquery_jplayer_1",
+									cssSelectorAncestor: "#jp_container_1"
+								},  [
+
+								{
+									title:"voikdsssssssssksddddddddddlsdddddddddddddddddces",
+									artist:"rev theory",
+									mp3:"http://localhost/IS501-DEEZER-V1.1/musica/randi.mp3",
+									poster: "http://localhost/IS501-DEEZER-V1.1/musica/covers/orton.jpg"
+								}
+								], {
+									swfPath: "../../dist/jplayer",
+									supplied: "webmv, ogv, m4v, oga, mp3",
+									useStateClassSkin: true,
+									autoBlur: false,
+									smoothPlayBar: true,
+									keyEnabled: true,
+									audioFullScreen: true
+								});
 
 
 
 
 
 
-</script>
+							</script>
 
 
 
 
-</body>
-</html>
+						</body>
+						</html>

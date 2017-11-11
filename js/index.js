@@ -1,3 +1,6 @@
+function pop(){
+  $('[data-toggle="popover"]').popover('hide');
+}
 
 function ifra(link){
     if (link==1)
@@ -275,7 +278,7 @@ function ver(div,div2,div3,div4,div5,div6){
        
         $("#"+div).css({"visibility":"hidden","opacity":"0"});
         $("#drop").css({"visibility":"hidden","opacity":"0"});
-    }
+    } 
 }
 
 function abrir(){

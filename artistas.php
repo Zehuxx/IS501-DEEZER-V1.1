@@ -75,7 +75,7 @@ $artistas=$conexion->ejecutarInstruccion("SELECT A.CODIGO_ARTISTA,A.NOMBRE_ARTIS
 
                        		</div>
                        		<div class="ubicar2">
-                       			<div class="col-xs-3 circulo"><span class="glyphicon glyphicon-play app" style="color: #fff" aria-hidden="true"></span>
+                       			<div class="col-xs-3 circulo" onclick="playa('.$row['CODIGO_ARTISTA'].');"><span class="glyphicon glyphicon-play app" style="color: #fff" aria-hidden="true"></span>
                             </div>
                        			<div class="col-xs-3 circulo"><span class="glyphicon glyphicon-heart app" style="color: #007feb" aria-hidden="true"></span>
                             </div>
@@ -116,7 +116,20 @@ $artistas=$conexion->ejecutarInstruccion("SELECT A.CODIGO_ARTISTA,A.NOMBRE_ARTIS
 	<script src="js/bootstrap.js"></script>
 	<script src="js/perfil.js"></script>
 	<script type="text/javascript">
-    
+        function playa(codigoartista){
+var parametros="codigoartista="+codigoartista;
+ $.ajax({
+        url:"ajax/reproducto-ajax.php?accion=3",
+        data:parametros,
+        method:"POST",
+        dataType:'json',
+        success:function(respuesta){
+          window.parent.top.myPlaylist.setPlaylist(respuesta);
+          window.parent.top.myPlaylist.option('autoPlay', true);
+        }
+     });
+
+}
 		$(function () {
           $('[data-toggle="popover"]').popover();
         });

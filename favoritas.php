@@ -1,4 +1,28 @@
 <?php
+session_start();
+include ("class/class-conexion.php");
+$conexion = new Conexion();
+$conexion->establecerConexion();
+$favoritas=$conexion->ejecutarInstruccion("
+WITH CONSULTA AS
+(SELECT A.CODIGO_CANCION,A.COVER,A.FECHA_SUBIDA,E.NOMBRE_ALBUM,A.NOMBRE,A.DURACION,NVL(LISTAGG(NOMBRE_ARTISTICO, ', ') WITHIN GROUP (ORDER BY A.CODIGO_CANCION) over (partition by A.CODIGO_CANCION),' ') NOMBRE_ARTISTAS
+FROM TBL_CANCIONES A
+LEFT JOIN TBL_CANCIONES_X_ARTISTA B
+ON(A.CODIGO_CANCION=B.CODIGO_CANCION)
+LEFT JOIN TBL_ARTISTAS C
+ON(B.CODIGO_ARTISTA=C.CODIGO_ARTISTA)
+LEFT JOIN TBL_CANCIONES_X_ALBUM D
+ON(A.CODIGO_CANCION=D.CODIGO_CANCION)
+LEFT JOIN TBL_ALBUMES E
+ON(D.CODIGO_ALBUM=E.CODIGO_ALBUM))
+SELECT A.CODIGO_CANCION,A.COVER,A.NOMBRE_ALBUM,A.NOMBRE,A.DURACION,A.NOMBRE_ARTISTAS,A.FECHA_SUBIDA
+FROM CONSULTA A
+RIGHT JOIN (SELECT CODIGO_USUARIO,CODIGO_CANCION
+FROM TBL_FAVORITAS
+WHERE CODIGO_USUARIO=1) B
+ON(A.CODIGO_CANCION=B.CODIGO_CANCION)
+GROUP BY A.CODIGO_CANCION,A.COVER,A.NOMBRE_ALBUM,A.NOMBRE,A.DURACION,A.NOMBRE_ARTISTAS,A.FECHA_SUBIDA
+");
    function cortar($text){
    	;
      if ((strlen($text)>15)) {
@@ -29,7 +53,7 @@
 		<div class="row">
 			<div class="col-lg-12 col-sm-12 col-xs-12 col-md-12 x">
 				<div class="col-lg-12 col-sm-12 col-xs-12 col-md-12 inic">
-					<h2 class="head"><span class="color-primary">13 </span>Canciones</h2>
+					<h2 class="head"><span class="color-primary favv"></span>Canciones</h2>
 				</div>
 				<div class="col-lg-12 col-sm-12 col-xs-12 col-md-6 escu">
 					<button class="btn-listen"><span class="glyphicon glyphicon-play-circle circl"  aria-hidden="true"></span> Escuchar</button>
@@ -83,14 +107,14 @@
 						</th>
 						<th class="last"></th>
 					</tr>';
-                  for ($i=0; $i < 13 ; $i++) { 
+                 while ($row = $conexion->obtenerRegistro($favoritas)) {
                   echo 
                     '<tr>
 						<td class="first">
 							
 						</td>
 						<td>
-							<span><span class="glyphicon glyphicon-heart"  aria-hidden="true"></span>
+							<span><span class="glyphicon glyphicon-heart" style="color: #007feb" aria-hidden="true"></span>
 						</td>
 						<td>
 							<img src="img/ecauliz.gif" width="12" height="12">
@@ -98,7 +122,7 @@
 							<a href="javascript:;" style="display: none"><span class="glyphicon glyphicon-pause"  aria-hidden="true"></a>
 						</td>
 						<td>
-								<a href="javascript:;"><span  class="ellipsis rec"><script type="text/javascript" >recortar2("The walking dead prueba jaja bueno hasta aquidf")</script></span></a>
+								<a href="javascript:;"><span  class="ellipsis rec"><script type="text/javascript" >recortar2("'.$row['NOMBRE'].'")</script></span></a>
 						</td>
 						<td >
 						<a href="javascript:;" data-trigger="focus" data-placement="auto right"  data-toggle="popover"   data-html="true" data-content="
@@ -106,10 +130,10 @@
                          <div class=\'detalles2\'>
                          	<table class=\'margeee\' >
                          		<tr >
-                         			<td><img class=\'respon\' src=\'img/goku.jpg\'></td>
-                         			<td ><a href=\'javascript:;\'><span class=\'art3\'>'; echo cortar("Me Rehuso"); echo '</span></a>
+                         			<td><img class=\'respon\' src=\''.$row['COVER'].'\'></td>
+                         			<td ><a href=\'javascript:;\'><span class=\'art3\'>'; echo cortar("".$row['NOMBRE'].""); echo '</span></a>
                          			<div class=\'espacio\'></div>
-                         			<span class=\'song3\'>de <a href=\'javascript:;\'>';echo cortar("Danny OceakkkkkkkMaluma");echo'</a></span>
+                         			<span class=\'song3\'>de <a href=\'javascript:;\'>';echo cortar("".$row['NOMBRE_ARTISTAS']."");echo'</a></span>
                          			</td>
                          		</tr>
                          		
@@ -145,16 +169,16 @@
 						
 						</td>
 						<td>
-								<a href="javascript:;"><span class="ellipsis rec"><script type="text/javascript" >recortar2("The walking dead prueba jaja bueno hasta aquidf")</script></span></a>
+								<a href="javascript:;"><span class="ellipsis rec"><script type="text/javascript" >recortar2("'.$row['NOMBRE_ARTISTAS'].'")</script></span></a>
 						</td>
 						<td>
-								<a href="javascript:;"><span class="ellipsis rec"><script type="text/javascript" >recortar2("The walking dead prueba jaja bueno hasta aquidf")</script></span></a>
+								<a href="javascript:;"><span class="ellipsis rec"><script type="text/javascript" >recortar2("'.$row['NOMBRE_ALBUM'].'")</script></span></a>
 						</td>
 						<td>
-							<span>21:22</span>
+							<span>'.$row['DURACION'].'</span>
 						</td>
 						<td class="time">
-						<span id="time" class="ellipsis date"><script type="text/javascript" >recortar("Hace 2 horas")</script> </span>
+						<span id="time" class="ellipsis date"><script type="text/javascript" >recortar("'.$row['FECHA_SUBIDA'].'")</script> </span>
 						</td>
 						<td class="last">
 							
@@ -164,7 +188,7 @@
  
 
 				?>
-					
+					<input type="text" id="fav" value="<?php echo $favoritos=$conexion->cantidadRegistros($favoritas); ?>" style="visibility: hidden;">
 					
 					
 				</table>
@@ -175,10 +199,13 @@
 	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
     <script type="text/javascript">
+
 		$(function () {
           $('[data-toggle="popover"]').popover();
         });
-
+      $(document).ready(function(){
+      	$(".favv").text($("#fav").val()+" ");
+      });
    
 	</script>
 </body>

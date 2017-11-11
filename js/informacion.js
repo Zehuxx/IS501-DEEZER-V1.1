@@ -1,4 +1,9 @@
 
+function pop(){
+  $('[data-toggle="popover"]').popover('hide');
+}
+
+
 $("#btn-save").click(function(){
 
     var user=$("#txt-nombreu");

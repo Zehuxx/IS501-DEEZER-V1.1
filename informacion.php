@@ -91,7 +91,7 @@ WHERE A.CODIGO_USUARIO=".$_SESSION["codigo_usuario"]."");
 							<label class="extras">Nombre de Usuario</label>
 						</td>
 						<td width="313" style="padding-left: 15px">
-							<input type="text" class="form-control" value="<?php echo $row['NOMBRE_USUARIO']; ?>" id="txt-nombreu">
+							<input type="text" class="form-control" onclick="pop();" value="<?php echo $row['NOMBRE_USUARIO']; ?>" id="txt-nombreu" data-toggle="popover" data-html="true"  data-content="-Usa [2-12] caracteres <br> -Puedes usar solo letras,numeros ej: a89,tyg87,jkj" data-container="body" data-placement="right">
 						</td>
 					</tr>
 				</table>
@@ -105,13 +105,13 @@ WHERE A.CODIGO_USUARIO=".$_SESSION["codigo_usuario"]."");
 							<label class="extras">Apellido</label>
 						</td>
 						<td width="300" style="padding-left: 15px;padding-bottom: 15px">
-							<input type="text" id="txt-apellido" value="<?php
+							<input type="text" id="txt-apellido" onclick="pop();" value="<?php
                                if($row['APELLIDO']==null){
                                    echo ""; 
                                }else{
                                	   echo $row['APELLIDO'];
                                }
-                               ?>" class="form-control">
+                               ?>" class="form-control" data-toggle="popover" data-content="-Solo usa letras" data-container="body" data-placement="right" >
                                
 						</td>
 					</tr>
@@ -120,14 +120,14 @@ WHERE A.CODIGO_USUARIO=".$_SESSION["codigo_usuario"]."");
 							<label class="extras">Nombre</label>
 						</td>
 						<td style="padding-left: 15px;padding-bottom: 15px">
-							<input type="text" id="txt-nombre" value="<?php 
+							<input type="text" onclick="pop();" id="txt-nombre" value="<?php 
                                if($row['NOMBRE']==null){
                                    echo ""; 
                                }else{
                                	   echo $row['NOMBRE'];
                                }
 
-							?>" class="form-control">
+							?>" class="form-control" data-toggle="popover" data-content="-Solo usa letras" data-container="body" data-placement="right" >
 						</td>
 					</tr>
 					<tr>
@@ -212,13 +212,13 @@ WHERE A.CODIGO_USUARIO=".$_SESSION["codigo_usuario"]."");
 							<label class="extras" class="form-control">Movil</label>
 						</td>
 						<td style="padding-left: 15px;padding-bottom: 15px">
-							<input type="text" id="txt-phone" value="<?php 
+							<input type="text" id="txt-phone" onclick="pop();" value="<?php 
                               if($row['TELEFONO']==null){
                                    echo ""; 
                                }else{
                                	   echo $row['TELEFONO'];
                                }
-							 ?>" class="form-control">
+							 ?>" class="form-control" data-toggle="popover"  data-content="Escribe tu numero de telefono de la forma: xxx xxxxxxxx" data-placement="right" data-container="body" >
 						</td>
 					</tr>
 					<?php }
@@ -257,7 +257,9 @@ WHERE A.CODIGO_USUARIO=".$_SESSION["codigo_usuario"]."");
 	<script src="js/informacion.js"></script>
 	
 	<script type="text/javascript">
-    
+      $(function () {
+    $('[data-toggle="popover"]').popover();
+      });
        $(".loader").css("display","none");
 
 

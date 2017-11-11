@@ -70,13 +70,13 @@ $albums=$conexion->ejecutarInstruccion("SELECT A.CODIGO_ALBUM,A.NOMBRE_ALBUM,NVL
                        	'<div class="col-md-3 dash2">
                        		<div class="change">
                        			<div class="fotos" >
-                       				<img src="'.$row['COVER'].'" class="perf">
+                        				<img src="'.$row['COVER'].'" class="perf">
 
                        			</div>
 
                        		</div>
                        		<div class="ubicar">
-                       			<div class="col-xs-3 circulo"><span class="glyphicon glyphicon-play app" style="color: #fff" aria-hidden="true"></span></div>
+                       			<div class="col-xs-3 circulo" onclick="playg('.$row['CODIGO_ALBUM'].');"><span class="glyphicon glyphicon-play app" style="color: #fff" aria-hidden="true"></span></div>
                        			<div class="col-xs-3 circulo"><span class="glyphicon glyphicon-heart app" style="color: #007feb" aria-hidden="true"></span></div>
                        			<div class="col-xs-3 circulo tot" data-trigger="focus"  data-placement="auto top"  data-toggle="popover"   data-html="true" data-content="
                        			<table id=\'new2\'>
@@ -136,6 +136,20 @@ $albums=$conexion->ejecutarInstruccion("SELECT A.CODIGO_ALBUM,A.NOMBRE_ALBUM,NVL
 	<script src="js/bootstrap.js"></script>
 	<script src="js/perfil.js"></script>
 	<script type="text/javascript">
+      function playg(codigoalbum){
+var parametros="codigoalbum="+codigoalbum;
+ $.ajax({
+        url:"ajax/reproducto-ajax.php?accion=2",
+        data:parametros,
+        method:"POST",
+        dataType:'json',
+        success:function(respuesta){
+          window.parent.top.myPlaylist.setPlaylist(respuesta);
+          window.parent.top.myPlaylist.option('autoPlay', true);
+        }
+     });
+
+}
 		$(function () {
           $('[data-toggle="popover"]').popover();
         });

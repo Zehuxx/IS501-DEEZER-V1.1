@@ -30,9 +30,9 @@
    <button type="summit" class="btn btn-default btn-primary" style="width: 140px;  height: 40px; float: left;"><img src="img/facebook.svg" width="27" class="bot" height="27"> Facebook</button>
    <button type="summit" class="btn btn-default btn-danger" style="width: 140px;  height: 40px;float: right;"><img src="img/google.svg" width="22" class="bot" height="22"> Google+</button><br><br>
 
-    <input type="email" id="txt-correo" class="form-control"  style="width: 300px;height: 40px;float: center;" placeholder="Correo electrónico" >
-    <input type="text" id="txt-contrasena" class="form-control"  style="width: 300px;height: 40px;float: center;" placeholder="Contraseña (6 caracteres mínimo)"  >
-    <input type="text" id="txt-nombreu" class="form-control"  style="width: 300px;height: 40px;float: center;" placeholder="Nombre de usuario">
+    <input type="email" id="txt-correo" class="form-control" onclick="pop();" style="width: 300px;height: 40px;float: center;" placeholder="Correo electrónico" data-html="true"  data-toggle="popover" data-content="<h5 style='color:black'>Correo de la forma: Name@example.xxx</h5>" data-container="body" data-placement="left" >
+    <input type="text" id="txt-contrasena" onclick="pop();" class="form-control" data-toggle="popover" data-html="true" data-content="<h5 style='color:black'>-Usa [6-15] caracteres</h5>" data-placement="left" data-container="body"  style="width: 300px;height: 40px;float: center;" placeholder="Contraseña (6 caracteres mínimo)"  >
+    <input type="text" id="txt-nombreu" onclick="pop();" data-toggle="popover" data-html="true"  data-content="<h5 style='color:black'>-Usa [2-12] caracteres <br> -Puedes usar solo letras,numeros ej: a89,tyg87,jkj</h5>" data-container="body" data-placement="left" class="form-control"  style="width: 300px;height: 40px;float: center;" placeholder="Nombre de usuario">
 
     <select  class="form-control" id="slc-sexo" style="width: 150px; float: left;">
                    <option value="">Sexo</option> 
@@ -131,7 +131,13 @@
                       
         </select></div></center>
         <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
         <script src="js/validarRegistro.js"></script>
+        <script type="text/javascript">
+          $(function () {
+    $('[data-toggle="popover"]').popover();
+      });
+        </script>
 	</body>
   <br><center>
   <h6><span style="margin: 5px" >Ofertas</span>
