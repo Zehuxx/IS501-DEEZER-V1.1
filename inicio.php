@@ -11,21 +11,37 @@
 <center>
 
 <div class="container"> 
-<br>
   <div id="myCarousel" class="carousel slide" data-ride="carousel">
 
-    <div class="carousel-inner">
-      <div class="item active">
-        <img src="img/bannershakira.png" alt="Shakira" style="width:100%;">
-      </div>
 
-      <div class="item">
-        <img src="img/bannermaluma.jpg" alt="Maluma" style="width:100%;">
+    <div id="flow" class="carousel-inner">
+      <div class="item active">
+        <img src="img/bannershakira.jpg" alt="Shakira" style="width:100%;">
+        <div class="carousel-caption d-none d-md-block text-left">
+                    <div id="playalbum">   <img class="img-rounded" src="img/goku.jpg"></div>
+              <h5>FLOW</h5>
+              <p>Tu propia banda sonora<p>
+            <div id="iconoplay"> <span class="glyphicon glyphicon-play-circle"></span></div>
+            </div>
+        </div>
+     <div class="item">
+        <img src="img/bannermaluma1.jpg" alt="Maluma" style="width:100%;">
+                    <div class="carousel-caption d-none d-md-block text-left">
+                    <div id="playalbum">   <img class="img-rounded" src="img/goku.jpg"></div>
+              <h5>FLOW</h5>
+              <p>Tu propia banda sonora<p>
+            <div id="iconoplay"> <span class="glyphicon glyphicon-play-circle"></span></div>
+            </div>
       </div>
     
       <div class="item">
-        <img src="img/bannermigente.jpg" alt="Migente" style="width:100%;">
-      </div>
+        <img src="img/bannermigente1.jpg" alt="Migente" style="width:100%;">
+                    <div class="carousel-caption d-none d-md-block text-left">
+                    <div id="playalbum">   <img class="img-rounded" src="img/goku.jpg"></div>
+              <h5>FLOW</h5>
+              <p>Tu propia banda sonora<p>
+            <div id="iconoplay"> <span class="glyphicon glyphicon-play-circle"></span></div>
+            </div>
     </div>
 
   </div>
@@ -36,9 +52,7 @@
     <div id="contenedor">
     	<center>
     	  <!--<div id="flow">
-           
-
-
+        
           </div>-->
     	  <div id="explorar"><a id="explorartxt">Explorar ></a></div>
     	  <div id="descubre"><p id="descubretxt">Descubre los canales de musica, entretenimiento y podcast</p></div>
@@ -90,7 +104,9 @@
     	  </div>
     	  <div id="lanzamientos"><a id="lanzamientostxt">Nuevos Lanzamientos ></a></div>
     	  <div id="lanzamiento">
-    	  	<div id="lanzamiento1" class="lanzamiet"></div>
+    	  	<div id="lanzamiento1" class="lanzamiet">
+   
+            </div>
     	  	<div id="lanzamiento2" class="lanzamiet"></div>
     	  	<div id="lanzamiento3" class="lanzamiet"></div>
     	  	<div id="lanzamiento4" class="lanzamiet"></div>
@@ -99,6 +115,8 @@
     </div>	
 
   </center>
+
+
 
 
 <script src="js/jquery.min.js"></script>
