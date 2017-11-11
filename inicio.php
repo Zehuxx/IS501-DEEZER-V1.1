@@ -20,7 +20,7 @@
         <div class="carousel-caption d-none d-md-block text-left">
                     <div id="playalbum">   <img class="img-rounded" src="img/goku.jpg"></div>
               <h5>FLOW</h5>
-              <p>Tu propia banda sonora<p>
+              <p>Tu propia banda sonoraa<p>
             <div id="iconoplay"> <span class="glyphicon glyphicon-play-circle"></span></div>
             </div>
         </div>
