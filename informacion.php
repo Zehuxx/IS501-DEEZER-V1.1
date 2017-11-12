@@ -91,7 +91,7 @@ WHERE A.CODIGO_USUARIO=".$_SESSION["codigo_usuario"]."");
 							<label class="extras">Nombre de Usuario</label>
 						</td>
 						<td width="313" style="padding-left: 15px">
-							<input type="text" class="form-control" onclick="pop();" value="<?php echo $row['NOMBRE_USUARIO']; ?>" id="txt-nombreu" data-toggle="popover" data-html="true"  data-content="-Usa [2-12] caracteres <br> -Puedes usar solo letras,numeros ej: a89,tyg87,jkj" data-container="body" data-placement="right">
+							<input type="text" class="form-control" data-trigger="focus" value="<?php echo $row['NOMBRE_USUARIO']; ?>" id="txt-nombreu" data-toggle="popover" data-html="true"  data-content="-Usa [2-12] caracteres <br> -Puedes usar solo letras,numeros ej: a89,tyg87,jkj" data-container="body" data-placement="right">
 						</td>
 					</tr>
 				</table>
@@ -105,7 +105,7 @@ WHERE A.CODIGO_USUARIO=".$_SESSION["codigo_usuario"]."");
 							<label class="extras">Apellido</label>
 						</td>
 						<td width="300" style="padding-left: 15px;padding-bottom: 15px">
-							<input type="text" id="txt-apellido" onclick="pop();" value="<?php
+							<input type="text" id="txt-apellido" data-trigger="focus" value="<?php
                                if($row['APELLIDO']==null){
                                    echo ""; 
                                }else{
@@ -120,7 +120,7 @@ WHERE A.CODIGO_USUARIO=".$_SESSION["codigo_usuario"]."");
 							<label class="extras">Nombre</label>
 						</td>
 						<td style="padding-left: 15px;padding-bottom: 15px">
-							<input type="text" onclick="pop();" id="txt-nombre" value="<?php 
+							<input type="text" data-trigger="focus" id="txt-nombre" value="<?php 
                                if($row['NOMBRE']==null){
                                    echo ""; 
                                }else{
@@ -212,7 +212,7 @@ WHERE A.CODIGO_USUARIO=".$_SESSION["codigo_usuario"]."");
 							<label class="extras" class="form-control">Movil</label>
 						</td>
 						<td style="padding-left: 15px;padding-bottom: 15px">
-							<input type="text" id="txt-phone" onclick="pop();" value="<?php 
+							<input type="text" id="txt-phone" data-trigger="focus" value="<?php 
                               if($row['TELEFONO']==null){
                                    echo ""; 
                                }else{

@@ -29,8 +29,8 @@
 				<div>
 					<br>
 					<form>
-						<input type="text" id="nombreu" onclick="pop();" data-html="true"  data-toggle="popover" data-content="<h5 style='color:black'>Correo de la forma: Name@example.xxx</h5>" data-container="body" data-placement="left"  class="form-control" style="width: 300px;height: 40px;margin-bottom: 3px;float: center;" placeholder="Correo Electronico" >
-				    	<input type="password" id="contrasena" class="form-control" onclick="pop();" style="width: 300px;height: 40px;float: center;" placeholder="Contraseña" data-toggle="popover" data-html="true" data-content="<h5 style='color:black'>-Usa [6-15] caracteres</h5>" data-placement="left" data-container="body"  >
+						<input type="text" id="nombreu" data-trigger="focus" data-html="true"  data-toggle="popover" data-content="<h5 style='color:black'>Correo de la forma: Name@example.xxx</h5>" data-container="body" data-placement="left"  class="form-control" style="width: 300px;height: 40px;margin-bottom: 3px;float: center;" placeholder="Correo Electronico" >
+				    	<input type="password" id="contrasena" class="form-control" data-trigger="focus" style="width: 300px;height: 40px;float: center;" placeholder="Contraseña" data-toggle="popover" data-html="true" data-content="<h5 style='color:black'>-Usa [6-15] caracteres</h5>" data-placement="left" data-container="body"  >
 					</form>
 	   			</div> 
 	   			<div id="resultado">

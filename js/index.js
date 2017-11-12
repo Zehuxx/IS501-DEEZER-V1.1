@@ -1,6 +1,4 @@
-function pop(){
-  $('[data-toggle="popover"]').popover('hide');
-}
+
 
 function ifra(link){
     if (link==1)

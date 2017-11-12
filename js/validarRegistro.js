@@ -1,6 +1,3 @@
-function pop(){
-  $('[data-toggle="popover"]').popover('hide');
-}
 
 
 $("#btn-registro").click(function(){
@@ -85,7 +82,7 @@ $("#btn-registro").click(function(){
             	sex.removeClass('has-error');
             }
 
-    	} 
+    	}  
     }
 
  var error=0;
@@ -103,19 +100,18 @@ $("#btn-registro").click(function(){
         method:"POST",
         dataType:'json',
         success:function(respuesta){
-          if (respuesta.codigo==1){
+          if (respuesta.codigo==0){
                $("#resultado").html('<h5 style="border-radius: 4px;color: black;width: 300px;font-size: 18px;" class="bg-success"><center>'+ respuesta.mensaje+'</center></h5>');
                window.location.href="index.php";
-          }else{
-            if (respuesta.codigo1==0) {
-                $("#resultado").html('<h5 style="border-radius: 4px;color: black;width: 300px;font-size: 18px;" class="bg-danger"><center>'+ respuesta.mensaje1+'</center></h5>');
-            }
-            if (respuesta.codigo2==0) {
-               $("#resultado").html('<h5 style="border-radius: 4px;color: black;width: 300px;font-size: 18px;" class="bg-danger"><center>'+ respuesta.mensaje2+'</center></h5>');
-            }
-            if (respuesta.codigo2==0 && respuesta.codigo1==0) {
-              $("#resultado").html('<h5 style="border-radius: 4px;color: black;width: 300px;font-size: 18px;" class="bg-danger"><center>Correo y Usuario en uso</center></h5>');
-            }
+          }
+          if (respuesta.codigo==1) {
+              $("#resultado").html('<h5 style="border-radius: 4px;color: black;width: 300px;font-size: 18px;" class="bg-danger"><center>'+ respuesta.mensaje+'</center></h5>');
+          }
+          if (respuesta.codigo==2) {
+             $("#resultado").html('<h5 style="border-radius: 4px;color: black;width: 300px;font-size: 18px;" class="bg-danger"><center>'+ respuesta.mensaje+'</center></h5>');
+          }
+          if (respuesta.codigo==3) {
+            $("#resultado").html('<h5 style="border-radius: 4px;color: black;width: 300px;font-size: 18px;" class="bg-danger"><center>'+respuesta.mensaje+'</center></h5>');
           }
         }
      });

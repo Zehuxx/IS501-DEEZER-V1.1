@@ -14,7 +14,7 @@ $artistas=$conexion->ejecutarInstruccion("SELECT A.CODIGO_ARTISTA,A.NOMBRE_ARTIS
                                                     GROUP BY CODIGO_ARTISTA) C
                                                     ON(B.CODIGO_ARTISTA = C.CODIGO_ARTISTA)");
    function cortar($text){
-   	;
+   	; 
      if ((strlen($text)>25)) {
      	echo substr($text, 0, 25)."..."; 
      }else{
