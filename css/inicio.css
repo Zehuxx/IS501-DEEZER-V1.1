@@ -124,7 +124,7 @@
 {
 	width: 1086px;
 	height: 327px;
-	margin-top: 120px;
+	margin-top: 180px;
 }
 
 .playlt
@@ -161,13 +161,14 @@
     font-weight: 600;
     font-size: 18px;
     float: left;
+    margin-top: 45px;
 }
 
 #popul
 {
 	width: 1086px;
 	height: 327px;
-	margin-top: 20px;
+	margin-top: 60px;
 }
 
 .popl
@@ -204,6 +205,7 @@
     font-weight: 600;
     font-size: 18px;
     float: left;
+    margin-top: 40px;
 }
 
 #top_pais
@@ -216,8 +218,8 @@
 	border-top-left-radius:4px;
 	border-top-right-radius:4px;
 	float: left;
-	margin-left: 160px;
-	margin-top: 25px;
+	margin-left: 150px;
+	margin-top: 55px;
 }
 
 #imgtop
@@ -257,7 +259,7 @@
 	height: 173.6px;
 	float: right;
 	margin-right: 155px;
-	margin-top: 45px;
+	margin-top: 65px;
 }
 h5
 {
@@ -310,6 +312,7 @@ body
 	font-weight: 550;
 	font-family: Lucida Grande,Arial,sans-serif;
 	text-align: right;
+	margin-top: 130px;
 }
 .cancion
 {
@@ -380,6 +383,7 @@ body
     font-weight: 600;
     font-size: 18px;
     float: left;
+    margin-top: 20px;
 }
 
 #lanzamiento
@@ -471,4 +475,102 @@ body
     font-weight: 800;
     font-size: 18px;
     color: #ffffff;
+}
+
+.nombre_album
+{
+	color: #32323d;
+    font-family: Open Sans,Arial,sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    float:left;
+    margin-top: 240px;
+    margin-left: -248px;
+}
+
+.cantidadfans
+{
+	color: #72727d;
+    font-family: Open Sans,Arial,sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    float: left;
+    margin-top: 260px;
+    margin-left: -248px;
+}
+
+.btnreproducir
+{
+	width: 124px;
+	height: 28px;
+	float: left;
+	margin-top: 15px;
+	margin-left: 140px;
+	background-color: #EFE2E9;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+	border-bottom-right-radius: 4px;
+	border-bottom-left-radius: 4px;
+	border: 1px solid black;
+}
+
+.glyphicon-play
+{
+	float: left;
+	margin-top: 4px;
+	margin-left: 15px;
+}
+
+#btn
+{
+	font-family: Open Sans,Arial,sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    float: left;
+    margin-top: 3.5px;
+    margin-left: 5px;
+}
+
+.option
+{
+	width: 132px;
+	height: 36px;
+	float: left;
+	position: relative;
+	margin-top: 185px;
+	margin-left: 10px;
+}
+
+.opt
+{
+	width: 36px;
+	height: 36px;
+	border-radius: 100%;
+	background-color: black;
+	float: left;
+	margin-left: 8px;
+}
+
+.fa-play
+{
+	float: left;
+	margin-top: 10px;
+	margin-left: 12px;
+	color: #ffffff;
+}
+
+.fa-heart
+{
+	float: left;
+	margin-top: 12px;
+	margin-left: 12px;
+	color: #ffffff;
+}
+
+.fa-ellipsis-h
+{
+	float: left;
+	margin-top: 12px;
+	margin-left: 14px;
+	color: #ffffff;
 }
