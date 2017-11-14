@@ -66,22 +66,46 @@
           <div id="seleccion"><a id="selecciontxt">Seleccion de playlist</a></div>
           <div id="selec"><p id="selectxt">Una seleccion de los editores para ti</p></div> 
           <div id="playlist_editores">
-            <div id="playlt1" class="playlt"></div>
+            <div id="playlt1" class="playlt">
+                <div class="option">
+                    <div class="opt"><i class="fa fa-play" aria-hidden="true"></i></div>
+                    <div class="opt"><i class="fa fa-heart" aria-hidden="true"></i></div>
+                    <div class="opt"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></div>
+                </div>
+            </div>
             <tr>
              <td><a class="nombre_album">Album recomendado</a></td>
              <td><span class="cantidadfans">116 canciones-48,777 fans</span></td>
             </tr>
-            <div id="playlt2" class="playlt"></div>
+            <div id="playlt2" class="playlt">
+                <div class="option">
+                    <div class="opt"><i class="fa fa-play" aria-hidden="true"></i></div>
+                    <div class="opt"><i class="fa fa-heart" aria-hidden="true"></i></div>
+                    <div class="opt"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></div>
+                </div>
+            </div>
             <tr>
              <td><a class="nombre_album">Album recomendado</a></td>
              <td><span class="cantidadfans">116 canciones-48,777 fans</span></td>
             </tr>
-            <div id="playlt3" class="playlt"></div>
+            <div id="playlt3" class="playlt">
+                <div class="option">
+                    <div class="opt"><i class="fa fa-play" aria-hidden="true"></i></div>
+                    <div class="opt"><i class="fa fa-heart" aria-hidden="true"></i></div>
+                    <div class="opt"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></div>
+                </div>
+            </div>
             <tr>
              <td><a class="nombre_album">Album recomendado</a></td>
              <td><span class="cantidadfans">116 canciones-48,777 fans</span></td>
             </tr>
-            <div id="playlt4" class="playlt"></div>
+            <div id="playlt4" class="playlt">
+                <div class="option">
+                    <div class="opt"><i class="fa fa-play" aria-hidden="true"></i></div>
+                    <div class="opt"><i class="fa fa-heart" aria-hidden="true"></i></div>
+                    <div class="opt"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></div>
+                </div>
+            </div>
             <tr>
              <td><a class="nombre_album">Album recomendado</a></td>
              <td><span class="cantidadfans">116 canciones-48,777 fans</span></td>
@@ -89,22 +113,46 @@
           </div>
           <div id="popular"><a id="populartxt">Popular ></a></div>
           <div id="popul">
-            <div id="pop1" class="popl"></div>
+            <div id="pop1" class="popl">
+               <div class="option">
+                    <div class="opt"><i class="fa fa-play" aria-hidden="true"></i></div>
+                    <div class="opt"><i class="fa fa-heart" aria-hidden="true"></i></div>
+                    <div class="opt"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></div>
+                </div> 
+            </div>
               <tr>
              <td><a class="nombre_album">Album recomendado</a></td>
              <td><span class="cantidadfans">116 canciones-48,777 fans</span></td>
             </tr>
-            <div id="pop2" class="popl"></div>
+            <div id="pop2" class="popl">
+                <div class="option">
+                    <div class="opt"><i class="fa fa-play" aria-hidden="true"></i></div>
+                    <div class="opt"><i class="fa fa-heart" aria-hidden="true"></i></div>
+                    <div class="opt"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></div>
+                </div>
+            </div>
               <tr>
              <td><a class="nombre_album">Album recomendado</a></td>
              <td><span class="cantidadfans">116 canciones-48,777 fans</span></td>
             </tr>
-            <div id="pop3" class="popl"></div>
+            <div id="pop3" class="popl">
+                <div class="option">
+                    <div class="opt"><i class="fa fa-play" aria-hidden="true"></i></div>
+                    <div class="opt"><i class="fa fa-heart" aria-hidden="true"></i></div>
+                    <div class="opt"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></div>
+                </div>
+            </div>
 <tr>
              <td><a class="nombre_album">Album recomendado</a></td>
              <td><span class="cantidadfans">116 canciones-48,777 fans</span></td>
             </tr>
-            <div id="pop4" class="popl"></div>
+            <div id="pop4" class="popl">
+                <div class="option">
+                    <div class="opt"><i class="fa fa-play" aria-hidden="true"></i></div>
+                    <div class="opt"><i class="fa fa-heart" aria-hidden="true"></i></div>
+                    <div class="opt"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></div>
+                </div>
+            </div>
 <tr>
              <td><a class="nombre_album">Album recomendado</a></td>
              <td><span class="cantidadfans">116 canciones-48,777 fans</span></td>
@@ -137,22 +185,46 @@
           </div>
           <div id="lanzamientos"><a id="lanzamientostxt">Nuevos Lanzamientos ></a></div>
           <div id="lanzamiento">
-            <div id="lanzamiento1" class="lanzamiet"></div>
+            <div id="lanzamiento1" class="lanzamiet">
+                <div class="option">
+                    <div class="opt"><i class="fa fa-play" aria-hidden="true"></i></div>
+                    <div class="opt"><i class="fa fa-heart" aria-hidden="true"></i></div>
+                    <div class="opt"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></div>
+                </div>
+            </div>
             <tr>
              <td><a class="nombre_album">Album recomendado</a></td>
              <td><span class="cantidadfans">De banda</span></td>
             </tr>
-            <div id="lanzamiento2" class="lanzamiet"></div>
+            <div id="lanzamiento2" class="lanzamiet">
+                <div class="option">
+                    <div class="opt"><i class="fa fa-play" aria-hidden="true"></i></div>
+                    <div class="opt"><i class="fa fa-heart" aria-hidden="true"></i></div>
+                    <div class="opt"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></div>
+                </div>
+            </div>
             <tr>
              <td><a class="nombre_album">Album recomendado</a></td>
              <td><span class="cantidadfans">De banda</span></td>
             </tr>
-            <div id="lanzamiento3" class="lanzamiet"></div>
+            <div id="lanzamiento3" class="lanzamiet">
+                <div class="option">
+                    <div class="opt"><i class="fa fa-play" aria-hidden="true"></i></div>
+                    <div class="opt"><i class="fa fa-heart" aria-hidden="true"></i></div>
+                    <div class="opt"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></div>
+                </div>
+            </div>
             <tr>
              <td><a class="nombre_album">Album recomendado</a></td>
              <td><span class="cantidadfans">De banda</span></td>
             </tr>
-            <div id="lanzamiento4" class="lanzamiet"></div>
+            <div id="lanzamiento4" class="lanzamiet">
+                <div class="option">
+                    <div class="opt"><i class="fa fa-play" aria-hidden="true"></i></div>
+                    <div class="opt"><i class="fa fa-heart" aria-hidden="true"></i></div>
+                    <div class="opt"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></div>
+                </div>
+            </div>
             <tr>
              <td><a class="nombre_album">Album recomendado</a></td>
              <td><span class="cantidadfans">De banda</span></td>
