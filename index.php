@@ -647,13 +647,45 @@ function cortar3($text){
 								</div><!-- /.modal-dialog --> 
 							</div><!-- /.modal --> 
 
+							<div class="modal fade" tabindex="-1" role="dialog" id="imagen">
+								<div class="modal-dialog" role="document"  style="width:900px" style="height: 800px">
+									<div class="modal-content">
 
+										<div class="modal-body">
+
+											<form method="post" id="formulario" enctype="multipart/form-data">
+												<div class="well">
+													<center>
+														<table>
+															<tr>
+																<td><h3>Cambiar foto de Perfil</h3></td>
+															</tr>
+															<tr>
+																<td>
+																	<label>Subir imagen:</label>
+																	<input type="file" name="file"> 
+																</td>
+															</tr>
+														</table>
+													</center>
+												</div>
+											</form>
+											<div id="respuesta"></div>         
+
+										</div>
+
+									</div><!-- /.modal-content -->
+								</div><!-- /.modal-dialog -->
+
+
+							</div><!-- /.modal -->
 
 							<script type="text/javascript" src="js/jquery.min.js"></script>
 							<script src="js/bootstrap.min.js"></script>
 							<script src="js/index.js"></script>
 							<script type="text/javascript" src="js/jquery.jplayer.js"></script>
 							<script type="text/javascript" src="js/jplayer.playlist.js"></script>
+							<script type="text/javascript" src="js/imagenes.js"></script>
 							<script id="repro" type="text/javascript">
 
 								$(function () {

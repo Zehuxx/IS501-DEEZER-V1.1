@@ -2,10 +2,10 @@
 session_start();
  if(!isset($_SESSION['codigo_usuario']))
  header('Location:http://localhost/IS501-DEEZER-V1.1/conectarse.php');
-include ("class/class-conexion.php");
+include("class/class-conexion.php");
 $conexion = new Conexion();
 $conexion->establecerConexion();
-$informacion=$conexion->ejecutarInstruccion("SELECT NVL(A.CODIGO_LUGAR,0) AS CODIGO_LUGAR,A.NOMBRE_USUARIO,A.CORREO,B.APELLIDO AS APELLIDO,B.CODIGO_SEXO,B.NOMBRE AS NOMBRE,B.TELEFONO AS TELEFONO,NVL(TO_CHAR(B.FECHA_NACIMIENTO,'DD'),0) AS DIA,NVL(TO_CHAR(B.FECHA_NACIMIENTO,'MM'),0) AS MES,NVL(TO_CHAR(B.FECHA_NACIMIENTO,'YYYY'),0) AS ANO
+$informacion=$conexion->ejecutarInstruccion("SELECT A.FOTO,NVL(A.CODIGO_LUGAR,0) AS CODIGO_LUGAR,A.NOMBRE_USUARIO,A.CORREO,B.APELLIDO AS APELLIDO,B.CODIGO_SEXO,B.NOMBRE AS NOMBRE,B.TELEFONO AS TELEFONO,NVL(TO_CHAR(B.FECHA_NACIMIENTO,'DD'),0) AS DIA,NVL(TO_CHAR(B.FECHA_NACIMIENTO,'MM'),0) AS MES,NVL(TO_CHAR(B.FECHA_NACIMIENTO,'YYYY'),0) AS ANO
 FROM TBL_USUARIOS A
 INNER JOIN TBL_PERSONAS B
 ON(A.CODIGO_USUARIO=B.CODIGO_PERSONA)
@@ -34,7 +34,7 @@ WHERE A.CODIGO_USUARIO=".$_SESSION["codigo_usuario"]."");
 		<div class="col-lg-12 col-sm-12 col-md-12 col-xs-12 afuera">
 			<div class="col-lg-12 col-sm-12 col-md-12 col-xs-12 dentro ">
 			 <div class="col-lg-2 col-sm-2 col-md-2 col-xs-2 imagen ">
-				<img src="img/goku.jpg" width="150" height="150" style="border-radius: 4px">
+				<img src="<?php echo $row['FOTO']; ?>" width="150" height="150" style="border-radius: 4px">
 
 			</div>
 			<div class="col-lg-10 col-sm-10 col-md-10 col-xs-10 texto ">
@@ -42,7 +42,7 @@ WHERE A.CODIGO_USUARIO=".$_SESSION["codigo_usuario"]."");
 				<p class="titulo">Mi oferta</p>
 				<hr>
 				<div class="alinear" >
-				 <div class="letrass"> Estás disfrutando de la versión gratuita de Deezer.<button  class="suscripcion"><a style="text-decoration:none;color:black;" href="javascript:;">Administrar mi suscripción</a> </button></div>
+				 <div class="letrass"> Estás disfrutando de la versión gratuita de Deezer.<button  class="suscripcion" onclick="moodd();"><a style="text-decoration:none;color:black;" href="javascript:;">Cambiar Foto Perfil</a> </button></div>
 			<p class="titulo">Inicia Sesion</p>
 			<hr>
 			<div >
@@ -274,6 +274,12 @@ WHERE A.CODIGO_USUARIO=".$_SESSION["codigo_usuario"]."");
  
 
       
+     	$('#imagen',window.parent.parent.document).on('hide.bs.modal', function (e) {
+           if($("#dropp",window.parent.parent.document).hasClass("modal-backdrop")){
+           $(".modal-backdrop",window.parent.parent.document).remove();
+           }
+         });
+ 
    
 
 </script>

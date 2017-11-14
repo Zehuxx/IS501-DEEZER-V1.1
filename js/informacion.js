@@ -187,3 +187,17 @@ function modddd(){
 }
    
 }
+
+
+function moodd(){
+  $('#imagen',window.parent.parent.document).modal('show');
+  
+  $("body",window.parent.parent.document).append('<div class="modal-backdrop fade in" id="dropp"  ></div>');
+  $('body').css("padding-right","0px");
+  if ($('body').hasClass('modal-open')) {
+  $('body').removeClass('modal-open');
+  $('.fade').removeClass("modal-backdrop"); 
+  
+}
+   
+}
