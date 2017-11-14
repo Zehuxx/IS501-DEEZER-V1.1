@@ -4,7 +4,7 @@
     <title>Inicio</title>
     <meta charset="utf-8">
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/inicio.css">
+    <link rel="stylesheet" type="text/css" href="css/principal.css">
     <link rel="stylesheet" type="text/css" href="fantastic/css/font-awesome.min.css">
 </head>
 <body>
@@ -240,7 +240,7 @@
 
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/inicio.js"></script>
+<script type="text/javascript" src="js/principal.js"></script>
 
 </body>
 </html>
