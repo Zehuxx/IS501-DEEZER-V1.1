@@ -4,6 +4,38 @@ session_start();
 if(!isset($_SESSION['codigo_usuario']))
 	header('Location:http://localhost/IS501-DEEZER-V1.1/conectarse.php');
 
+include("class/class-conexion.php");
+$conexion = new Conexion();
+$conexion->establecerConexion();
+$foto=$conexion->ejecutarInstruccion("SELECT *
+	FROM TBL_USUARIOS 
+	WHERE CODIGO_USUARIO = ".$_SESSION["codigo_usuario"]."");
+
+$albums=$conexion->ejecutarInstruccion("SELECT A.CODIGO_ALBUM,A.NOMBRE_ALBUM,NVL(B.NOMBRE_ARTISTAS,' ') AS NOMBRE_ARTISTAS,A.COVER
+	FROM TBL_ALBUMES A
+	LEFT JOIN (SELECT A.CODIGO_ALBUM,LISTAGG(NOMBRE_ARTISTICO, ', ') WITHIN GROUP (ORDER BY A.CODIGO_ALBUM) over (partition by A.CODIGO_ALBUM) NOMBRE_ARTISTAS
+	FROM TBL_ALBUMES_X_ARTISTAS A
+	LEFT JOIN TBL_ARTISTAS B
+	ON(A.CODIGO_ARTISTA=B.CODIGO_ARTISTA)) B
+	ON(A.CODIGO_ALBUM=B.CODIGO_ALBUM)
+	RIGHT JOIN (SELECT CODIGO_ALBUM
+	FROM TBL_SEGUIDORES_ALBUM
+	WHERE CODIGO_USUARIO=".$_SESSION['codigo_usuario'].") C
+	ON(A.CODIGO_ALBUM=C.CODIGO_ALBUM)
+	GROUP BY A.CODIGO_ALBUM,A.NOMBRE_ALBUM,B.NOMBRE_ARTISTAS,A.COVER");
+
+$paylist=$conexion->ejecutarInstruccion("SELECT A.CODIGO_PLAYLIST,C.NOMBRE_USUARIO,A.NOMBRE_PLAYLIST,A.NUMERO_SEGUIDORES,A.COVER
+	FROM TBL_PLAYLIST A
+	INNER JOIN(SELECT CODIGO_SEGUIDOR,CODIGO_PLAYLIST
+	FROM TBL_SEGUIDORES_PLAYLIST
+	WHERE CODIGO_SEGUIDOR=".$_SESSION['codigo_usuario'].") B
+	ON(A.CODIGO_PLAYLIST=B.CODIGO_PLAYLIST)
+	LEFT JOIN (SELECT A.CODIGO_PLAYLIST,B.NOMBRE_USUARIO
+		FROM TBL_PLAYLIST_X_USUARIO A
+		LEFT JOIN TBL_USUARIOS B
+		ON(A.CODIGO_USUARIO=B.CODIGO_USUARIO)) C
+		ON(A.CODIGO_PLAYLIST=C.CODIGO_PLAYLIST)");
+
 function cortar($text){
 
 	if ((strlen($text)>25)) {
@@ -12,7 +44,7 @@ function cortar($text){
 		echo $text;
 	}
 
-}
+} 
 
 function cortar2($text){
 
@@ -84,8 +116,9 @@ function cortar3($text){
 			<hr>
 			<li onclick="reload('hijoo')"  id="li3">
 				<a id="mod" href="#" class="si" onclick="arreglo('mod','first3','start','first','start2','first2','start4','first4');"">
-
-					<span id="first3"><img src="img/goku.jpg" width="24" height="24" style="border-radius: 50%;margin-right: 5px"> <span id="aayuda">Mi Musica</span> </span>
+					<?php 
+					while ($row = $conexion->obtenerRegistro($foto)) { ?>
+					<span id="first3"><img src="<?php echo $row['FOTO']; }?>" width="24" height="24" style="border-radius: 50%;margin-right: 5px"> <span id="aayuda">Mi Musica</span> </span>
 				</a>
 
 
@@ -157,7 +190,7 @@ function cortar3($text){
 						<div class="hijo2" id="hijo2">
 							<div class="margen2">
 								<span onclick="playlists()" class="link">
-									<span class="color-primary">13</span>
+									<span class="color-primary pay"></span>
 									<span class="azz"> 
 										<span> Playlists</span>
 										<span class="glyphicon glyphicon-chevron-right tamano" aria-hidden="true"></span>
@@ -189,20 +222,20 @@ function cortar3($text){
 										</tr>
 
 										<?php
-										for ($i=0; $i <9 ; $i++) { 
+										 while ($row = $conexion->obtenerRegistro($paylist)) {
 											echo 
 											'<tr class="separacion"></tr>
 											<tr>
-											<td><img src="img/goku.jpg" class=\'repo\' width="56" height="56"></td>
+											<td><img src="'.$row['COVER'].'" class=\'repo\' width="56" height="56" onclick="play('.$row['CODIGO_PLAYLIST'].');"></td>
 											<td class="espacio">
-											<span class="col-xs-12 principal2 playname"><span class="userr">';echo cortar('1234567890'); echo '</span></span>
-											<span class="col-xs-12 playuser">de <span class="playuser2">';echo cortar2('1234567890'); echo '</span></span>
+											<span class="col-xs-12 principal2 playname"><span class="userr" onclick="play('.$row['CODIGO_PLAYLIST'].');">';echo cortar("".$row['NOMBRE_PLAYLIST'].""); echo '</span></span>
+											<span class="col-xs-12 playuser">de <span class="playuser2">';echo cortar2("".$row['NOMBRE_USUARIO'].""); echo '</span></span>
 											<span class="glyphicon glyphicon-option-horizontal xxx" data-trigger="manual"  data-placement="auto right"  data-toggle="popover"   data-html="true" data-content="
 											<table class=\'help\'>
 											<tr>
-											<td><img src=\'img/goku.jpg\' width=\'56\' height=\'56\'></td>
-											<td><span class=\'col-xs-12 principal3 playname2\'><span class=\'userr\'>';echo cortar3('1234567890123456789012345'); echo '</span></span>
-											<span class=\'col-xs-12 playuser3\'>de <span class=\'playuser2\'>';echo cortar3('1234567890123456789012345'); echo '</span></span></td>
+											<td><img src=\''.$row['COVER'].'\' width=\'56\' height=\'56\' onclick=\'play('.$row['CODIGO_PLAYLIST'].');\'></td>
+											<td><span class=\'col-xs-12 principal3 playname2\'><span class=\'userr\' onclick=\'play('.$row['CODIGO_PLAYLIST'].');\'>';echo cortar3("".$row['NOMBRE_PLAYLIST'].""); echo '</span></span>
+											<span class=\'col-xs-12 playuser3\'>de <span class=\'playuser2\'>';echo cortar3("".$row['NOMBRE_USUARIO'].""); echo '</span></span></td>
 											</tr>
 											</table>
 											<div class=\'lineahr2\'></div>
@@ -247,7 +280,7 @@ function cortar3($text){
 
 									<div class="margen3">
 										<span onclick="albums()" class="link">
-											<span class="color-primary">13</span>
+											<span class="color-primary albx"></span>
 											<span class="azz"> 
 												<span> Albumes</span>
 												<span class="glyphicon glyphicon-chevron-right tamano" aria-hidden="true"></span>
@@ -278,20 +311,20 @@ function cortar3($text){
 												</tr>
 
 												<?php
-												for ($i=0; $i <9 ; $i++) { 
+												while ($row = $conexion->obtenerRegistro($albums)) {
 													echo 
 													'<tr class="separacion"></tr>
 													<tr>
-													<td><img src="img/goku.jpg" width="56" height="56"></td>
+													<td><img src="'.$row['COVER'].'" width="56" height="56" onclick="playg('.$row['CODIGO_ALBUM'].');"></td>
 													<td class="espacio">
-													<span class="col-xs-12 principal2 playname"><span class="userr">';echo cortar('1234567890'); echo '</span></span>
-													<span class="col-xs-12 playuser">de <span class="playuser2">';echo cortar2('1234567890'); echo '</span></span>
+													<span class="col-xs-12 principal2 playname"><span class="userr" onclick="playg('.$row['CODIGO_ALBUM'].');">';echo cortar("".$row['NOMBRE_ALBUM'].""); echo '</span></span>
+													<span class="col-xs-12 playuser">de <span class="playuser2">';echo cortar2("".$row['NOMBRE_ARTISTAS'].""); echo '</span></span>
 													<span class="glyphicon glyphicon-option-horizontal xxx" data-trigger="manual"  data-placement="auto right"  data-toggle="popover"   data-html="true" data-content="
 													<table class=\'help\'>
 													<tr>
-													<td><img src=\'img/goku.jpg\' width=\'56\' height=\'56\'></td>
-													<td><span class=\'col-xs-12 principal3 playname2\'><span class=\'userr\'>';echo cortar3('1234567890123456789012345'); echo '</span></span>
-													<span class=\'col-xs-12 playuser3\'>de <span class=\'playuser2\'>';echo cortar3('1234567890123456789012345'); echo '</span></span></td>
+													<td><img src=\''.$row['COVER'].'\' width=\'56\' height=\'56\' onclick=\'playg('.$row['CODIGO_ALBUM'].');\'></td>
+													<td><span class=\'col-xs-12 principal3 playname2\'><span class=\'userr\' onclick=\'playg('.$row['CODIGO_ALBUM'].');\'>';echo cortar3("".$row['NOMBRE_ALBUM'].""); echo '</span></span>
+													<span class=\'col-xs-12 playuser3\'>de <span class=\'playuser2\'>';echo cortar3("".$row['NOMBRE_ARTISTAS'].""); echo '</span></span></td>
 													</tr>
 													</table>
 													<div class=\'lineahr2\'></div>
@@ -679,7 +712,8 @@ function cortar3($text){
 
 
 							</div><!-- /.modal -->
-
+							<input type="text" id="fav" value="<?php echo $favoritos=$conexion->cantidadRegistros($albums); ?>" style="visibility: hidden;">
+							<input type="text" id="fav2" value="<?php echo $favoritos=$conexion->cantidadRegistros($paylist); ?>" style="visibility: hidden;">
 							<script type="text/javascript" src="js/jquery.min.js"></script>
 							<script src="js/bootstrap.min.js"></script>
 							<script src="js/index.js"></script>
@@ -693,9 +727,9 @@ function cortar3($text){
 								});
 								
 								$(document).ready(function(){
-									
+									$(".albx").text($("#fav").val()+" ");
 
-
+                                     $(".pay").text($("#fav2").val()+" ");
 									$(function () {
 										$('[data-toggle="tooltip"]').tooltip();
 									});
@@ -714,46 +748,11 @@ function cortar3($text){
 									});
 
 
-									$("#anadir").click(function() {
-										$("#jquery_jplayer_1").jPlayer({
-											
-
-
-										});
-										$("#jp_container_1 .jp-title ul").html("<li>Bubble - MP3 - Poster</li>");
-										return false;
-									});
-
 									
-									$(".repo").click(function() {
-										myPlaylist.add(
-										{
-											title:"Big Buck Bunny Trailer",
-											artist:"Blender Foundation",
-											m4v:"http://www.jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v",
-											ogv:"http://www.jplayer.org/video/ogv/Big_Buck_Bunny_Trailer.ogv",
-											webmv: "http://www.jplayer.org/video/webm/Big_Buck_Bunny_Trailer.webm",
-											poster:"http://www.jplayer.org/video/poster/Big_Buck_Bunny_Trailer_480x270.png"
-										});
-									});
 
 
 
-/*
-									function arr(){
-										for (var i = 0; i < py.playlist.length; i++) {
-                                         	//alert(py.playlist[i]["artist"]+py.playlist[i]["artist"]+py.playlist[i]["mp3"]+py.playlist[i]["poster"]);
-
-                                         }
-                                     }
-
-//console.log(py.playlist);
-
-*/
-
-
-
-});
+								});
 
 								var myPlaylist = new jPlayerPlaylist({
 									jPlayer: "#jquery_jplayer_1",
@@ -775,8 +774,34 @@ function cortar3($text){
 									keyEnabled: true,
 									audioFullScreen: true
 								});
+								function playg(codigoalbum){
+									var parametros="codigoalbum="+codigoalbum;
+									$.ajax({
+										url:"ajax/reproducto-ajax.php?accion=2",
+										data:parametros,
+										method:"POST",
+										dataType:'json',
+										success:function(respuesta){
+											myPlaylist.setPlaylist(respuesta);
+											myPlaylist.option('autoPlay', true);
+										}
+									});
 
+								}
+								function play(codigoplaylist){
+									var parametros="codigoplaylist="+codigoplaylist;
+									$.ajax({
+										url:"ajax/reproducto-ajax.php?accion=1",
+										data:parametros,
+										method:"POST",
+										dataType:'json',
+										success:function(respuesta){
+											window.parent.top.myPlaylist.setPlaylist(respuesta);
+											window.parent.top.myPlaylist.option('autoPlay', true);
+										}
+									});
 
+								}
 
 
 

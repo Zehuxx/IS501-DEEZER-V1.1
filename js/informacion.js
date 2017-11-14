@@ -158,11 +158,11 @@ $("#btn-save").click(function(){
         method:"POST",
         dataType:'json',
         success:function(respuesta){
-          if (respuesta.codigo==1){
+          if (respuesta.codigo==0){
               $("#resultado").html('<div class="bg-success"><center>'+respuesta.mensaje+'</center></div>');
              
           }else{
-            
+              $("#resultado").html('<div class="bg-danger"><center>'+respuesta.mensaje+'</center></div>');
           }
         }
      });

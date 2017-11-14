@@ -56,6 +56,7 @@ if (isset($_FILES["file"]))
     $resultado["mensaje"]="<div class='bg-success'><center>Exito, Fotografia Actualizada</center></div>";
     $resultado["actualizar2"]='<img src="'.$src.'" width="150" height="150" style="border-radius: 4px">';
     $resultado["actualizar"]='<img src="'.$src.'" width="24" height="24" style="border-radius: 50%;margin-right: 5px"> <span id="aayuda">Mi Musica</span>';    
+    $resultado["actualizar3"]='<img src="'.$src.'" id="photo" width="160" height="160">';
     echo json_encode($resultado);
     }
 }else{

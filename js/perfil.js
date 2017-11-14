@@ -19,7 +19,7 @@ function borde(id){
    $("#alb").removeClass("borde-a");
    $("#art").removeClass("borde-a");
    $("#af").css("color","#32323d");
-   $("#alp").css("color","#72727d");
+   $("#alp").css("color","#72727d"); 
    $("#bla").css("color","#72727d");
    $("#tra").css("color","#72727d");
    $("#mas").css("color","#72727d");
@@ -341,6 +341,8 @@ function info(){
  $('#ifra', window.parent.document).html('<iframe class="contenido" src="configuraciones.php" frameborder="0"  ></iframe>');
   
 }
+
+
 
 function comprobar(){
   var a=window.parent.document.getElementById("pla");
