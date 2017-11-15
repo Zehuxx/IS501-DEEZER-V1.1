@@ -62,6 +62,21 @@ switch ($_GET['accion']){
               $arr[]=array("title"=>"".$row['NOMBRE']."","artist"=>"".$row['NOMBRE_ARTISTICO']."","mp3"=>"".$row['CANCION']."","poster"=>"".$row['COVER']."");
         }
 		break;
+    case '4':
+      $codigo_cancion=$_POST['codigocancion'];
+      $cancion=$conexion->ejecutarInstruccion("SELECT A.CODIGO_CANCION,A.NOMBRE,A.CANCION,A.COVER,NVL(B.NOMBRE_ARTISTAS,' ') AS NOMBRE_ARTISTAS
+                                              FROM TBL_CANCIONES A 
+                                              LEFT JOIN (SELECT  A.CODIGO_CANCION,LISTAGG(NOMBRE_ARTISTICO, ', ') WITHIN GROUP (ORDER BY A.CODIGO_CANCION) over (partition by A.CODIGO_CANCION) NOMBRE_ARTISTAS
+                                              FROM TBL_CANCIONES_X_ARTISTA A
+                                              LEFT JOIN TBL_ARTISTAS B
+                                              ON(A.CODIGO_ARTISTA=B.CODIGO_ARTISTA)) B
+                                              ON(A.CODIGO_CANCION=B.CODIGO_CANCION)
+                                              GROUP BY A.CODIGO_CANCION,A.NOMBRE,A.CANCION,A.COVER,B.NOMBRE_ARTISTAS
+                                              HAVING A.CODIGO_CANCION=".$codigo_cancion."");
+      while ($row = $conexion->obtenerRegistro($cancion)) {
+              $arr[]=array("title"=>"".$row['NOMBRE']."","artist"=>"".$row['NOMBRE_ARTISTAS']."","mp3"=>"".$row['CANCION']."","poster"=>"".$row['COVER']."");
+        }
+    break;
 	default:
 	
 	break;

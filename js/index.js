@@ -6,7 +6,7 @@ function ifra(link){
     if(link==2)
     	$("#ifra").html("<iframe class='contenido' src='recomendaciones.php' frameborder='0' ></iframe>");
      if(link==3)
-    	$("#ifra").html("<iframe class='contenido' src='disposi.php' frameborder='0' ></iframe>");
+    	$("#ifra").html("<iframe class='contenido' src='principal.php' frameborder='0' ></iframe>");
 }
   
 function ifra2(link){

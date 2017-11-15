@@ -98,7 +98,7 @@ function cortar3($text){
 
 </style>
 
-</head>
+</head> 
 <body>
 	
 	<div  class="col-lgj-2" id="barrra">
@@ -107,7 +107,7 @@ function cortar3($text){
 		
 		<ul class="nav" id="nav">
 
-			<li  id="start" onclick="reload('hijoo');arreglo('start','first','mod','first3','start2','first2','start4','first4');" ><a href="#"  class="si"> <p id="first" >INICIO</p></a>
+			<li  id="start" onclick="reload('hijoo');ifra(3);arreglo('start','first','mod','first3','start2','first2','start4','first4');" ><a href="#"  class="si"> <p id="first" >INICIO</p></a>
 
 
 			</li>
@@ -587,7 +587,7 @@ function cortar3($text){
 
 							</div>
 							<div class="col-lgj-10 " id="ifra"  >
-								
+								<iframe class="contenido" src="principal.php" frameborder="0"  ></iframe>
 							</div>
 							<!-- Modal -->
 							<div class="modal fade" id="newplaylist" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -796,8 +796,8 @@ function cortar3($text){
 										method:"POST",
 										dataType:'json',
 										success:function(respuesta){
-											window.parent.top.myPlaylist.setPlaylist(respuesta);
-											window.parent.top.myPlaylist.option('autoPlay', true);
+											myPlaylist.setPlaylist(respuesta);
+											myPlaylist.option('autoPlay', true);
 										}
 									});
 

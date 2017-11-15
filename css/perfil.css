@@ -118,6 +118,12 @@ left:510px;
 	left: 508px;
 }
 
+#flow2{
+    width: 1005px;
+    margin-left: 54px;
+    margin-top: 20px;
+}
+
 #line{
 	display: block;
 }
@@ -303,6 +309,10 @@ hr{
 .contenido4{
  width: 1130px;
  overflow:hidden;
+}
+
+#contenedor{
+ margin-left: 55px;
 }
 
 .margeee{

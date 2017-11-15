@@ -10,7 +10,7 @@ $paylist=$conexion->ejecutarInstruccion("SELECT A.CODIGO_PLAYLIST,A.NOMBRE_PLAYL
                                           WHERE CODIGO_SEGUIDOR=".$_SESSION['codigo_usuario'].") B
                                           ON(A.CODIGO_PLAYLIST=B.CODIGO_PLAYLIST)");
    function cortar($text){ 
-   	;
+   	
      if ((strlen($text)>30)) {
      	echo substr($text, 0, 30)."..."; 
      }else{
