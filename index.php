@@ -641,7 +641,7 @@ function cortar3($text){
 															<label class="extras">Ingesar Contraseña:</label>
 														</td>
 														<td style="padding-left: 15px;padding-bottom: 15px">
-															<input type="text" id="txt-password" placeholder="Contraseña" data-trigger="focus" class="form-control" data-toggle="popover" data-html="true" data-content="<h5 style='color:black'>-Usa [6-15] caracteres</h5>" data-placement="right" data-container="body">
+															<input type="password" id="txt-password" placeholder="Contraseña" data-trigger="focus" class="form-control" data-toggle="popover" data-html="true" data-content="<h5 style='color:black'>-Usa [6-15] caracteres</h5>" data-placement="right" data-container="body">
 														</td>
 													</tr>
 													<tr>
@@ -649,7 +649,7 @@ function cortar3($text){
 															<label class="extras">Ingesar Nueva Contraseña:</label>
 														</td>
 														<td style="padding-left: 15px;padding-bottom: 15px">
-															<input type="text" id="txt-newpassword" placeholder="Nueva Contraseña" data-trigger="focus" class="form-control" data-toggle="popover" data-html="true" data-content="<h5 style='color:black'>-Usa [6-15] caracteres<br>-Asegurate de que las contraseñas coincidan</h5>" data-placement="right" data-container="body">
+															<input type="password" id="txt-newpassword" placeholder="Nueva Contraseña" data-trigger="focus" class="form-control" data-toggle="popover" data-html="true" data-content="<h5 style='color:black'>-Usa [6-15] caracteres<br>-Asegurate de que las contraseñas coincidan</h5>" data-placement="right" data-container="body">
 														</td>
 													</tr>
 													<tr>
@@ -657,7 +657,7 @@ function cortar3($text){
 															<label class="extras">Confirmar Contraseña:</label>
 														</td>
 														<td style="padding-left: 15px;padding-bottom: 10px">
-															<input type="text" id="txt-confpassword" placeholder="Confirmar Contraseña" data-trigger="focus" class="form-control" data-toggle="popover" data-html="true" data-content="<h5 style='color:black'>-Usa [6-15] caracteres<br>-Asegurate de que las contraseñas coincidan</h5>" data-placement="right" data-container="body">
+															<input type="password" id="txt-confpassword" placeholder="Confirmar Contraseña" data-trigger="focus" class="form-control" data-toggle="popover" data-html="true" data-content="<h5 style='color:black'>-Usa [6-15] caracteres<br>-Asegurate de que las contraseñas coincidan</h5>" data-placement="right" data-container="body">
 														</td>
 													</tr>
 													<tr>
@@ -760,7 +760,7 @@ function cortar3($text){
 								},  [
 
 								{
-									title:"voikdsssssssssksddddddddddlsdddddddddddddddddces",
+									title:"voices",
 									artist:"rev theory",
 									mp3:"http://localhost/IS501-DEEZER-V1.1/musica/randi.mp3",
 									poster: "http://localhost/IS501-DEEZER-V1.1/musica/covers/orton.jpg"
