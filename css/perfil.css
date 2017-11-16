@@ -1,7 +1,8 @@
 #foto{
 	height: 230px;
-	background-color: red;
-	position: relative;
+    width: 1135px;
+    position: relative;
+    margin-left: -10px;
 }
 
 #profile-photo{ 

@@ -31,10 +31,10 @@ while ($row = $conexion->obtenerRegistro($foto)) {
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-lg-12 col-xs-12 col-md-12 col-sm-12" id="foto">
-				
+				<img src="img/bannermigente1.jpg" id="foto">
 			</div>
-			<div id="profile-photo"><img src="<?php echo $row['FOTO']; }?>" id="photo" width="160" height="160"></div>
-			<div id="name-perfil"><span id="name">Cristian </span></div>
+			<div id="profile-photo"><img src="<?php echo $row['FOTO']; ?>" id="photo" width="160" height="160"></div>
+			<div id="name-perfil"><span id="name"><?php echo $row['NOMBRE_USUARIO']; }?></span></div>
 			<div id="flow">
 				<table>
 					<tr>
